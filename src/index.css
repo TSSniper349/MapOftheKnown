@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background-color: #faf7f2;
+  color: #2c2519;
+  font-family: Inter, 'IBM Plex Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle parchment grain - layered background gradients */
+body {
+  background-image:
+    radial-gradient(circle at 25% 30%, rgba(155, 140, 114, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 75% 70%, rgba(155, 140, 114, 0.05) 0%, transparent 35%),
+    radial-gradient(circle at 50% 50%, rgba(212, 197, 164, 0.04) 0%, transparent 60%);
+}
+
+/* SVG defaults */
+svg {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+text {
+  font-family: 'EB Garamond', 'Source Serif Pro', Georgia, serif;
+  fill: #3d3527;
+}
+
+.node-label {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 11px;
+  fill: #3d3527;
+  pointer-events: none;
+  paint-order: stroke;
+  stroke: #faf7f2;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.era-label {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  fill: #574c39;
+}
+
+.lane-label {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  fill: #574c39;
+}
+
+.tick-label {
+  font-family: Inter, sans-serif;
+  font-size: 10px;
+  fill: #7a6b53;
+}
+
+/* Custom scrollbar in detail panel */
+.scroll-soft::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-soft::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-soft::-webkit-scrollbar-thumb {
+  background: rgba(155, 140, 114, 0.35);
+  border-radius: 999px;
+}
+.scroll-soft::-webkit-scrollbar-thumb:hover {
+  background: rgba(155, 140, 114, 0.6);
+}
+
+/* Subtle drop cap for detail panel description */
+.drop-cap::first-letter {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 2.6em;
+  float: left;
+  line-height: 0.85;
+  padding-right: 0.08em;
+  padding-top: 0.06em;
+  color: #574c39;
+}
+
+/* Soft fade for off-window items */
+.faded {
+  opacity: 0.15;
+  transition: opacity 240ms ease;
+}
+
+.fade-edge {
+  opacity: 0.1;
+}
+
+button:focus-visible,
+input:focus-visible,
+[role='button']:focus-visible {
+  outline: 1.5px solid #9c8866;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Slider styling */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  height: 3px;
+  background: #d4c5a4;
+  border-radius: 2px;
+}
+input[type='range']::-moz-range-track {
+  height: 3px;
+  background: #d4c5a4;
+  border-radius: 2px;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  background: #574c39;
+  height: 14px;
+  width: 14px;
+  border-radius: 999px;
+  border: 2px solid #faf7f2;
+  box-shadow: 0 1px 2px rgba(60, 40, 20, 0.2);
+}
+input[type='range']::-moz-range-thumb {
+  background: #574c39;
+  height: 14px;
+  width: 14px;
+  border-radius: 999px;
+  border: 2px solid #faf7f2;
+}
+
+/* Animated frontier glow */
+@keyframes frontier-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 1.5px rgba(122, 46, 58, 0.45));
+  }
+  50% {
+    filter: drop-shadow(0 0 5px rgba(122, 46, 58, 0.55));
+  }
+}
+.frontier-glow {
+  animation: frontier-pulse 3.6s ease-in-out infinite;
+}
