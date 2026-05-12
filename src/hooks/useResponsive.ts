@@ -28,24 +28,55 @@ function measure(): Viewport {
   };
 }
 
+/**
+ * Returns a callback ref + the observed size. On attach we take a synchronous
+ * measurement (so the first render after mount already has real dimensions
+ * instead of {0,0}), then subscribe to a ResizeObserver for ongoing updates.
+ * Bails out of setSize when the dimensions haven't changed to avoid pointless
+ * re-renders.
+ */
 export function useResizeObserver<T extends HTMLElement>(): [
   (el: T | null) => void,
   { width: number; height: number },
 ] {
   const [size, setSize] = useState({ width: 0, height: 0 });
   const observerRef = useRef<ResizeObserver | null>(null);
-  const setRef = useCallback((el: T | null) => {
-    observerRef.current?.disconnect();
-    if (!el) return;
-    const ro = new ResizeObserver((entries) => {
-      const e = entries[0];
-      if (!e) return;
-      const { width, height } = e.contentRect;
-      setSize({ width, height });
-    });
-    ro.observe(el);
-    observerRef.current = ro;
+  const elementRef = useRef<T | null>(null);
+
+  const update = useCallback((width: number, height: number) => {
+    setSize((prev) =>
+      prev.width === width && prev.height === height ? prev : { width, height },
+    );
   }, []);
-  useEffect(() => () => observerRef.current?.disconnect(), []);
+
+  const setRef = useCallback(
+    (el: T | null) => {
+      observerRef.current?.disconnect();
+      observerRef.current = null;
+      elementRef.current = el;
+      if (!el) return;
+      // Synchronous initial measurement so layout doesn't have to wait a frame.
+      const rect = el.getBoundingClientRect();
+      update(rect.width, rect.height);
+      const ro = new ResizeObserver((entries) => {
+        const entry = entries[0];
+        if (!entry) return;
+        const { width, height } = entry.contentRect;
+        update(width, height);
+      });
+      ro.observe(el);
+      observerRef.current = ro;
+    },
+    [update],
+  );
+
+  useEffect(
+    () => () => {
+      observerRef.current?.disconnect();
+      observerRef.current = null;
+    },
+    [],
+  );
+
   return [setRef, size];
 }

@@ -17,19 +17,24 @@ interface TimelineNetworkProps {
 }
 
 const MARGIN = { top: 38, right: 24, bottom: 34, left: 132 };
+const FALLBACK = { width: 1200, height: 720 };
 
 export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: TimelineNetworkProps) {
-  const [hostRef, size] = useResizeObserver<HTMLDivElement>();
+  const [hostRef, measured] = useResizeObserver<HTMLDivElement>();
   const svgRef = useRef<SVGSVGElement>(null);
+  const zoomBehaviorRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null);
   const [transform, setTransform] = useState<d3.ZoomTransform>(d3.zoomIdentity);
   const [hover, setHover] = useState<{ id: string; clientX: number; clientY: number } | null>(null);
 
-  const innerW = Math.max(0, size.width - MARGIN.left - MARGIN.right);
-  const innerH = Math.max(0, size.height - MARGIN.top - MARGIN.bottom);
+  // Use measured size when available; otherwise fall back so the network is
+  // visible (and laid out) even before the first ResizeObserver callback.
+  const width = measured.width > 0 ? measured.width : FALLBACK.width;
+  const height = measured.height > 0 ? measured.height : FALLBACK.height;
+  const innerW = Math.max(80, width - MARGIN.left - MARGIN.right);
+  const innerH = Math.max(80, height - MARGIN.top - MARGIN.bottom);
 
   /* ----- Compute layout in "world" coordinates ----- */
   const layout = useMemo(() => {
-    if (innerW <= 0 || innerH <= 0) return null;
     const xScale = createEraScale(0, innerW);
     const laneCount = DOMAINS.length;
     const laneH = innerH / laneCount;
@@ -67,40 +72,48 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
     return { xScale, laneH, nodes: positioned, edges, idx };
   }, [rawNodes, rawEdges, innerW, innerH]);
 
-  /* ----- d3 zoom ----- */
+  /* ----- d3 zoom (X-only) ----- */
   useEffect(() => {
     const svg = svgRef.current;
-    if (!svg || !layout) return;
+    if (!svg) return;
     const sel = d3.select(svg);
     const zoom = d3
       .zoom<SVGSVGElement, unknown>()
       .scaleExtent([1, 24])
       .translateExtent([
-        [-40, 0],
-        [innerW + 40, 0],
+        [-40, -40],
+        [innerW + 40, innerH + 40],
       ])
       .extent([
         [0, 0],
-        [innerW, 0],
+        [innerW, innerH],
       ])
       .on('zoom', (event) => {
-        setTransform(event.transform);
+        // Force x-only behavior by zeroing y in the resulting transform.
+        const t = event.transform;
+        setTransform(d3.zoomIdentity.translate(t.x, 0).scale(t.k));
       });
     sel.call(zoom);
     sel.on('dblclick.zoom', null);
-    // Store the zoom on the svg node so we can programmatically transform it later.
-    (svg as unknown as { __zoom: typeof zoom }).__zoom = zoom;
+    zoomBehaviorRef.current = zoom;
     return () => {
       sel.on('.zoom', null);
+      zoomBehaviorRef.current = null;
     };
-  }, [innerW, innerH, layout]);
+  }, [innerW, innerH]);
 
   /* ----- Apply external yearWindow → zoom transform ----- */
   useEffect(() => {
-    if (!layout || !svgRef.current) return;
     const svg = svgRef.current;
+    const zoom = zoomBehaviorRef.current;
+    if (!svg || !zoom) return;
     const win = ui.yearWindow;
-    if (!win) return;
+    const sel = d3.select(svg);
+    if (!win) {
+      // Reset to full view when the window is cleared.
+      sel.transition().duration(300).call(zoom.transform, d3.zoomIdentity);
+      return;
+    }
     const [y0, y1] = win;
     const x0 = layout.xScale.forward(y0);
     const x1 = layout.xScale.forward(y1);
@@ -108,15 +121,11 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
     const k = Math.max(1, Math.min(24, innerW / spanPx));
     const tx = -x0 * k;
     const newT = d3.zoomIdentity.translate(tx, 0).scale(k);
-    const sel = d3.select(svg);
-    const zoom = (svg as unknown as { __zoom?: d3.ZoomBehavior<SVGSVGElement, unknown> }).__zoom;
-    if (!zoom) return;
     sel.transition().duration(420).call(zoom.transform, newT);
-  }, [ui.yearWindow, layout, innerW]);
+  }, [ui.yearWindow, layout.xScale, innerW]);
 
   /* ----- Highlight (chain / compare) ----- */
   const highlight = useMemo(() => {
-    if (!layout) return null;
     const { idx } = layout;
     const ancSet = new Set<string>();
     const descSet = new Set<string>();
@@ -145,7 +154,6 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
 
   /* ----- Visibility (domain, importance, search) ----- */
   const visibleSet = useMemo(() => {
-    if (!layout) return new Set<string>();
     const q = ui.search.trim().toLowerCase();
     return new Set(
       layout.nodes
@@ -196,33 +204,27 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
     ui.setHovered(null);
   }, [ui]);
 
-  if (!layout) {
-    return <div ref={hostRef} className="h-full w-full" />;
-  }
-
   const { xScale, laneH, nodes, edges } = layout;
   const k = transform.k;
   const tx = transform.x;
-
-  // World-X → screen-X helper (within plot area; add MARGIN.left to get full svg coord)
   const wxToSx = (wx: number) => tx + wx * k;
 
   const yearWindow = ui.yearWindow;
   const isHighlightMode =
-    (highlight?.pathSet.size ?? 0) > 0 ||
-    (highlight?.ancSet.size ?? 0) + (highlight?.descSet.size ?? 0) > 0;
-
+    (highlight.pathSet.size ?? 0) > 0 ||
+    (highlight.ancSet.size ?? 0) + (highlight.descSet.size ?? 0) > 0;
   const tickYears = pickTickYears(k);
 
   return (
-    <div ref={hostRef} className="relative h-full w-full">
+    <div ref={hostRef} className="absolute inset-0">
       <svg
         ref={svgRef}
-        width={size.width}
-        height={size.height}
-        viewBox={`0 0 ${size.width} ${size.height}`}
+        width={width}
+        height={height}
+        viewBox={`0 0 ${width} ${height}`}
+        preserveAspectRatio="xMinYMin meet"
         onClick={() => ui.selectNode(null)}
-        style={{ cursor: 'grab', display: 'block' }}
+        style={{ cursor: 'grab', display: 'block', width: '100%', height: '100%' }}
         role="img"
         aria-label="Time-axis network graph"
       >
@@ -269,11 +271,11 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
             <circle cx="100" cy="60" r="0.5" fill="rgba(120,100,80,0.04)" />
           </pattern>
           <clipPath id="plot-clip">
-            <rect x={0} y={-40} width={innerW} height={innerH + 80} />
+            <rect x={0} y={-50} width={Math.max(1, innerW)} height={Math.max(1, innerH + 100)} />
           </clipPath>
         </defs>
 
-        <rect width={size.width} height={size.height} fill="url(#parchment-grain)" />
+        <rect width={width} height={height} fill="url(#parchment-grain)" />
 
         {/* Lane labels (fixed left) */}
         <g transform={`translate(${MARGIN.left - 10}, ${MARGIN.top})`}>
@@ -317,10 +319,10 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
           })}
         </g>
 
-        {/* Plot area (clipped) */}
+        {/* Plot area */}
         <g transform={`translate(${MARGIN.left}, ${MARGIN.top})`}>
-          {/* Lane bands - unclipped, no zoom */}
-          <g>
+          {/* Lane bands (unclipped, no zoom) */}
+          <g pointerEvents="none">
             {DOMAINS.map((_, i) => (
               <rect
                 key={i}
@@ -329,7 +331,6 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
                 width={innerW}
                 height={laneH}
                 fill={i % 2 === 0 ? 'rgba(155,140,114,0.045)' : 'rgba(212,197,164,0.08)'}
-                pointerEvents="none"
               />
             ))}
             {DOMAINS.map((_, i) => (
@@ -353,7 +354,7 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
             />
           </g>
 
-          {/* Era labels at top (within clip, but above plot) */}
+          {/* Era labels (top of plot) */}
           <g clipPath="url(#plot-clip)" pointerEvents="none">
             {xScale.eraBounds.map(({ era, x0, x1 }) => {
               const cxw = (x0 + x1) / 2;
@@ -367,9 +368,8 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
             })}
           </g>
 
-          {/* Clipped content: era rules, edges, nodes */}
+          {/* Clipped content: era rules, window mask, edges, nodes */}
           <g clipPath="url(#plot-clip)">
-            {/* Era boundary rules — drawn at screen coords */}
             {xScale.eraBounds.slice(0, -1).map(({ era, x1 }) => {
               const sx = wxToSx(x1);
               if (sx < -2 || sx > innerW + 2) return null;
@@ -387,7 +387,6 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
               );
             })}
 
-            {/* Window-focus rectangles when yearWindow active */}
             {yearWindow && (
               <>
                 <rect
@@ -412,28 +411,29 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
               </>
             )}
 
-            {/* Edges */}
             {ui.showEdges &&
               edges.map((edge) => {
                 const sId = edge.source.id;
                 const tId = edge.target.id;
                 if (!visibleSet.has(sId) || !visibleSet.has(tId)) return null;
-                const inHighlightedPath =
-                  highlight?.pathEdgeKeys.has(edgeKey(sId, tId, edge.type)) ?? false;
+                const inHighlightedPath = highlight.pathEdgeKeys.has(
+                  edgeKey(sId, tId, edge.type),
+                );
                 const inTraceChain =
                   isHighlightMode &&
-                  ((highlight!.ancSet.has(sId) || sId === ui.selectedId) &&
-                    (highlight!.ancSet.has(tId) || tId === ui.selectedId)) ||
-                  (isHighlightMode &&
-                    (highlight!.descSet.has(sId) || sId === ui.selectedId) &&
-                    (highlight!.descSet.has(tId) || tId === ui.selectedId));
+                  ((highlight.ancSet.has(sId) || sId === ui.selectedId) &&
+                    (highlight.ancSet.has(tId) || tId === ui.selectedId) ||
+                    (highlight.descSet.has(sId) || sId === ui.selectedId) &&
+                      (highlight.descSet.has(tId) || tId === ui.selectedId));
                 const hovered =
                   (ui.hoveredId && (ui.hoveredId === sId || ui.hoveredId === tId)) ||
                   (ui.selectedId && (ui.selectedId === sId || ui.selectedId === tId));
                 const inWinS =
-                  !yearWindow || (edge.source.year >= yearWindow[0] && edge.source.year <= yearWindow[1]);
+                  !yearWindow ||
+                  (edge.source.year >= yearWindow[0] && edge.source.year <= yearWindow[1]);
                 const inWinT =
-                  !yearWindow || (edge.target.year >= yearWindow[0] && edge.target.year <= yearWindow[1]);
+                  !yearWindow ||
+                  (edge.target.year >= yearWindow[0] && edge.target.year <= yearWindow[1]);
                 let opacity: number;
                 if (inHighlightedPath) opacity = 0.9;
                 else if (inTraceChain) opacity = 0.55;
@@ -460,19 +460,18 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
                 );
               })}
 
-            {/* Nodes */}
             {nodes.map((n) => {
               if (!ui.visibleDomains.has(n.domain)) return null;
-              const visible = visibleSet.has(n.id);
+              if (!visibleSet.has(n.id)) return null;
               const isSelected = ui.selectedId === n.id;
               const isCompare = ui.compareIds.includes(n.id);
-              const isAnc = highlight?.ancSet.has(n.id) ?? false;
-              const isDesc = highlight?.descSet.has(n.id) ?? false;
-              const isOnPath = highlight?.pathSet.has(n.id) ?? false;
-              const inWin = !yearWindow || (n.year >= yearWindow[0] && n.year <= yearWindow[1]);
+              const isAnc = highlight.ancSet.has(n.id);
+              const isDesc = highlight.descSet.has(n.id);
+              const isOnPath = highlight.pathSet.has(n.id);
+              const inWin =
+                !yearWindow || (n.year >= yearWindow[0] && n.year <= yearWindow[1]);
 
               let opacity = 1;
-              if (!visible) return null;
               if (isHighlightMode) {
                 if (isSelected || isCompare || isOnPath || isAnc || isDesc) opacity = 1;
                 else opacity = 0.1;
@@ -501,9 +500,9 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
                 ringWidth = 1.6;
               }
               const r = n.radius;
-              const isFocus = visible && (isHighlightMode ? opacity === 1 : inWin);
+              const focusedForLabel = isHighlightMode ? opacity === 1 : inWin;
               const labelOn =
-                isFocus &&
+                focusedForLabel &&
                 (n.importance >= 4 || isSelected || isCompare || isOnPath || isAnc || isDesc);
 
               return (
@@ -543,8 +542,12 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
             })}
           </g>
 
-          {/* Year tick axis at bottom */}
-          <g transform={`translate(0, ${innerH + 6})`} clipPath="url(#plot-clip)" pointerEvents="none">
+          {/* Bottom year-tick axis */}
+          <g
+            transform={`translate(0, ${innerH + 6})`}
+            clipPath="url(#plot-clip)"
+            pointerEvents="none"
+          >
             {tickYears.map((y) => {
               const sx = wxToSx(xScale.forward(y));
               if (sx < -40 || sx > innerW + 40) return null;
@@ -565,7 +568,9 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
 
       <div className="pointer-events-none absolute bottom-1 left-3 font-serif text-[11px] italic text-ink-400">
         <span className="rounded bg-parchment-50/70 px-2 py-0.5">
-          drag · scroll-zoom · click for detail · shift-click two to compare · press <kbd className="font-sans text-ink-700">I</kbd> to trace · <kbd className="font-sans text-ink-700">E</kbd> to toggle edges
+          drag · scroll-zoom · click for detail · shift-click two to compare · press{' '}
+          <kbd className="font-sans text-ink-700">I</kbd> to trace ·{' '}
+          <kbd className="font-sans text-ink-700">E</kbd> to toggle edges
         </span>
       </div>
     </div>
