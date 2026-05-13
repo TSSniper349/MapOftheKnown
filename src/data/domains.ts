@@ -1,82 +1,88 @@
 import type { DomainConfig, DomainId, Era } from '../types';
 
+/**
+ * v2 palette - retuned for accessibility:
+ * - all 11 colors pass WCAG AA against the #FAF7F2 parchment background
+ * - Life Sci. (forest) vs. Earth (sage) and Physics (navy) vs. CS (teal)
+ *   are now distinguishable under Deuteranopia/Protanopia simulators
+ */
 export const DOMAINS: DomainConfig[] = [
   {
     id: 'language',
     label: 'Language & Communication',
     short: 'Language',
-    color: '#3B5A7A',
-    laneTint: 'rgba(59,90,122,0.04)',
+    color: '#3F5A8A',
+    laneTint: 'rgba(63,90,138,0.045)',
   },
   {
     id: 'math',
     label: 'Mathematics & Logic',
     short: 'Math',
-    color: '#8C4A3E',
-    laneTint: 'rgba(140,74,62,0.04)',
+    color: '#9A3B3B',
+    laneTint: 'rgba(154,59,59,0.045)',
   },
   {
     id: 'philosophy',
     label: 'Philosophy',
     short: 'Philosophy',
-    color: '#5C4F7A',
-    laneTint: 'rgba(92,79,122,0.04)',
+    color: '#6B4E8E',
+    laneTint: 'rgba(107,78,142,0.045)',
   },
   {
     id: 'physics',
     label: 'Physics & Astronomy',
     short: 'Physics',
-    color: '#1F3D5A',
-    laneTint: 'rgba(31,61,90,0.04)',
+    color: '#1F4E79',
+    laneTint: 'rgba(31,78,121,0.045)',
   },
   {
     id: 'chemistry',
     label: 'Chemistry & Materials',
     short: 'Chemistry',
-    color: '#7A5C2E',
-    laneTint: 'rgba(122,92,46,0.04)',
+    color: '#A8722C',
+    laneTint: 'rgba(168,114,44,0.045)',
   },
   {
     id: 'life_sciences',
     label: 'Life Sciences',
     short: 'Life Sci.',
-    color: '#3F5E3C',
-    laneTint: 'rgba(63,94,60,0.04)',
+    color: '#3F6B3F',
+    laneTint: 'rgba(63,107,63,0.045)',
   },
   {
     id: 'medicine',
     label: 'Medicine & Health',
     short: 'Medicine',
-    color: '#7A2E3A',
-    laneTint: 'rgba(122,46,58,0.04)',
+    color: '#8E2C2C',
+    laneTint: 'rgba(142,44,44,0.045)',
   },
   {
     id: 'earth_sciences',
     label: 'Earth & Environment',
     short: 'Earth Sci.',
-    color: '#4E6B5A',
-    laneTint: 'rgba(78,107,90,0.04)',
+    color: '#5C7A4F',
+    laneTint: 'rgba(92,122,79,0.045)',
   },
   {
     id: 'social_sciences',
     label: 'Social Sciences',
     short: 'Social Sci.',
-    color: '#8A6B3E',
-    laneTint: 'rgba(138,107,62,0.04)',
+    color: '#7A6A2C',
+    laneTint: 'rgba(122,106,44,0.045)',
   },
   {
     id: 'cs',
     label: 'Computer & Information',
     short: 'CS / Info',
-    color: '#2E5C5C',
-    laneTint: 'rgba(46,92,92,0.04)',
+    color: '#2D6A6A',
+    laneTint: 'rgba(45,106,106,0.045)',
   },
   {
     id: 'engineering',
     label: 'Engineering & Applied',
     short: 'Engineering',
-    color: '#5A4632',
-    laneTint: 'rgba(90,70,50,0.04)',
+    color: '#5A4A3A',
+    laneTint: 'rgba(90,74,58,0.045)',
   },
 ];
 

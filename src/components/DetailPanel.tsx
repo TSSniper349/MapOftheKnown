@@ -3,15 +3,17 @@ import type { PreparedEdge, PreparedNode } from '../App';
 import { DOMAIN_BY_ID } from '../data/domains';
 import { formatYear, parseEventYear } from '../lib/timeScale';
 import type { UIActions, UIState } from '../hooks/useUIState';
+import type { DerivedTables } from '../lib/derive';
 import type { EdgeType } from '../types';
 
 interface DetailPanelProps {
   nodes: PreparedNode[];
   edges: PreparedEdge[];
+  derived: DerivedTables;
   ui: UIState & UIActions;
 }
 
-export function DetailPanel({ nodes, edges, ui }: DetailPanelProps) {
+export function DetailPanel({ nodes, edges, derived, ui }: DetailPanelProps) {
   const sel = ui.selectedId;
   const [a, b] = ui.compareIds;
   const showCompare = !!(a && b && a !== b);
@@ -24,21 +26,20 @@ export function DetailPanel({ nodes, edges, ui }: DetailPanelProps) {
         aria-hidden
         className="hidden h-full w-[26rem] shrink-0 border-l border-parchment-300 bg-parchment-50/40 px-6 py-8 text-ink-500 lg:block"
       >
-        <div className="font-serif text-lg italic">
-          Pick an event to read its entry.
-        </div>
+        <div className="font-serif text-lg italic">Pick an event to read its entry.</div>
         <ul className="mt-4 list-disc space-y-1 pl-5 font-serif text-sm leading-relaxed">
           <li>Click a node for its full entry.</li>
           <li>
-            <span className="text-ink-700">Shift-click</span> two nodes to trace the
-            shortest influence path between them.
+            <span className="text-ink-700">Shift-click</span> two nodes to trace the shortest
+            influence path between them.
           </li>
           <li>
-            With a node selected, press{' '}
-            <kbd className="rounded border border-parchment-300 bg-parchment-100 px-1 font-sans text-xs">
-              I
-            </kbd>{' '}
-            to glow its ancestors blue and descendants amber.
+            Press <kbd className="rounded border border-parchment-300 bg-parchment-100 px-1 font-sans text-xs">I</kbd>{' '}
+            to glow ancestors blue and descendants amber.
+          </li>
+          <li>
+            Search and press <kbd className="rounded border border-parchment-300 bg-parchment-100 px-1 font-sans text-xs">↵</kbd>{' '}
+            to teleport.
           </li>
         </ul>
       </aside>
@@ -46,9 +47,7 @@ export function DetailPanel({ nodes, edges, ui }: DetailPanelProps) {
   }
 
   if (showCompare) {
-    return (
-      <CompareNarrative nodes={nodes} edges={edges} aId={a!} bId={b!} ui={ui} />
-    );
+    return <CompareNarrative nodes={nodes} edges={edges} aId={a!} bId={b!} ui={ui} />;
   }
 
   const ev = node.raw;
@@ -60,8 +59,11 @@ export function DetailPanel({ nodes, edges, ui }: DetailPanelProps) {
       : formatYear(year);
   const uncertainty = ev.dateUncertainty ?? 0;
   const inLinks = edges.filter((e) => e.target === ev.id);
-  const outLinks = edges.filter((e) => e.source === ev.id);
+  const outLinks = edges.filter((e) => e.source === ev.id || e.secondarySource === ev.id);
   const nodeById = (id: string) => nodes.find((n) => n.raw.id === id);
+
+  const locations = ev.locations ?? [];
+  const concepts = ev.concepts ?? [];
 
   return (
     <aside className="relative flex h-full w-[28rem] shrink-0 flex-col border-l border-parchment-300 bg-parchment-50 shadow-card">
@@ -76,10 +78,8 @@ export function DetailPanel({ nodes, edges, ui }: DetailPanelProps) {
               <span className="ml-2 text-ink-500/80">/ {ev.subdomain.replace(/_/g, ' ')}</span>
             )}
           </div>
-          <h2 className="mt-1 font-serif text-2xl leading-snug text-ink-900">
-            {ev.label}
-          </h2>
-          <div className="mt-1 flex items-center gap-2 font-sans text-sm text-ink-500">
+          <h2 className="mt-1 font-serif text-2xl leading-snug text-ink-900">{ev.label}</h2>
+          <div className="mt-1 flex flex-wrap items-center gap-2 font-sans text-sm text-ink-500">
             <span className="font-serif italic">{dateStr}</span>
             {uncertainty > 0 && (
               <span className="text-xs text-ink-400">± {formatUncertainty(uncertainty)}</span>
@@ -91,14 +91,29 @@ export function DetailPanel({ nodes, edges, ui }: DetailPanelProps) {
             )}
           </div>
         </div>
-        <button
-          type="button"
-          onClick={ui.closeDetail}
-          className="rounded-md border border-parchment-300 bg-parchment-50 px-2 py-1 font-sans text-xs text-ink-600 hover:bg-parchment-200"
-          aria-label="Close detail panel"
-        >
-          close
-        </button>
+        <div className="flex flex-col items-end gap-1">
+          <button
+            type="button"
+            onClick={ui.togglePinDetail}
+            className={`rounded-md border px-2 py-1 font-sans text-xs ${
+              ui.detailPinned
+                ? 'border-ink-700 bg-ink-700 text-parchment-50'
+                : 'border-parchment-300 bg-parchment-50 text-ink-600 hover:bg-parchment-200'
+            }`}
+            aria-pressed={ui.detailPinned}
+            title="Pin this panel open"
+          >
+            {ui.detailPinned ? 'pinned' : 'pin'}
+          </button>
+          <button
+            type="button"
+            onClick={ui.closeDetail}
+            className="rounded-md border border-parchment-300 bg-parchment-50 px-2 py-1 font-sans text-xs text-ink-600 hover:bg-parchment-200"
+            aria-label="Close detail panel"
+          >
+            close
+          </button>
+        </div>
       </div>
 
       <div className="scroll-soft mt-3 flex-1 overflow-y-auto px-6 pb-6">
@@ -108,11 +123,66 @@ export function DetailPanel({ nodes, edges, ui }: DetailPanelProps) {
 
         {ev.keyFigures && ev.keyFigures.length > 0 && (
           <div className="mt-4">
-            <div className="text-[11px] uppercase tracking-[0.14em] text-ink-500">
-              Key figures
+            <div className="text-[11px] uppercase tracking-[0.14em] text-ink-500">Key figures</div>
+            <div className="mt-1 flex flex-wrap gap-1.5 font-serif text-[14px] text-ink-800">
+              {ev.keyFigures.map((name) => {
+                const inGraph = derived.people.has(name);
+                return (
+                  <button
+                    key={name}
+                    onClick={() => {
+                      if (inGraph) {
+                        ui.selectPerson(name);
+                        ui.setView('people');
+                      }
+                    }}
+                    className="rounded border border-parchment-300 bg-parchment-50 px-2 py-0.5 hover:bg-parchment-200/70"
+                  >
+                    {name}
+                  </button>
+                );
+              })}
             </div>
-            <div className="mt-1 font-serif text-[15px] text-ink-800">
-              {ev.keyFigures.join(' · ')}
+          </div>
+        )}
+
+        {locations.length > 0 && (
+          <div className="mt-4">
+            <div className="text-[11px] uppercase tracking-[0.14em] text-ink-500">Locations</div>
+            <ul className="mt-1 space-y-0.5">
+              {locations.map((loc, i) => (
+                <li key={i}>
+                  <button
+                    onClick={() => ui.setView('geo')}
+                    className="text-left font-serif text-[14px] text-ink-800 hover:underline"
+                  >
+                    {loc.label}
+                    <span className="ml-2 font-sans text-[10px] text-ink-400">
+                      {loc.lat.toFixed(1)}°, {loc.lon.toFixed(1)}°
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {concepts.length > 0 && (
+          <div className="mt-4">
+            <div className="text-[11px] uppercase tracking-[0.14em] text-ink-500">Concepts</div>
+            <div className="mt-1 flex flex-wrap gap-1.5">
+              {concepts.map((c) => (
+                <button
+                  key={c}
+                  onClick={() => {
+                    ui.selectConcept(c);
+                    ui.setView('concept');
+                  }}
+                  className="rounded-full border border-parchment-300 bg-parchment-50 px-2 py-0.5 font-serif text-[12px] text-ink-700 hover:bg-parchment-200/70"
+                >
+                  {c}
+                </button>
+              ))}
             </div>
           </div>
         )}
@@ -133,18 +203,18 @@ export function DetailPanel({ nodes, edges, ui }: DetailPanelProps) {
           {ui.traceActive && (
             <div className="flex items-center gap-1 text-xs text-ink-600">
               <span>depth:</span>
-              {([1, 2, -1] as const).map((d) => (
+              {([1, 2, -1] as const).map((depthV) => (
                 <button
-                  key={d}
+                  key={depthV}
                   type="button"
-                  onClick={() => ui.setTraceDepth(d)}
+                  onClick={() => ui.setTraceDepth(depthV)}
                   className={`rounded border px-2 py-0.5 font-sans ${
-                    ui.traceDepth === d
+                    ui.traceDepth === depthV
                       ? 'border-ink-600 bg-ink-100 text-ink-800'
                       : 'border-parchment-300 bg-parchment-50 text-ink-600 hover:bg-parchment-200'
                   }`}
                 >
-                  {d === -1 ? 'all' : `${d} hop${d > 1 ? 's' : ''}`}
+                  {depthV === -1 ? 'all' : `${depthV} hop${depthV > 1 ? 's' : ''}`}
                 </button>
               ))}
             </div>
@@ -241,6 +311,10 @@ function edgeLabel(t: EdgeType): string {
       return 'influences';
     case 'refines':
       return 'refines';
+    case 'synthesizes':
+      return 'synthesizes';
+    case 'parallel':
+      return 'parallel discovery';
   }
 }
 
@@ -253,26 +327,10 @@ function formatUncertainty(years: number): string {
 function formatPreciseDate(iso: string): string {
   const [y, m, d] = iso.split('-');
   const yy = Number(y);
-  const months = [
-    '',
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
-  ];
+  const months = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const mn = months[Number(m)] ?? '';
   return `${d ? Number(d) + ' ' : ''}${mn} ${yy}`;
 }
-
-/* ----- Compare narrative ----- */
 
 interface CompareProps {
   nodes: PreparedNode[];

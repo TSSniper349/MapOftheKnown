@@ -33,10 +33,8 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
 
   const innerW = Math.max(0, trackW);
   const xScale = useMemo(() => createEraScale(0, innerW), [innerW]);
-
   const winYears: [number, number] = ui.yearWindow ?? FULL_DOMAIN;
 
-  /* ----- Histogram bins (importance-weighted) ----- */
   const bins = useMemo(() => {
     if (innerW < 4) return [];
     const W = 4;
@@ -127,12 +125,8 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
     },
     [ui],
   );
+  const resetWindow = useCallback(() => ui.setYearWindow(null), [ui]);
 
-  const resetWindow = useCallback(() => {
-    ui.setYearWindow(null);
-  }, [ui]);
-
-  // Convert window years → pixels
   const x0 = xScale.forward(winYears[0]);
   const x1 = xScale.forward(winYears[1]);
 
@@ -143,6 +137,19 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
     >
       <div className="mb-1 flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={ui.togglePlay}
+            className={`rounded-md border px-2 py-1 font-sans text-xs ${
+              ui.playing
+                ? 'border-domain-medicine bg-domain-medicine text-parchment-50'
+                : 'border-parchment-300 bg-parchment-50 text-ink-700 hover:bg-parchment-200'
+            }`}
+            aria-pressed={ui.playing}
+            title="Play / pause (Space)"
+          >
+            {ui.playing ? '❚❚ pause' : '▶ play'}
+          </button>
           {ERAS.map((e, i) => (
             <button
               key={e.id}
@@ -176,7 +183,6 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
         onPointerLeave={onPointerUp}
         style={{ touchAction: 'none' }}
       >
-        {/* Histogram of events */}
         <svg
           width="100%"
           height={TRACK_HEIGHT - 4}
@@ -200,7 +206,6 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
             );
           })}
 
-          {/* Era boundary lines */}
           {xScale.eraBounds.slice(0, -1).map(({ era, x1: x }) => (
             <line
               key={era.id}
@@ -214,7 +219,6 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
             />
           ))}
 
-          {/* Era labels small */}
           {xScale.eraBounds.map(({ era, x0: ex0, x1: ex1 }) => {
             const center = (ex0 + ex1) / 2;
             return (
@@ -232,14 +236,7 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
             );
           })}
 
-          {/* Selected window mask */}
-          <rect
-            x={0}
-            y={0}
-            width={x0}
-            height={TRACK_HEIGHT - 4}
-            fill="rgba(250,247,242,0.55)"
-          />
+          <rect x={0} y={0} width={x0} height={TRACK_HEIGHT - 4} fill="rgba(250,247,242,0.55)" />
           <rect
             x={x1}
             y={0}
@@ -258,7 +255,6 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
           />
         </svg>
 
-        {/* Drag region for window */}
         <div
           onPointerDown={(e) => onPointerDown(e, 'window')}
           className="absolute top-0"
@@ -269,8 +265,6 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
             cursor: drag === 'window' ? 'grabbing' : 'grab',
           }}
         />
-
-        {/* Left handle */}
         <button
           type="button"
           aria-label="Start of window"
@@ -280,8 +274,6 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
         >
           <span className="block h-6 w-[2px] rounded bg-domain-medicine" />
         </button>
-
-        {/* Right handle */}
         <button
           type="button"
           aria-label="End of window"
@@ -295,4 +287,3 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
     </footer>
   );
 }
-

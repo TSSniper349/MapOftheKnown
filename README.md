@@ -1,8 +1,8 @@
-# Map of the Known
+# Map of the Known &mdash; v2
 
-An interactive time-axis network of human knowledge, from the emergence of language (~150,000 years ago) to the research frontiers of 2026. Events are nodes; intellectual influences are edges. The data is curated, not exhaustive; the point is the shape of the graph.
+A coordinated, four-lens map of human knowledge: events on a time-axis network, on a geographic map, in a people-graph, and as a concept tree. From the emergence of language (~150,000 years ago) to the research frontiers of 2026.
 
-**366 events** &middot; **412 influences** &middot; **11 domain swimlanes** &middot; **5 piecewise-compressed eras**
+**366 events · 417 influences · 11 domain lanes · 4 coordinated views**
 
 ---
 
@@ -10,45 +10,56 @@ An interactive time-axis network of human knowledge, from the emergence of langu
 
 ```bash
 npm install
-npm run dev      # local dev server (http://localhost:5173)
-npm run build    # production build → dist/
-npm run preview  # serve the production build
+npm run dev        # local dev server (http://localhost:5173)
+npm run build      # production build → dist/
+npm run preview    # serve the production build
 npm run typecheck
 ```
 
 The site is static and deploys to Vercel, Netlify, GitHub Pages, or any static host.
 
-## What you can do with it
+## The four views
 
-| Interaction | How |
-|---|---|
-| Pan & zoom | drag, scroll wheel, pinch |
-| Read an event | click a node — detail slides in from the right |
-| Trace an influence chain | select a node, press **I** (or click *Trace influences*) — ancestors glow blue, descendants amber. Depth slider for 1 / 2 / all hops |
-| Compare two events | **shift-click** two nodes — shortest influence path is drawn with a step-by-step narrative |
-| Narrow the time window | drag the handles on the bottom scrubber, or click an era button |
-| Hide/show domains | click a lane label on the left, or use the **Domains** panel |
-| Importance threshold | drag the slider in the **Controls** panel (only events of importance ≥ N) |
-| Search | **/** focuses the search box; matches against label, description, and key figures |
-| Toggle edges | press **E** or use the **Edges** checkbox |
-| Mobile | falls back to an era-grouped list view (the network is too dense to be useful on a small screen) |
+| Key | View | What it shows |
+|---|---|---|
+| 1 | **Time-axis** | The default. X = compressed time, Y = ~11 domain lanes. Per-lane density stripes show *when* each field exploded; semantic zoom controls label density (Globe / Continent / Country / Street). Press `Space` to animate playback. |
+| 2 | **Geographic** | Equal Earth projection with markers colored by domain. Multi-location events (parallel discoveries, multi-civilizational developments) appear as multiple markers connected by a dotted line. Zoom out to see country-level pie clusters. |
+| 3 | **People** | Force-directed graph of canonicalized `keyFigures`. Nodes are people sized by total importance, colored by their most-frequent domain. Edges are co-event ties. Lineages (Hilbert → von Neumann → Shannon) become visible. |
+| 4 | **Concepts** | Concept tags grouped by their dominant domain. Click a tag to highlight every event carrying it across all views. |
 
-## Visual language
+Selection is shared global state. Click an event in the time-axis, switch to the map (`2`) — the same event is highlighted, its location pinned. Click its key figure in the detail panel and you teleport to the people-graph. The bottom-left **selection breadcrumb** shows what is currently selected and clears it with one tap.
 
-- **Background**: parchment, a warm off-white with subtle grain
-- **Type**: EB Garamond serif for prose and labels, Inter sans for UI
-- **Color**: muted, desaturated jewel tones, one per domain (deep navy, oxblood, forest green, ochre, plum, slate, terracotta, etc.)
-- **Node size**: proportional to event importance (1–5)
-- **Frontier events**: dashed border with a gentle outward glow
-- **Edge styles**: solid + arrow for `enables`; dashed for `influences`; solid + open diamond for `refines`
-- **Era boundaries**: vertical dashed rules with small-caps era labels at the top
-- **Lane bands**: alternating very-faint tints separating domains on the Y axis
+## Interactions
 
-## Time scale
+Mouse:
+- Pan, scroll-zoom, click an item for detail.
+- Shift-click two events to enter compare mode (shortest influence path drawn as a narrative chain).
+- Hover an edge for its relationship description.
 
-Linear time across 150,000 years is unreadable — over 95% of events fall in the last 500 years. The X axis uses a **piecewise compression** so each era gets roughly comparable screen real estate at default zoom:
+Keyboard:
+- `1` / `2` / `3` / `4` — switch view.
+- `/` — focus search.
+- `↵` — **teleport**: select the matching event, zoom the time-axis to a 150-year window centered on it, briefly pulse the node.
+- `I` — toggle influence-chain mode (ancestors blue, descendants amber, depth slider in the detail panel).
+- `E` — toggle all edges.
+- `Space` — play / pause time-axis animation.
+- `←` / `→` — step the time window.
+- `Esc` — clear selection / exit mode.
 
-| Era | Range | Default screen share |
+## Visual aesthetic
+
+- Warm parchment background (`#FAF7F2`) with a faint grain.
+- EB Garamond serif for prose, labels, era names. Inter sans for UI chrome.
+- A muted-jewel domain palette retuned for **WCAG AA against the parchment**, with explicit attention to Deuteranopia / Protanopia distinguishability — the v1 Life Sciences / Earth Sciences green collision and the Physics / CS navy-teal collision are gone.
+- Frontier events have a dashed border and a gentle outward glow.
+- Selected nodes get a **parchment-colored halo** before their colored border — selection reads clearly against any background.
+- The in-canvas legend that overlapped the Physics lane in v1 has been removed; the sidebar legend is the single source.
+
+## Time scale &amp; semantic zoom
+
+Linear time across 150,000 years is unreadable. X uses **piecewise compression** so each era gets comparable screen space at default zoom:
+
+| Era | Range | Default share |
 |---|---|---|
 | Prehistory | ~150,000 BCE – 3000 BCE | 13% |
 | Antiquity | 3000 BCE – 500 CE | 16% |
@@ -56,159 +67,179 @@ Linear time across 150,000 years is unreadable — over 95% of events fall in th
 | Modern | 1700 – 1900 | 18% |
 | Contemporary | 1900 – 2026 | 35% |
 
-Inside each era the scale is linear, so relative ordering and spacing are preserved within an era. Zooming via the scrubber or scroll wheel enlarges any sub-range to the full canvas — effectively giving "semantic zoom" into a denser local timeline.
+Inside each era the scale is linear, so relative ordering and spacing are preserved.
 
-## Domain swimlanes
+**Four semantic-zoom levels** drive label density on the time-axis:
 
-The Y axis is divided into 11 swimlanes (top to bottom):
+| Level | Visible span | Labels | Edges |
+|---|---|---|---|
+| L0 Globe | > 5,000 years | top importance-5 only | hidden by default |
+| L1 Continent | 500 – 5,000 years | importance ≥ 4 | ~6% opacity |
+| L2 Country | 50 – 500 years | importance ≥ 3 | ~12% opacity |
+| L3 Street | < 50 years | all + description preview for importance ≥ 4 | ~22% opacity |
 
-1. **Language & Communication** — writing systems, alphabets, linguistic theory, mass-media tech
-2. **Mathematics & Logic** — number, geometry, algebra, analysis, formal logic
-3. **Philosophy** — metaphysics, epistemology, philosophy of mind, ethics, political theory
-4. **Physics & Astronomy** — mechanics, optics, electromagnetism, relativity, quantum, cosmology
-5. **Chemistry & Materials** — atoms, bonds, materials, industrial processes
-6. **Life Sciences** — natural history, taxonomy, evolution, cell biology, molecular biology, genetics, neuroscience
-7. **Medicine & Health** — clinical medicine, public health, surgery, pharmacology, vaccinology
-8. **Earth & Environment** — geology, paleontology, climate, ecology
-9. **Social Sciences** — economics, sociology, anthropology, psychology, linguistics
-10. **Computer & Information** — computability, languages, networks, AI, cryptography
-11. **Engineering & Applied Sciences** — metallurgy, civil works, machines, electronics, aerospace
+A status indicator in the top-right shows the current level.
 
-A few events sit awkwardly between lanes (paper, gunpowder, mathematical logic) — they are placed where the *kind* of contribution they made is best categorized, not where their inventor's discipline is conventionally listed.
+## Data schema (v2)
 
-## Data schema
-
-Events and influences live in [`public/events.json`](public/events.json), loaded at runtime. The shape:
+Events live in [`public/events.json`](public/events.json):
 
 ```json
 {
-  "_meta": { "version": "0.3", ... },
-  "nodes": [
-    {
-      "id": "evt_005_euclid",
-      "label": "Euclidean geometry",
-      "date": -300,
-      "dateUncertainty": 30,
-      "domain": "math",
-      "subdomain": "geometry",
-      "description": "Euclid's Elements systematized…",
-      "keyFigures": ["Euclid"],
-      "importance": 5,
-      "frontier": false,
-      "sources": []
-    }
+  "id": "evt_015_calculus",
+  "label": "Differential and integral calculus",
+  "date": 1675,
+  "dateUncertainty": 10,
+  "domain": "math",
+  "subdomain": "calculus",
+  "description": "Independent invention by Newton (fluxions) and Leibniz (differentials)…",
+  "keyFigures": ["Isaac Newton", "Gottfried Wilhelm Leibniz"],
+  "locations": [
+    { "label": "Cambridge, England", "lat": 52.20, "lon": 0.12 },
+    { "label": "Hanover, Holy Roman Empire", "lat": 52.37, "lon": 9.73 }
   ],
-  "edges": [
-    {
-      "source": "evt_005_euclid",
-      "target": "evt_016_principia",
-      "type": "enables",
-      "description": "Newton presented mechanics in Euclidean geometric form."
-    }
-  ]
+  "concepts": ["derivative", "integral", "infinitesimal", "limit"],
+  "importance": 5,
+  "frontier": false,
+  "sources": []
 }
 ```
 
-Required fields:
+**v2 additions:**
 
-- **`id`** — globally unique. Convention: `evt_<slug>` or `evt_<n>_<slug>` for the original seed.
-- **`label`** — 2–6 words. Shown in tooltips, detail panel, and node labels at high importance.
-- **`date`** — signed integer year (negative = BCE) **or** an ISO 8601 string like `"1687-07-05"` for sub-year precision in the modern era. Dates are parsed by `parseEventYear()` in `src/lib/timeScale.ts`.
-- **`domain`** — one of: `language`, `math`, `philosophy`, `physics`, `chemistry`, `life_sciences`, `medicine`, `earth_sciences`, `social_sciences`, `cs`, `engineering`. Drives both lane assignment and node color.
-- **`description`** — 1–3 sentences, scholarly tone. Drawn from the detail panel with a serif drop cap. Not a Wikipedia clone; aim for *why this event mattered* rather than encyclopedic detail.
-- **`importance`** — integer 1–5. Drives node size, label visibility, and the importance-threshold filter.
+- **`locations[]`** — array of `{ label, lat, lon }`. Empty allowed for events without a meaningful geographic anchor (e.g. emergence of symbolic language, the modern synthesis). Multi-civilizational events (the agricultural revolution, iron smelting) have one entry per origin.
+- **`concepts[]`** — controlled vocabulary tags, **lowercased, hyphenated**. They drive the concepts view, search, and cross-view filtering.
 
-Optional fields:
+**Canonicalization rules** (the builder must enforce these when adding events):
 
-- `dateUncertainty` — plus/minus in years. Use generously for prehistoric events.
-- `subdomain` — free-form, displayed under the domain in the detail panel.
-- `keyFigures` — array of names. Shown in the detail panel; matched by search.
-- `frontier` — `true` for events that open an *ongoing* research area (CRISPR, transformers, quantum error correction, GLP-1, BCIs, etc.). Renders with a dashed border and gentle glow; the detail panel shows "Active — ongoing" instead of a terminal date.
-- `sources` — placeholder for future citation strings.
+- `keyFigures` strings are matched **exactly** across events. `"Newton"`, `"Isaac Newton"`, and `"I. Newton"` are three different people unless normalized. This dataset uses the full conventional English transliteration without diacritics everywhere — keep the discipline.
+- `concepts` strings are matched **exactly**. `"natural-selection"` ≠ `"natural selection"` ≠ `"naturalSelection"`. Use the same tag everywhere you mean the same idea, lowercased and hyphenated.
 
-Edges:
+Required fields: `id`, `label`, `date`, `domain`, `description`, `importance`. The rest are optional but strongly recommended for full functionality.
 
-- **`source`**, **`target`** — must reference existing node ids. Invalid edges are silently dropped at load time.
-- **`type`** — one of:
-  - `enables` — solid line with a closed arrowhead. Foundational dependency. *Calculus → Classical mechanics.*
-  - `influences` — dashed line. Conceptual borrowing, suggestive resemblance. *Information theory → Molecular biology.*
-  - `refines` — solid line with an open diamond. Succession or replacement. *Newtonian mechanics → General relativity.*
-- **`description`** — optional, 1–2 sentences. Shown when the related event appears in the detail panel's *Built on* / *Enabled* sections.
+### Edges (v2)
+
+Edge types expanded from 3 to 5:
+
+| Type | Line style | Meaning |
+|---|---|---|
+| `enables` | solid + arrow | Foundational dependency. *Calculus → Newtonian mechanics.* |
+| `refines` | solid + open diamond | Succession / supersedure. *Newton → Einstein.* |
+| `influences` | dashed | Conceptual borrowing. *Information theory → molecular biology.* |
+| `synthesizes` | solid + filled-circle marker | One event explicitly combines two priors. May use `sources: ["evt_a", "evt_b"]` for the two-source case. *Modern synthesis = Darwin + Mendel.* |
+| `parallel` | dotted, no arrow | Independent simultaneous discovery / structurally parallel events. *Evolution and plate tectonics each unified their fields by replacing static taxonomies with dynamics.* |
+
+Schema:
+
+```json
+{ "source": "evt_a", "target": "evt_b", "type": "enables", "description": "…" }
+{ "sources": ["evt_a", "evt_b"], "target": "evt_c", "type": "synthesizes", "description": "…" }
+```
+
+### Derived tables (computed at load)
+
+The people-graph, the place clusters, and the concept tree are all **derived** at load time from the events themselves. No author-time files needed. `src/lib/derive.ts` does the work:
+
+- **People** &mdash; one record per canonicalized `keyFigures` string, with their events, total importance, primary domain, and date span.
+- **Places** &mdash; one record per `(lat, lon)` rounded to 2 decimals, with the events located there.
+- **Concepts** &mdash; one record per concept tag, with its events, dominant domain, date span, and whether any of its events are `frontier: true`.
 
 ## Adding events
 
 1. Open `public/events.json`.
-2. Append a node to the `nodes` array. Pick a unique `id`. Choose the most defensible `domain` and a sensible `importance`.
-3. Add edges to the `edges` array describing what this event was built on (incoming) and what it enabled (outgoing). Aim for 1–4 edges per non-trivial event — too few makes the graph sparse, too many makes the influence-chain mode unreadable.
-4. Reload the page. The graph re-lays out automatically.
+2. Append a node. Pick a unique `id`, a defensible `domain`, an `importance` (1–5).
+3. **Reuse existing concept tags** where you can — search for the tag you want to use in other events. The concept tree quality is *only as good as canonicalization discipline*.
+4. **Reuse existing `keyFigures` strings** by exact match. The people-graph is brittle to name variation; "Charles Darwin" everywhere, not "Darwin" or "C. Darwin".
+5. Add `locations` accurately. The geographic view will reveal Eurocentric blind spots in real time — that's the point.
+6. Add edges describing what this event was built on (incoming) and what it enabled (outgoing). 1–4 edges per non-trivial event.
+7. Reload.
 
-Tips:
+### Adding a concept hierarchy (optional)
 
-- Keep descriptions short (1–3 sentences). The site is *not* a reference work; it's a map.
-- Prefer "events" over "great people". A great figure usually maps to one or two events (a book, a discovery); list the names under `keyFigures`.
-- For non-Western events, use the conventional English transliteration without diacritics so search works without IME tricks (e.g., `al-Khwarizmi`, `Ibn al-Haytham`, `Panini`, `Brahmagupta`).
-- If you're unsure where an event goes, look at the curation guidance in `_meta.curationGuidance`. The seed deliberately prioritized medicine, social sciences, earth sciences, language, and non-Western depth.
+The brief allows an authored `concepts.json` for tree structure. It is **not required**; without it the concept view groups concepts by their dominant domain (the current default). If you decide to author one, the shape is:
+
+```json
+{
+  "concepts": [
+    { "id": "computation", "parent": null, "label": "Computation" },
+    { "id": "neural-network", "parent": "computation", "label": "Neural network" },
+    { "id": "attention", "parent": "neural-network", "label": "Attention mechanism" }
+  ]
+}
+```
+
+Drop it in `public/concepts.json`. (Not wired up in this revision; left for v2.1.)
+
+### Colorblind testing
+
+The 11-color palette in `src/data/domains.ts` was selected to pass WCAG AA against the parchment background and to remain distinguishable under common color-vision deficiencies. To verify after a palette edit:
+
+1. Open `npm run dev` in Chrome.
+2. DevTools → Rendering pane → Emulate vision deficiencies → Protanopia / Deuteranopia / Tritanopia.
+3. Sample the time-axis legend and the map; adjacent lane swatches must still read as distinct.
 
 ## Architecture
 
 ```
 src/
-├── App.tsx                   # top-level layout, loads events.json
-├── main.tsx                  # React entry
-├── index.css                 # parchment palette, font rules
-├── types.ts                  # RawEvent, RawEdge, EventNode, EdgeLink
-├── data/
-│   └── domains.ts            # 11 DomainConfig records + 5 ERAS
+├── App.tsx                   # View router; loads events.json
+├── main.tsx
+├── index.css
+├── types.ts                  # v2 schema types (RawEvent, RawEdge, Location, etc.)
+├── data/domains.ts           # 11-color palette + ERAS
 ├── lib/
-│   ├── timeScale.ts          # createEraScale: piecewise compression
+│   ├── timeScale.ts          # piecewise era-compressed scale
 │   ├── graph.ts              # ancestors / descendants / shortestPath
-│   └── layout.ts             # node radius + in-lane jitter resolver
+│   ├── layout.ts             # node radius + in-lane jitter resolver
+│   └── derive.ts             # people / places / concepts tables + person-edge builder
 ├── hooks/
-│   ├── useEvents.ts          # fetch & validate events.json
-│   ├── useUIState.ts         # selection, compare, filters, year window
-│   └── useResponsive.ts      # viewport + ResizeObserver
-└── components/
-    ├── Header.tsx            # title + search bar
-    ├── ControlsPanel.tsx     # domain checkboxes, importance, edges, legend
-    ├── TimelineNetwork.tsx   # the SVG canvas (the big one)
-    ├── NodeTooltip.tsx       # hover tooltip
-    ├── DetailPanel.tsx       # right-hand detail panel + compare narrative
-    ├── TimeScrubber.tsx      # histogram-backed bottom slider
-    ├── Legend.tsx            # corner color legend
-    └── MobileFallback.tsx    # era-list view for small screens
+│   ├── useEvents.ts
+│   ├── useUIState.ts         # view, selection, pin, playback, teleport, etc.
+│   └── useResponsive.ts      # ResizeObserver with synchronous initial measurement
+├── components/
+│   ├── Header.tsx            # title + Enter-to-teleport search
+│   ├── ViewTabs.tsx          # 4-tab view router
+│   ├── ControlsPanel.tsx     # domains, importance, edges, legend
+│   ├── TimelineNetwork.tsx   # the time-axis view (semantic zoom + density stripes + playback)
+│   ├── NodeTooltip.tsx
+│   ├── DetailPanel.tsx       # right-hand pinnable detail + compare narrative
+│   ├── TimeScrubber.tsx      # bottom slider + play button + era quick-jumps
+│   ├── SelectionBreadcrumb.tsx
+│   └── MobileFallback.tsx
+└── views/
+    ├── GeographicView.tsx    # Equal Earth + d3-geo + topojson land
+    ├── PeopleView.tsx        # d3-force people-graph
+    └── ConceptView.tsx       # domain-grouped concept tags
+
+public/
+├── events.json               # 366 events, 417 edges
+├── topojson/world-50m.json   # simplified land outline for the geographic view
+└── favicon.svg
 ```
-
-### Time scale
-
-`createEraScale(rangeStart, rangeEnd, eras)` produces forward/inverse mappings from year ↔ pixel. Each era gets a slice of the X range proportional to its `share`. Inside an era the scale is linear, so within Antiquity (say) the relative spacing of Euclid (-300), Archimedes (-250), and Eratosthenes (-240) is preserved exactly.
-
-When you drag the scrubber to a sub-range, the d3.zoom transform stretches that sub-range to fill the canvas — without changing the underlying era-compressed coordinate system. That preserves event positions inside the visible window in a natural, linear-feeling way ("semantic zoom"), and makes scrubber and pan/zoom share a single piece of state.
-
-### Influence chain
-
-`ancestors()` and `descendants()` are bounded BFS over the directed edge graph, with the depth bound coming from the UI. `shortestPath()` does undirected BFS for compare mode.
-
-The graph index is built once per data load and reused across selection / hover / depth changes, so chain mode is interactive on a graph this size.
-
-### Rendering performance
-
-~366 nodes + ~412 edges renders comfortably in SVG. Edges off-screen are skipped; labels are only drawn for sufficiently important or selected nodes. There is no force layout — node positions are deterministic given the data, so the same event always lands in the same spot.
 
 ## Tech
 
 - **Vite** for build tooling
-- **React 18** + TypeScript
-- **D3 v7** (`d3-zoom`, `d3-selection`) for pan/zoom, otherwise hand-rolled scales and layouts so the SVG is fully under React's control
-- **Tailwind CSS** for styling, with a custom palette (`parchment`, `ink`, `domain.*`) defined in `tailwind.config.js`
+- **React 18** + **TypeScript** (strict)
+- **D3 v7** for `d3-zoom`, `d3-geo` (Equal Earth), `d3-force`, `d3-hierarchy`-style derivations
+- **topojson-client** + **world-atlas** for the simplified land outline (~50 KB)
+- **Tailwind CSS** with a custom palette (`parchment`, `ink`, `domain.*`) in `tailwind.config.js`
 
-The bundled output is ~233 KB JS + ~19 KB CSS, gzipped to ~75 KB JS + ~5 KB CSS.
+Bundle: ~298 KB JS + ~21 KB CSS, gzipped to ~96 KB JS + ~5 KB CSS.
+
+## Performance
+
+- Time-axis renders all ~366 nodes in SVG at 60fps on a 5-year-old laptop.
+- The geographic view caches its TopoJSON after first fetch (~55 KB).
+- The people-graph runs d3-force with `alphaDecay: 0.04` and 90-strength charges; the simulation settles in ~3 seconds.
+- The concept view is a static grouped-tags grid — no simulation cost.
 
 ## Curation principles
 
-- ~300–500 nodes ceiling: a hard editorial constraint, not a technical one. Past ~500 the influence graph becomes a hairball.
-- Balance across domains. The seed leaned physics/CS-heavy; this expansion pushed deliberately into medicine, earth sciences, social sciences, and language/communication, and tried to give serious weight to non-Western contributions (Chinese astronomy and medicine; Indian linguistics and mathematics; Islamic Golden Age scholarship; Mesoamerican mathematics; African metallurgy and tallies).
-- Events, not "great men". Names are attributes (`keyFigures`), not nodes.
-- Descriptions explain *why* an event mattered for what came next — that's the unit of influence the graph is trying to capture.
+- ~300–500 events is an editorial constraint, not a technical one. Past ~500 the influence graph becomes a hairball.
+- **Balance across domains.** The seed leaned physics/CS-heavy; this expansion pushed deliberately into medicine, earth sciences, social sciences, and language — and gave serious weight to non-Western contributions: Chinese astronomy and medicine (Zhang Heng, Huangdi Neijing, Shen Kuo, Su Song), Indian linguistics and mathematics (Pāṇini, Aryabhata, Brahmagupta, Madhava), Islamic Golden Age scholarship (al-Khwarizmi, al-Haytham, al-Razi, Avicenna, al-Biruni, Omar Khayyam, Ibn al-Nafis, Ibn Khaldun), Mesoamerican mathematics (Maya zero, Long Count), African metallurgy and tallies (Lebombo, Ishango, Nok iron).
+- **Events, not "great men".** Names are attributes (`keyFigures`), not nodes. The people-graph derives them automatically.
+- Descriptions stay 1–3 sentences and explain *why* the event mattered for what came next — that's the unit of influence the graph is trying to capture.
 
 ## License
 
