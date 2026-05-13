@@ -150,6 +150,20 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
           >
             {ui.playing ? '❚❚ pause' : '▶ play'}
           </button>
+          <select
+            value={ui.playSpeed}
+            onChange={(e) =>
+              ui.setPlaySpeed(Number(e.target.value) as 30 | 80 | 200 | 500)
+            }
+            className="rounded-md border border-parchment-300 bg-parchment-50 px-2 py-1 font-sans text-xs text-ink-700"
+            aria-label="Playback speed (years per second)"
+            title="Playback speed (years per second)"
+          >
+            <option value={30}>30 y/s</option>
+            <option value={80}>80 y/s</option>
+            <option value={200}>200 y/s</option>
+            <option value={500}>500 y/s</option>
+          </select>
           {ERAS.map((e, i) => (
             <button
               key={e.id}

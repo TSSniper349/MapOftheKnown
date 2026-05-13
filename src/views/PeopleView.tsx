@@ -40,21 +40,24 @@ export function PeopleView({ nodes, derived, ui }: PeopleViewProps) {
 
   /* ----- Build sim data from derived.people ----- */
   const { simNodes, simLinks } = useMemo(() => {
-    const minImportance = 2; // filter out tiny one-off contributors
+    // Inclusion rule: appear in 2+ events, OR have a single event of
+    // importance >= 4. Keeps the graph readable while preserving lineages.
     const nameSet = new Set<string>();
     const simNodes: SimNode[] = [];
     for (const p of derived.people.values()) {
-      if (p.totalImportance < minImportance) continue;
-      // Skip if any of their events are filtered out by importance threshold + domain
       const events = p.events
         .map((id) => nodes.find((n) => n.raw.id === id))
         .filter((n): n is PreparedNode => !!n)
         .filter(
           (n) =>
-            ui.visibleDomains.has(n.raw.domain) && n.raw.importance >= ui.importanceMin,
+            ui.visibleDomains.has(n.raw.domain) &&
+            n.raw.importance >= ui.importanceMin &&
+            (!ui.frontierOnly || n.raw.frontier),
         );
       if (events.length === 0) continue;
       const totalImp = events.reduce((s, n) => s + n.raw.importance, 0);
+      const eligible = events.length >= 2 || totalImp >= 4;
+      if (!eligible) continue;
       const r = 4 + Math.min(18, Math.sqrt(totalImp) * 2);
       simNodes.push({
         id: p.name,
@@ -73,7 +76,7 @@ export function PeopleView({ nodes, derived, ui }: PeopleViewProps) {
       simLinks.push({ source: e.source, target: e.target, weight: e.weight });
     }
     return { simNodes, simLinks };
-  }, [derived, nodes, ui.visibleDomains, ui.importanceMin]);
+  }, [derived, nodes, ui.visibleDomains, ui.importanceMin, ui.frontierOnly]);
 
   /* ----- Force simulation ----- */
   useEffect(() => {

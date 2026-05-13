@@ -193,6 +193,19 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
   }, [layout, ui.compareIds, ui.traceActive, ui.selectedId, ui.traceDepth]);
 
   /* ----- Visibility (domain, importance, search, person, concept) ----- */
+  const sparseSet = useMemo(() => {
+    const degree = new Map<string, number>();
+    for (const e of layout.edges) {
+      degree.set(e.source.id, (degree.get(e.source.id) ?? 0) + 1);
+      degree.set(e.target.id, (degree.get(e.target.id) ?? 0) + 1);
+    }
+    const s = new Set<string>();
+    for (const n of layout.nodes) {
+      if ((degree.get(n.id) ?? 0) < 2) s.add(n.id);
+    }
+    return s;
+  }, [layout]);
+
   const visibleSet = useMemo(() => {
     const q = ui.search.trim().toLowerCase();
     return new Set(
@@ -200,6 +213,7 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
         .filter((n) => {
           if (!ui.visibleDomains.has(n.domain)) return false;
           if (n.importance < ui.importanceMin) return false;
+          if (ui.frontierOnly && !n.frontier) return false;
           if (q) {
             const inLabel = n.label.toLowerCase().includes(q);
             const inDesc = n.description.toLowerCase().includes(q);
@@ -221,6 +235,7 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
     layout,
     ui.visibleDomains,
     ui.importanceMin,
+    ui.frontierOnly,
     ui.search,
     ui.selectedPerson,
     ui.selectedConcept,
@@ -245,7 +260,7 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
   /* ----- Playback ----- */
   useEffect(() => {
     if (!ui.playing) return;
-    const speedYearsPerSec = 80;
+    const speedYearsPerSec = ui.playSpeed;
     const stepMs = 60;
     const windowSpan = 300; // years
     const dataStart = ERAS[0].start;
@@ -267,7 +282,7 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
       ui.setYearWindow([start, end]);
     }, stepMs);
     return () => window.clearInterval(iv);
-  }, [ui.playing]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [ui.playing, ui.playSpeed]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /* ----- Handlers ----- */
   const handleNodeClick = useCallback(
@@ -306,7 +321,45 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
   const zoomLevel = levelForSpan(visibleSpan);
 
   const tickYears = pickTickYears(k, zoomLevel);
-  const labelImportanceMin = zoomLevel === 0 ? 99 : zoomLevel === 1 ? 4 : zoomLevel === 2 ? 3 : 1;
+  const labelImportanceMin = zoomLevel === 0 ? 5 : zoomLevel === 1 ? 4 : zoomLevel === 2 ? 3 : 1;
+
+  // Importance-priority label dropout: greedy placement within each lane,
+  // sorted by importance descending. A label is suppressed if it would overlap
+  // a previously-placed (higher-importance) label in the same lane.
+  const labelOnSet = useMemo(() => {
+    if (innerW <= 0) return new Set<string>();
+    const placedByLane: Map<number, { x0: number; x1: number }[]> = new Map();
+    const out = new Set<string>();
+    const charW = zoomLevel === 3 ? 6.6 : 6.0;
+    const maxChars = zoomLevel === 3 ? 60 : 36;
+    const candidates = [...nodes]
+      .filter((n) => visibleSet.has(n.id) && n.importance >= labelImportanceMin)
+      .sort((a, b) => {
+        if (b.importance !== a.importance) return b.importance - a.importance;
+        return a.x - b.x;
+      });
+    for (const n of candidates) {
+      const sx = tx + n.x * k;
+      if (sx < -50 || sx > innerW + 50) continue;
+      const labelText = n.label.length > maxChars ? n.label.slice(0, maxChars - 1) + '…' : n.label;
+      const w = labelText.length * charW + 8;
+      const x0 = sx + n.radius + 4;
+      const x1 = x0 + w;
+      const lane = placedByLane.get(n.laneIndex) ?? [];
+      let overlap = false;
+      for (const p of lane) {
+        if (!(x1 < p.x0 || x0 > p.x1)) {
+          overlap = true;
+          break;
+        }
+      }
+      if (overlap) continue;
+      lane.push({ x0, x1 });
+      placedByLane.set(n.laneIndex, lane);
+      out.add(n.id);
+    }
+    return out;
+  }, [nodes, visibleSet, labelImportanceMin, zoomLevel, tx, k, innerW]);
 
   return (
     <div ref={hostRef} className="absolute inset-0">
@@ -667,19 +720,15 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
               } else if (isPersonHit || isConceptHit) {
                 ringColor = '#7a6b53';
                 ringWidth = 1.4;
+              } else if (ui.highlightSparse && sparseSet.has(n.id)) {
+                ringColor = '#a8722c';
+                ringWidth = 1.4;
               }
               const r = n.radius;
               const focusedForLabel = isHighlightMode ? opacity === 1 : inWin;
-              const labelOn =
-                focusedForLabel &&
-                (n.importance >= labelImportanceMin ||
-                  isSelected ||
-                  isCompare ||
-                  isOnPath ||
-                  isAnc ||
-                  isDesc ||
-                  isPersonHit ||
-                  isConceptHit);
+              const forcedLabel =
+                isSelected || isCompare || isOnPath || isAnc || isDesc || isPersonHit || isConceptHit;
+              const labelOn = focusedForLabel && (forcedLabel || labelOnSet.has(n.id));
 
               return (
                 <g
@@ -766,6 +815,21 @@ export function TimelineNetwork({ nodes: rawNodes, edges: rawEdges, ui }: Timeli
       </svg>
 
       <NodeTooltip host={hostRef} hover={hover} nodes={layout.nodes} />
+
+      {visibleSet.size === 0 && (
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div className="rounded-md border border-parchment-300 bg-parchment-50/90 px-4 py-2 font-serif italic text-ink-500 shadow-page">
+            No events match the current filters.
+            <button
+              type="button"
+              onClick={ui.resetFilters}
+              className="pointer-events-auto ml-2 rounded border border-parchment-300 bg-parchment-50 px-2 py-0.5 font-sans text-[11px] text-ink-700 hover:bg-parchment-200"
+            >
+              reset
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="pointer-events-none absolute bottom-1 right-3 font-serif text-[11px] italic text-ink-400">
         <span className="rounded bg-parchment-50/70 px-2 py-0.5">
