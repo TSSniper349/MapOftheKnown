@@ -170,3 +170,17 @@ input[type='range']::-moz-range-thumb {
 .frontier-glow {
   animation: frontier-pulse 3.6s ease-in-out infinite;
 }
+
+/* Search-teleport pulse ring */
+@keyframes pulse-ring {
+  0% {
+    r: 4;
+    opacity: 0.8;
+    stroke-width: 2.4;
+  }
+  100% {
+    r: 28;
+    opacity: 0;
+    stroke-width: 0.4;
+  }
+}

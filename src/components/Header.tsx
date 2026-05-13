@@ -5,9 +5,16 @@ interface HeaderProps {
   edgeCount: number;
   search: string;
   onSearchChange: (s: string) => void;
+  onSubmitSearch?: () => void;
 }
 
-export function Header({ nodeCount, edgeCount, search, onSearchChange }: HeaderProps) {
+export function Header({
+  nodeCount,
+  edgeCount,
+  search,
+  onSearchChange,
+  onSubmitSearch,
+}: HeaderProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -40,22 +47,28 @@ export function Header({ nodeCount, edgeCount, search, onSearchChange }: HeaderP
           {nodeCount.toLocaleString()} events &nbsp;&middot;&nbsp; {edgeCount.toLocaleString()}{' '}
           influences
         </div>
-        <div className="relative">
+        <form
+          className="relative"
+          onSubmit={(e) => {
+            e.preventDefault();
+            onSubmitSearch?.();
+          }}
+        >
           <input
             ref={inputRef}
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Search events, figures…"
-            className="w-56 rounded-md border border-parchment-300 bg-parchment-50 px-3 py-1.5 font-serif text-sm text-ink-800 placeholder:text-ink-400 focus:border-ink-400 focus:outline-none"
+            placeholder="Search · Enter to teleport"
+            className="w-64 rounded-md border border-parchment-300 bg-parchment-50 px-3 py-1.5 font-serif text-sm text-ink-800 placeholder:text-ink-400 focus:border-ink-400 focus:outline-none"
             type="search"
-            aria-label="Search events"
+            aria-label="Search events, figures, and concepts"
           />
           {!search && (
             <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 rounded border border-parchment-300 px-1 text-[10px] uppercase tracking-wider text-ink-400">
               /
             </span>
           )}
-        </div>
+        </form>
       </div>
     </header>
   );
