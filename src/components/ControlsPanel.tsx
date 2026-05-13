@@ -132,6 +132,41 @@ export function ControlsPanel({ ui }: ControlsPanelProps) {
             </p>
           </Section>
 
+          <Section title="Lenses">
+            <label className="flex cursor-pointer items-center gap-2">
+              <input
+                type="checkbox"
+                checked={ui.frontierOnly}
+                onChange={ui.toggleFrontierOnly}
+                className="h-3 w-3 accent-ink-700"
+              />
+              <span className="font-serif text-[13px] text-ink-800">
+                frontier only (active research)
+              </span>
+            </label>
+            <label className="mt-1 flex cursor-pointer items-center gap-2">
+              <input
+                type="checkbox"
+                checked={ui.highlightSparse}
+                onChange={ui.toggleHighlightSparse}
+                className="h-3 w-3 accent-ink-700"
+              />
+              <span className="font-serif text-[13px] text-ink-800">
+                highlight sparse events
+              </span>
+            </label>
+            <p className="mt-1 font-serif text-[11px] italic text-ink-400">
+              ringed events have fewer than 2 edges &mdash; curation gaps
+            </p>
+            <button
+              type="button"
+              onClick={ui.resetFilters}
+              className="mt-2 w-full rounded-md border border-parchment-300 bg-parchment-50 px-2 py-1 font-sans text-xs text-ink-700 hover:bg-parchment-200"
+            >
+              reset all filters
+            </button>
+          </Section>
+
           <Section title="Legend">
             <div className="space-y-1.5 font-serif text-[12.5px] text-ink-700">
               <LegendRow label="enables (foundational)">

@@ -52,12 +52,13 @@ export function GeographicView({ nodes, ui }: GeographicViewProps) {
     return nodes.filter((n) => {
       if (!ui.visibleDomains.has(n.raw.domain)) return false;
       if (n.raw.importance < ui.importanceMin) return false;
+      if (ui.frontierOnly && !n.raw.frontier) return false;
       if (ui.yearWindow && (n.year < ui.yearWindow[0] || n.year > ui.yearWindow[1])) return false;
       if (ui.selectedPerson && !(n.raw.keyFigures ?? []).includes(ui.selectedPerson)) return false;
       if (ui.selectedConcept && !(n.raw.concepts ?? []).includes(ui.selectedConcept)) return false;
       return true;
     });
-  }, [nodes, ui.visibleDomains, ui.importanceMin, ui.yearWindow, ui.selectedPerson, ui.selectedConcept]);
+  }, [nodes, ui.visibleDomains, ui.importanceMin, ui.frontierOnly, ui.yearWindow, ui.selectedPerson, ui.selectedConcept]);
 
   const width = Math.max(200, size.width || 1200);
   const height = Math.max(200, size.height || 720);

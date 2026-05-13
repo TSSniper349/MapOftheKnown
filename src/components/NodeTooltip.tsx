@@ -20,8 +20,13 @@ export function NodeTooltip({ hover, nodes }: NodeTooltipProps) {
   const d = DOMAIN_BY_ID[node.domain];
   const dateStr =
     typeof node.rawDate === 'string' ? node.rawDate : formatYear(node.year);
-  const x = Math.min(window.innerWidth - 340, hover.clientX + 14);
-  const y = Math.min(window.innerHeight - 160, hover.clientY + 14);
+  // Clamp inside the viewport on both axes; flip left/up if too near right/bottom edge
+  const W = 340;
+  const H = 160;
+  const cx = hover.clientX + 14;
+  const cy = hover.clientY + 14;
+  const x = Math.max(8, Math.min(window.innerWidth - W - 8, cx));
+  const y = Math.max(8, Math.min(window.innerHeight - H - 8, cy));
 
   return (
     <div

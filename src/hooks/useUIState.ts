@@ -3,6 +3,7 @@ import type { DomainId, ViewId } from '../types';
 import { DOMAINS } from '../data/domains';
 
 export type TraceDepth = 1 | 2 | -1; // -1 = all
+export type PlaySpeed = 30 | 80 | 200 | 500; // years per second
 
 export interface UIState {
   view: ViewId;
@@ -20,6 +21,11 @@ export interface UIState {
   yearWindow: [number, number] | null;
   detailPinned: boolean;
   playing: boolean;
+  playSpeed: PlaySpeed;
+  /** Highlight events with fewer than 2 edges (the "what's missing" lens). */
+  highlightSparse: boolean;
+  /** Show only frontier (ongoing research) events. */
+  frontierOnly: boolean;
   /** Search-pulse target; used by the time-axis to flash a node briefly. */
   pulseId: string | null;
   /** Counter incremented when search teleports; views can react to this. */
@@ -45,6 +51,10 @@ export interface UIActions {
   togglePinDetail: () => void;
   togglePlay: () => void;
   setPlaying: (v: boolean) => void;
+  setPlaySpeed: (s: PlaySpeed) => void;
+  toggleHighlightSparse: () => void;
+  toggleFrontierOnly: () => void;
+  resetFilters: () => void;
   triggerPulse: (id: string) => void;
   teleportTo: (id: string) => void;
 }
@@ -67,6 +77,9 @@ export function useUIState(): UIState & UIActions {
   const [yearWindow, setYearWindow] = useState<[number, number] | null>(null);
   const [detailPinned, setDetailPinned] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [playSpeed, setPlaySpeed] = useState<PlaySpeed>(80);
+  const [highlightSparse, setHighlightSparse] = useState(false);
+  const [frontierOnly, setFrontierOnly] = useState(false);
   const [pulseId, setPulseId] = useState<string | null>(null);
   const [teleportCounter, setTeleportCounter] = useState(0);
 
@@ -127,6 +140,19 @@ export function useUIState(): UIState & UIActions {
 
   const togglePinDetail = useCallback(() => setDetailPinned((v) => !v), []);
   const togglePlay = useCallback(() => setPlaying((v) => !v), []);
+  const toggleHighlightSparse = useCallback(() => setHighlightSparse((v) => !v), []);
+  const toggleFrontierOnly = useCallback(() => setFrontierOnly((v) => !v), []);
+  const resetFilters = useCallback(() => {
+    setVisibleDomains(new Set(DOMAINS.map((d) => d.id)));
+    setImportanceMin(1);
+    setSearch('');
+    setShowEdges(true);
+    setYearWindow(null);
+    setHighlightSparse(false);
+    setFrontierOnly(false);
+    setSelectedPersonState(null);
+    setSelectedConceptState(null);
+  }, []);
 
   const triggerPulse = useCallback((id: string) => {
     setPulseId(id);
@@ -168,6 +194,9 @@ export function useUIState(): UIState & UIActions {
     yearWindow,
     detailPinned,
     playing,
+    playSpeed,
+    highlightSparse,
+    frontierOnly,
     pulseId,
     teleportCounter,
     setView,
@@ -188,6 +217,10 @@ export function useUIState(): UIState & UIActions {
     togglePinDetail,
     togglePlay,
     setPlaying,
+    setPlaySpeed,
+    toggleHighlightSparse,
+    toggleFrontierOnly,
+    resetFilters,
     triggerPulse,
     teleportTo,
   };
