@@ -18,6 +18,7 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [trackW, setTrackW] = useState(0);
   const [drag, setDrag] = useState<'left' | 'right' | 'window' | null>(null);
+  const [collapsed, setCollapsed] = useState(false);
   const dragStart = useRef<{ mouseX: number; window: [number, number] } | null>(null);
 
   useEffect(() => {
@@ -130,9 +131,40 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
   const x0 = xScale.forward(winYears[0]);
   const x1 = xScale.forward(winYears[1]);
 
+  if (collapsed) {
+    return (
+      <footer
+        className="z-10 flex h-7 shrink-0 select-none items-center justify-between border-t border-parchment-300 bg-parchment-50/90 shadow-page transition-[height] duration-200 ease-out hover:h-9"
+        style={{ paddingLeft: PAD_LEFT - 8, paddingRight: PAD_RIGHT }}
+      >
+        <div className="flex items-center gap-3 font-serif text-xs italic text-ink-500">
+          <span className="text-[10px] uppercase not-italic tracking-[0.2em] text-ink-400">
+            timeline
+          </span>
+          <span>
+            {formatYear(winYears[0])}
+            <span className="mx-2">to</span>
+            {formatYear(winYears[1])}
+          </span>
+        </div>
+        <button
+          type="button"
+          onClick={() => setCollapsed(false)}
+          className="rounded p-1 text-ink-500 hover:bg-parchment-200/70 hover:text-ink-700"
+          aria-label="Expand timeline"
+          title="Expand timeline"
+        >
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 9 L7 5 L11 9" stroke="currentColor" strokeWidth="1.5" />
+          </svg>
+        </button>
+      </footer>
+    );
+  }
+
   return (
     <footer
-      className="z-10 flex h-[110px] shrink-0 select-none flex-col justify-end border-t border-parchment-300 bg-parchment-50/90 shadow-page"
+      className="group/scrubber z-10 flex h-[110px] shrink-0 select-none flex-col justify-end border-t border-parchment-300 bg-parchment-50/90 shadow-page transition-[height] duration-200 ease-out hover:h-[124px]"
       style={{ paddingLeft: PAD_LEFT - 8, paddingRight: PAD_RIGHT }}
     >
       <div className="mb-1 flex items-center justify-between gap-3">
@@ -182,10 +214,23 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
             Full
           </button>
         </div>
-        <div className="font-serif text-xs italic text-ink-500">
-          {formatYear(winYears[0])}
-          <span className="mx-2">to</span>
-          {formatYear(winYears[1])}
+        <div className="flex items-center gap-2 font-serif text-xs italic text-ink-500">
+          <span>
+            {formatYear(winYears[0])}
+            <span className="mx-2">to</span>
+            {formatYear(winYears[1])}
+          </span>
+          <button
+            type="button"
+            onClick={() => setCollapsed(true)}
+            className="rounded p-1 not-italic text-ink-500 hover:bg-parchment-200/70 hover:text-ink-700"
+            aria-label="Collapse timeline"
+            title="Collapse timeline"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 5 L7 9 L11 5" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </button>
         </div>
       </div>
 
