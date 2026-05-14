@@ -9,6 +9,7 @@ import { PeopleView } from './views/PeopleView';
 import { ConceptView } from './views/ConceptView';
 import { DetailPanel } from './components/DetailPanel';
 import { PersonProfilePanel } from './components/PersonProfilePanel';
+import { StorylineRunner } from './components/StorylineRunner';
 import { ControlsPanel } from './components/ControlsPanel';
 import { TimeScrubber } from './components/TimeScrubber';
 import { Header } from './components/Header';
@@ -91,6 +92,7 @@ export default function App() {
             derived={derived}
             ui={ui}
           />
+          <StorylineRunner nodes={nodes} ui={ui} />
           <SelectionBreadcrumb nodes={nodes} edges={edges} ui={ui} />
         </div>
         {ui.selectedPerson ? (

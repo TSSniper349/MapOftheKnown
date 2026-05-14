@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { UIActions, UIState } from '../hooks/useUIState';
 import { DOMAINS } from '../data/domains';
+import { StorylinePicker } from './StorylineRunner';
 
 interface ControlsPanelProps {
   ui: UIState & UIActions;
@@ -132,6 +133,13 @@ export function ControlsPanel({ ui }: ControlsPanelProps) {
             <p className="mt-1 font-serif text-[11px] italic text-ink-400">
               edges fade to ~10%; brighten on hover/selection
             </p>
+          </Section>
+
+          <Section title="Storylines">
+            <p className="mb-1.5 font-serif text-[11px] italic text-ink-500">
+              curated tours through the influence graph
+            </p>
+            <StorylinePicker ui={ui} />
           </Section>
 
           <Section title="Lenses">

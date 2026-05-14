@@ -113,6 +113,27 @@ export function GeographicView({ nodes, ui }: GeographicViewProps) {
     return all;
   }, [visibleNodes, projection]);
 
+  /**
+   * Knowledge centroid: importance-weighted geographic mean of currently-visible
+   * events, projected to screen. As the time scrubber moves, this marker drifts
+   * across continents — making the migration of knowledge legible at a glance
+   * (Greece → Persia → China → Europe → North America).
+   */
+  const centroid = useMemo(() => {
+    if (projected.length === 0) return null;
+    let sx = 0;
+    let sy = 0;
+    let sw = 0;
+    for (const m of projected) {
+      const w = m.event.importance;
+      sx += m.px * w;
+      sy += m.py * w;
+      sw += w;
+    }
+    if (sw === 0) return null;
+    return { x: sx / sw, y: sy / sw, weight: sw, count: projected.length };
+  }, [projected]);
+
   /* ----- Cluster aggregation when zoomed out ----- */
   const clusters = useMemo(() => {
     if (k > 2.5) return null; // show individual markers
@@ -334,6 +355,79 @@ export function GeographicView({ nodes, ui }: GeographicViewProps) {
                   </g>
                 );
               })}
+
+          {centroid && (
+            <g
+              transform={`translate(${centroid.x}, ${centroid.y})`}
+              style={{ pointerEvents: 'none' }}
+            >
+              <circle r={22 / k} fill="rgba(122,46,58,0.07)" stroke="none">
+                <animate
+                  attributeName="r"
+                  values={`${18 / k};${30 / k};${18 / k}`}
+                  dur="3.6s"
+                  repeatCount="indefinite"
+                />
+                <animate
+                  attributeName="opacity"
+                  values="0.7;0.2;0.7"
+                  dur="3.6s"
+                  repeatCount="indefinite"
+                />
+              </circle>
+              <circle
+                r={9 / k}
+                fill="none"
+                stroke="rgba(122,46,58,0.85)"
+                strokeWidth={1.2 / k}
+                strokeDasharray={`${3 / k} ${2 / k}`}
+              />
+              <circle r={2.4 / k} fill="rgba(122,46,58,0.95)" />
+              {/* crosshair ticks */}
+              <line
+                x1={-12 / k}
+                x2={-6 / k}
+                y1={0}
+                y2={0}
+                stroke="rgba(122,46,58,0.7)"
+                strokeWidth={1 / k}
+              />
+              <line
+                x1={6 / k}
+                x2={12 / k}
+                y1={0}
+                y2={0}
+                stroke="rgba(122,46,58,0.7)"
+                strokeWidth={1 / k}
+              />
+              <line
+                y1={-12 / k}
+                y2={-6 / k}
+                x1={0}
+                x2={0}
+                stroke="rgba(122,46,58,0.7)"
+                strokeWidth={1 / k}
+              />
+              <line
+                y1={6 / k}
+                y2={12 / k}
+                x1={0}
+                x2={0}
+                stroke="rgba(122,46,58,0.7)"
+                strokeWidth={1 / k}
+              />
+              <text
+                x={14 / k}
+                y={-10 / k}
+                fontSize={Math.max(8, 10 / k)}
+                fill="rgba(122,46,58,0.9)"
+                fontFamily="EB Garamond, serif"
+                fontStyle="italic"
+              >
+                centroid
+              </text>
+            </g>
+          )}
         </g>
       </svg>
 
@@ -351,6 +445,15 @@ export function GeographicView({ nodes, ui }: GeographicViewProps) {
         <div className="font-serif text-[11px] text-ink-400">
           Equal Earth · {projected.length} markers · scroll to zoom
         </div>
+        {centroid && (
+          <div className="mt-1 flex items-center gap-1.5 border-t border-parchment-300/60 pt-1 font-serif text-[10.5px] italic text-domain-medicine/90">
+            <svg width="10" height="10" viewBox="-5 -5 10 10">
+              <circle r="3.5" fill="none" stroke="currentColor" strokeWidth="0.8" strokeDasharray="1.5 1" />
+              <circle r="1" fill="currentColor" />
+            </svg>
+            knowledge centroid · scrub time to watch it migrate
+          </div>
+        )}
       </div>
     </div>
   );
