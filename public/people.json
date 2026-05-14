@@ -496,6 +496,454 @@
       "life": "c. 965–c. 1040",
       "tagline": "Arab polymath; founder of modern optics",
       "bio": "His Book of Optics overturned ancient extramission theories of vision, showed that light enters the eye, and ran controlled experiments — one of the earliest systematic uses of the experimental method anywhere."
+    },
+    {
+      "name": "Johannes Kepler",
+      "wikiTitle": "Johannes_Kepler",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/JKepler.jpg?width=480",
+      "life": "1571–1630",
+      "tagline": "German astronomer; planetary motion",
+      "bio": "Salvaged the Copernican system by replacing perfect circles with ellipses. His three laws of planetary motion gave Newton the empirical scaffold for universal gravitation."
+    },
+    {
+      "name": "William Harvey",
+      "wikiTitle": "William_Harvey",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/William_Harvey.jpg?width=480",
+      "life": "1578–1657",
+      "tagline": "English physician; circulation of blood",
+      "bio": "Showed by measurement and dissection that blood circulates — pumped by the heart, returning through the veins. His De Motu Cordis (1628) broke a thousand-year-old Galenic dogma."
+    },
+    {
+      "name": "James Watt",
+      "wikiTitle": "James_Watt",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/James_Watt_by_Henry_Howard.jpg?width=480",
+      "life": "1736–1819",
+      "tagline": "Scottish engineer; the modern steam engine",
+      "bio": "Added the separate condenser to Newcomen's atmospheric engine, doubling its efficiency and detaching the steam engine from the mineshaft. The thermodynamic core of the Industrial Revolution."
+    },
+    {
+      "name": "Edward Jenner",
+      "wikiTitle": "Edward_Jenner",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Edward_Jenner.jpg?width=480",
+      "life": "1749–1823",
+      "tagline": "English physician; vaccination",
+      "bio": "Observed that milkmaids who had caught cowpox were spared smallpox. His 1796 inoculation of a boy with cowpox launched vaccination — the only human disease ever eradicated by deliberate medical action."
+    },
+    {
+      "name": "George Boole",
+      "wikiTitle": "George_Boole",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/George_Boole_color.jpg?width=480",
+      "life": "1815–1864",
+      "tagline": "English mathematician; symbolic logic",
+      "bio": "His Laws of Thought (1854) recast logic as algebra: AND, OR, NOT as binary operations. A century later, Shannon noticed those operations were exactly what electrical switches did, and the digital age inherited Boole's notation."
+    },
+    {
+      "name": "Gregor Mendel",
+      "wikiTitle": "Gregor_Mendel",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Gregor_Mendel.png?width=480",
+      "life": "1822–1884",
+      "tagline": "Austrian abbot; laws of inheritance",
+      "bio": "Crossed 28,000 pea plants in his monastery garden and discovered the discrete particulate units of heredity — what we now call genes. Ignored for 35 years; rediscovered in 1900 and christened the founder of genetics."
+    },
+    {
+      "name": "Max Planck",
+      "wikiTitle": "Max_Planck",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Max_Planck_1933.jpg?width=480",
+      "life": "1858–1947",
+      "tagline": "German physicist; quantum hypothesis",
+      "bio": "In 1900, to explain the black-body spectrum, he proposed that radiation is emitted in discrete quanta of energy E = hν — an act he called 'a desperate measure'. That measure became quantum mechanics."
+    },
+    {
+      "name": "Edwin Hubble",
+      "wikiTitle": "Edwin_Hubble",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Studio_portrait_photograph_of_Edwin_Powell_Hubble_(cropped).JPG?width=480",
+      "life": "1889–1953",
+      "tagline": "American astronomer; the expanding universe",
+      "bio": "Resolved Cepheid variables in Andromeda and proved that 'spiral nebulae' are other galaxies, not gas clouds in ours. His 1929 redshift-distance relation showed the universe is expanding — Lemaître's Big Bang gained an observational anchor."
+    },
+    {
+      "name": "Alexander Fleming",
+      "wikiTitle": "Alexander_Fleming",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Alexander_Fleming_1945.jpg?width=480",
+      "life": "1881–1955",
+      "tagline": "Scottish microbiologist; discovered penicillin",
+      "bio": "Returned from holiday in 1928 to find a stray mold clearing bacteria from a forgotten petri dish. Florey and Chain industrialized the discovery during WWII; together they remade the prognosis of every bacterial infection."
+    },
+    {
+      "name": "Tim Berners-Lee",
+      "wikiTitle": "Tim_Berners-Lee",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Sir_Tim_Berners-Lee_(cropped).jpg?width=480",
+      "life": "1955–",
+      "tagline": "British computer scientist; inventor of the World Wide Web",
+      "bio": "At CERN in 1989 he wrote the first web server, browser, and HTTP/HTML specifications, then convinced his employer to give them away royalty-free. The web compounded what the internet's plumbing had quietly built."
+    },
+    {
+      "name": "Panini",
+      "wikiTitle": "Pāṇini",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Grammarian_Panini.png?width=480",
+      "life": "fl. c. 4th century BCE",
+      "tagline": "Sanskrit grammarian; father of linguistics",
+      "bio": "His Ashtadhyayi gave Sanskrit a complete generative grammar in around four thousand sutras — a formal system that 20th-century computer scientists would recognize as something between Backus-Naur form and a finite automaton."
+    },
+    {
+      "name": "Ashish Vaswani",
+      "wikiTitle": "Ashish_Vaswani",
+      "portrait": "",
+      "life": "1986–",
+      "tagline": "Indian-American computer scientist; the Transformer",
+      "bio": "First author of 'Attention Is All You Need' (2017), the eight-author Google Brain paper that introduced the Transformer architecture. Co-founded Adept AI and then Essential AI."
+    },
+    {
+      "name": "Rudolf Virchow",
+      "wikiTitle": "Rudolf_Virchow",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Rudolf_Virchow.jpg?width=480",
+      "life": "1821–1902",
+      "tagline": "German pathologist; cellular pathology",
+      "bio": "Founded cellular pathology with the principle 'omnis cellula e cellula' — every cell from a cell. Connected disease to lesions at the cellular level and shaped modern medical investigation as a microscopic discipline."
+    },
+    {
+      "name": "Matthias Schleiden",
+      "wikiTitle": "Matthias_Jakob_Schleiden",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Matthias_Jacob_Schleiden.jpg?width=480",
+      "life": "1804–1881",
+      "tagline": "German botanist; cell theory",
+      "bio": "Argued in 1838 that all plants are composed of cells — the plant half of the cell theory that Schwann would complete a year later for animals."
+    },
+    {
+      "name": "Theodor Schwann",
+      "wikiTitle": "Theodor_Schwann",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/TheodorSchwann.jpg?width=480",
+      "life": "1810–1882",
+      "tagline": "German physiologist; cell theory in animals",
+      "bio": "Extended Schleiden's cell theory to animal tissues in 1839, framing the cell as the universal structural unit of life. Discovered the myelin-producing cells of the peripheral nervous system that still carry his name."
+    },
+    {
+      "name": "Fritz Haber",
+      "wikiTitle": "Fritz_Haber",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Fritz_Haber.png?width=480",
+      "life": "1868–1934",
+      "tagline": "German chemist; Haber process",
+      "bio": "Synthesized ammonia from atmospheric nitrogen — the fertilizer breakthrough that now feeds roughly half of humanity. Also the father of chemical warfare; the contradictions of his life sit on top of half a century of agriculture."
+    },
+    {
+      "name": "Carl Bosch",
+      "wikiTitle": "Carl_Bosch",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Carl_Bosch.jpg?width=480",
+      "life": "1874–1940",
+      "tagline": "German industrial chemist; Haber-Bosch process",
+      "bio": "Scaled Haber's bench reaction into a continuous high-pressure industrial process. Without the Haber-Bosch process, global food production would not support the current population."
+    },
+    {
+      "name": "Howard Florey",
+      "wikiTitle": "Howard_Florey",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Howard_Walter_Florey_1945.jpg?width=480",
+      "life": "1898–1968",
+      "tagline": "Australian pathologist; industrialized penicillin",
+      "bio": "Led the Oxford team that purified Fleming's mold extract, demonstrated its clinical power, and persuaded American industry to mass-produce it in time to save Allied soldiers. Shared the 1945 Nobel with Fleming and Chain."
+    },
+    {
+      "name": "Ernst Chain",
+      "wikiTitle": "Ernst_Chain",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ernst_Boris_Chain_1945.jpg?width=480",
+      "life": "1906–1979",
+      "tagline": "German-British biochemist; penicillin's structure",
+      "bio": "Worked out penicillin's chemistry and purification protocol alongside Florey. Refugee from Nazi Germany; co-laureate of the 1945 Nobel."
+    },
+    {
+      "name": "Kurt Goedel",
+      "wikiTitle": "Kurt_Gödel",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/1925_kurt_gödel.png?width=480",
+      "life": "1906–1978",
+      "tagline": "Austrian logician; incompleteness theorems",
+      "bio": "Showed in 1931 that any sufficiently powerful formal system contains true statements it cannot prove — and cannot prove its own consistency. The result ended Hilbert's program and reset the philosophy of mathematics."
+    },
+    {
+      "name": "Noam Chomsky",
+      "wikiTitle": "Noam_Chomsky",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Noam_Chomsky_portrait_2015.jpg?width=480",
+      "life": "1928–",
+      "tagline": "American linguist; generative grammar",
+      "bio": "His Syntactic Structures (1957) recast language as a system generated by a finite set of rules from a small core of innate principles — toppling behaviorist linguistics and shaping cognitive science."
+    },
+    {
+      "name": "Jack Kilby",
+      "wikiTitle": "Jack_Kilby",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Jack_Kilby_(cropped).png?width=480",
+      "life": "1923–2005",
+      "tagline": "American engineer; the integrated circuit",
+      "bio": "At Texas Instruments in 1958, built the first working integrated circuit — multiple transistors fabricated on a single chip of germanium. Won the 2000 Nobel Prize in Physics for the idea that ate the world."
+    },
+    {
+      "name": "Robert Noyce",
+      "wikiTitle": "Robert_Noyce",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Robert_Noyce_Intel_SC1_1970_(cropped).png?width=480",
+      "life": "1927–1990",
+      "tagline": "American physicist; co-inventor of the IC; co-founder of Intel",
+      "bio": "Independently arrived at the integrated circuit using silicon and planar process — the version that scaled. Co-founded Fairchild Semiconductor, then Intel; the 'Mayor of Silicon Valley'."
+    },
+    {
+      "name": "Kary Mullis",
+      "wikiTitle": "Kary_Mullis",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Kary_Mullis.jpg?width=480",
+      "life": "1944–2019",
+      "tagline": "American biochemist; PCR",
+      "bio": "Conceived the polymerase chain reaction on a 1983 drive up Highway 128 — a way to copy a strand of DNA billions of times in a test tube. PCR became the workhorse of every molecular-biology lab on Earth."
+    },
+    {
+      "name": "Craig Venter",
+      "wikiTitle": "Craig_Venter",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Craigventer2.jpg?width=480",
+      "life": "1946–",
+      "tagline": "American geneticist; first human genome draft",
+      "bio": "Led Celera Genomics in a shotgun-sequencing sprint that finished the first draft of the human genome alongside the public project. Later synthesized the first self-replicating cell with a chemically written chromosome."
+    },
+    {
+      "name": "Francis Collins",
+      "wikiTitle": "Francis_Collins",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Francis_Collins_official_portrait.jpg?width=480",
+      "life": "1950–",
+      "tagline": "American geneticist; led the Human Genome Project",
+      "bio": "Discovered the genes for cystic fibrosis, Huntington's, and neurofibromatosis, then directed the public Human Genome Project to its 2003 completion. Long-time director of NIH."
+    },
+    {
+      "name": "Katalin Kariko",
+      "wikiTitle": "Katalin_Karikó",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Katalin_Karikó_at_the_United_States_Embassy_Sweden,_2023_Nobel_Reception_(cropped).jpg?width=480",
+      "life": "1955–",
+      "tagline": "Hungarian-American biochemist; modified-mRNA vaccines",
+      "bio": "Spent decades on the academic fringes refining synthetic mRNA so the immune system would tolerate it. With Weissman, found that pseudouridine substitution did it — the discovery underneath the COVID-19 mRNA vaccines and the 2023 Nobel."
+    },
+    {
+      "name": "Drew Weissman",
+      "wikiTitle": "Drew_Weissman",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Drew_Weissman,_2023_Nobel_Laureate_in_Medicine_(cropped).jpg?width=480",
+      "life": "1959–",
+      "tagline": "American immunologist; modified-mRNA vaccines",
+      "bio": "Co-discoverer with Karikó of nucleoside-modified mRNA — the breakthrough that let mRNA be used as a therapy. 2023 Nobel Prize in Physiology or Medicine."
+    },
+    {
+      "name": "John Jumper",
+      "wikiTitle": "John_Jumper",
+      "portrait": "",
+      "life": "1985–",
+      "tagline": "American chemist; AlphaFold lead",
+      "bio": "Led DeepMind's AlphaFold 2 team, the protein-structure prediction system that effectively solved a 50-year-old grand challenge. Shared the 2024 Nobel Prize in Chemistry with Hassabis and Baker."
+    },
+    {
+      "name": "Confucius",
+      "wikiTitle": "Confucius",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Konfuzius-1770.jpg?width=480",
+      "life": "551–479 BCE",
+      "tagline": "Chinese philosopher; founder of Confucianism",
+      "bio": "Teacher and minister whose disciples compiled the Analects, a manual of ethics, ritual, and government that became the moral grammar of East Asia for two millennia."
+    },
+    {
+      "name": "Pythagoras",
+      "wikiTitle": "Pythagoras",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Kapitolinischer_Pythagoras_adjusted.jpg?width=480",
+      "life": "c. 570–c. 495 BCE",
+      "tagline": "Greek philosopher; mathematics as cosmology",
+      "bio": "Founded a religious-mathematical school on the conviction that 'all is number'. The theorem named after him predates him — but the idea that the universe could be read in ratios was his."
+    },
+    {
+      "name": "Siddhartha Gautama",
+      "wikiTitle": "Gautama_Buddha",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Buddha_in_Sarnath_Museum_(Dhammajak_Mutra).jpg?width=480",
+      "life": "c. 563–c. 483 BCE",
+      "tagline": "Indian ascetic; founder of Buddhism",
+      "bio": "Prince turned wandering ascetic who, after enlightenment under the Bodhi tree, taught the Four Noble Truths and the Eightfold Path. The community that formed around him grew into one of the world's great religions."
+    },
+    {
+      "name": "Aryabhata",
+      "wikiTitle": "Aryabhata",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/2064_aryabhata-crp.jpg?width=480",
+      "life": "476–550",
+      "tagline": "Indian astronomer-mathematician",
+      "bio": "His Āryabhaṭīya gave the place-value decimal system, an approximation of π to four places, the modern sine table, and a heliocentric-flavored explanation of why the stars appear to rotate."
+    },
+    {
+      "name": "Eratosthenes",
+      "wikiTitle": "Eratosthenes",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Portrait_of_Eratosthenes.png?width=480",
+      "life": "c. 276–c. 194 BCE",
+      "tagline": "Greek polymath; chief librarian at Alexandria",
+      "bio": "Measured the Earth's circumference from the difference in noonday shadows between Aswan and Alexandria — within a few percent of the correct value. Also gave us the sieve for finding primes."
+    },
+    {
+      "name": "Claudius Ptolemy",
+      "wikiTitle": "Ptolemy",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/PtolemyArab.jpg?width=480",
+      "life": "c. 100–c. 170",
+      "tagline": "Greco-Roman astronomer; the geocentric universe",
+      "bio": "His Almagest gave the geocentric system its mathematical machinery of epicycles — the model the Latin West used for fourteen centuries until Copernicus moved the Sun. His Geographia mapped the known world."
+    },
+    {
+      "name": "Sushruta",
+      "wikiTitle": "Sushruta",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Sushruta_statue.jpg?width=480",
+      "life": "fl. c. 600 BCE",
+      "tagline": "Indian surgeon; the Sushruta Samhita",
+      "bio": "The Sushruta Samhita catalogued 1,100 diseases, 700 medicinal plants, and 121 surgical instruments — including techniques for cataract surgery and rhinoplasty that anticipate modern plastic surgery by two thousand years."
+    },
+    {
+      "name": "Claudius Galen",
+      "wikiTitle": "Galen",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Galenoghippokrates.jpg?width=480",
+      "life": "c. 129–c. 216",
+      "tagline": "Greek physician; the canonical anatomy of antiquity",
+      "bio": "Dissected animals, treated gladiators, and produced a vast medical corpus that — through the Islamic world and into Renaissance Europe — defined Western medicine until Vesalius started correcting his anatomical errors in 1543."
+    },
+    {
+      "name": "Andreas Vesalius",
+      "wikiTitle": "Andreas_Vesalius",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Vesalius_Fabrica_portrait.jpg?width=480",
+      "life": "1514–1564",
+      "tagline": "Flemish anatomist; modern human anatomy",
+      "bio": "His De Humani Corporis Fabrica (1543), based on his own dissections rather than Galen's authority, founded modern human anatomy — and announced that observing the body was now allowed to overrule the ancients."
+    },
+    {
+      "name": "Antonie van Leeuwenhoek",
+      "wikiTitle": "Antonie_van_Leeuwenhoek",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Jan_Verkolje_-_Antonie_van_Leeuwenhoek.jpg?width=480",
+      "life": "1632–1723",
+      "tagline": "Dutch draper; the father of microbiology",
+      "bio": "A Delft cloth merchant who ground better lenses than any university and used them to see 'animalcules' — bacteria, protozoa, spermatozoa — for the first time in human history."
+    },
+    {
+      "name": "Carl Linnaeus",
+      "wikiTitle": "Carl_Linnaeus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Carolus_Linnaeus_by_Hendrik_Hollander_1853.jpg?width=480",
+      "life": "1707–1778",
+      "tagline": "Swedish naturalist; binomial nomenclature",
+      "bio": "Imposed a two-word genus-species naming system on living things in Systema Naturae (1735) — the taxonomic spine still used by biologists. Also slotted humans, controversially, into the same scheme as the apes."
+    },
+    {
+      "name": "Leonhard Euler",
+      "wikiTitle": "Leonhard_Euler",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Leonhard_Euler.jpg?width=480",
+      "life": "1707–1783",
+      "tagline": "Swiss mathematician; the most productive in history",
+      "bio": "Founded analytic number theory and graph theory, named e and i, gave us the identity e^(iπ) + 1 = 0. Continued publishing after losing his sight; his collected works fill 80 quarto volumes."
+    },
+    {
+      "name": "Immanuel Kant",
+      "wikiTitle": "Immanuel_Kant",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Immanuel_Kant_portrait_c1790.jpg?width=480",
+      "life": "1724–1804",
+      "tagline": "German philosopher; the Critiques",
+      "bio": "Argued in the Critique of Pure Reason that experience is shaped by mind-imposed categories like space, time, and causation. His categorical imperative tried to ground ethics on reason alone. The hinge of modern philosophy."
+    },
+    {
+      "name": "Charles Babbage",
+      "wikiTitle": "Charles_Babbage",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Charles_Babbage_1860.jpg?width=480",
+      "life": "1791–1871",
+      "tagline": "English polymath; the analytical engine",
+      "bio": "Designed the difference engine and the more ambitious analytical engine — a programmable mechanical computer with separate memory and processor a hundred years before electronics caught up. Ada Lovelace wrote its first programs."
+    },
+    {
+      "name": "Alessandro Volta",
+      "wikiTitle": "Alessandro_Volta",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Alessandro-volta2.jpg?width=480",
+      "life": "1745–1827",
+      "tagline": "Italian physicist; the electrochemical pile",
+      "bio": "Stacked discs of zinc and copper into the first battery (1800), giving science a steady source of electric current and unleashing electrochemistry. The unit of electric potential carries his name."
+    },
+    {
+      "name": "John Dalton",
+      "wikiTitle": "John_Dalton",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_Dalton_by_Thomas_Phillips,_1835.jpg?width=480",
+      "life": "1766–1844",
+      "tagline": "English chemist; modern atomic theory",
+      "bio": "Revived the ancient atom as a quantitative concept: each element has atoms of a characteristic weight; compounds combine in fixed ratios. Also the first scientist to describe his own color blindness."
+    },
+    {
+      "name": "Charles Lyell",
+      "wikiTitle": "Charles_Lyell",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Charles_Lyell00.jpg?width=480",
+      "life": "1797–1875",
+      "tagline": "British geologist; uniformitarianism",
+      "bio": "His Principles of Geology (1830) argued that the same slow processes acting today, given enough time, produced the rocks beneath our feet. The book that gave Darwin the deep time evolution required."
+    },
+    {
+      "name": "Pierre de Fermat",
+      "wikiTitle": "Pierre_de_Fermat",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Pierre_de_Fermat.jpg?width=480",
+      "life": "1601–1665",
+      "tagline": "French magistrate; number theory & probability",
+      "bio": "A lawyer who did mathematics on the side and changed it. Co-founded probability theory with Pascal, anticipated the calculus, and left the famous marginal note that became Fermat's Last Theorem — unproved for 358 years."
+    },
+    {
+      "name": "John Napier",
+      "wikiTitle": "John_Napier",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_Napier.jpg?width=480",
+      "life": "1550–1617",
+      "tagline": "Scottish mathematician; logarithms",
+      "bio": "Invented logarithms (1614) and 'Napier's bones' to make multiplication into addition. Astronomers and navigators gained the tool that made their tables possible for the next three centuries."
+    },
+    {
+      "name": "Joseph-Louis Lagrange",
+      "wikiTitle": "Joseph-Louis_Lagrange",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Lagrange_portrait.jpg?width=480",
+      "life": "1736–1813",
+      "tagline": "Italian-French mathematician; analytical mechanics",
+      "bio": "His Mécanique Analytique (1788) recast Newton's mechanics in the language of energies and constraints — the Lagrangian formulation that underlies every modern physics curriculum from quantum field theory down."
+    },
+    {
+      "name": "Pierre-Simon Laplace",
+      "wikiTitle": "Pierre-Simon_Laplace",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Pierre-Simon_Laplace.jpg?width=480",
+      "life": "1749–1827",
+      "tagline": "French mathematician; the Newton of France",
+      "bio": "Proved the stability of the solar system over long timescales, founded mathematical probability and Bayesian inference, and proposed that a sufficiently powerful intelligence — Laplace's demon — could predict everything from the present state of the world."
+    },
+    {
+      "name": "Joseph Fourier",
+      "wikiTitle": "Joseph_Fourier",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Fourier2.jpg?width=480",
+      "life": "1768–1830",
+      "tagline": "French mathematician; heat & harmonics",
+      "bio": "Showed that any periodic function could be decomposed into sines and cosines — the Fourier series that now underpins signal processing, quantum mechanics, and JPEG compression. Also the first to propose the greenhouse effect."
+    },
+    {
+      "name": "Sadi Carnot",
+      "wikiTitle": "Nicolas_Léonard_Sadi_Carnot",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Sadi_Carnot.jpeg?width=480",
+      "life": "1796–1832",
+      "tagline": "French engineer; founder of thermodynamics",
+      "bio": "His 1824 Réflexions analyzed the steam engine and arrived at an absolute upper bound on efficiency that depends only on the temperatures between which the engine works — the seed of the second law. Dead of cholera at 36."
+    },
+    {
+      "name": "Thomas Young",
+      "wikiTitle": "Thomas_Young_(scientist)",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Thomas_Young_(scientist).jpg?width=480",
+      "life": "1773–1829",
+      "tagline": "English polymath; wave theory of light",
+      "bio": "His double-slit experiment (1803) demonstrated that light interferes with itself, vindicating Huygens' wave theory over Newton's corpuscular one. Also helped decipher the Rosetta Stone."
+    },
+    {
+      "name": "James Hutton",
+      "wikiTitle": "James_Hutton",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/SIR_HENRY_RAEBURN_-_James_Hutton,_Geologist_(Scottish_National_Portrait_Gallery).jpg?width=480",
+      "life": "1726–1797",
+      "tagline": "Scottish geologist; deep time",
+      "bio": "Standing at Siccar Point in 1788, recognized that the rocks beneath his feet recorded cycles of erosion and uplift requiring 'no vestige of a beginning, no prospect of an end'. Gave geology its deep time."
+    },
+    {
+      "name": "Michael Faraday",
+      "wikiTitle": "Michael_Faraday",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/M_Faraday_Th_Phillips_oil_1842.jpg?width=480",
+      "life": "1791–1867",
+      "tagline": "English experimentalist; electromagnetism",
+      "bio": "Self-taught bookbinder's apprentice who became the 19th century's greatest experimental physicist. Discovered electromagnetic induction, invented the first electric motor and generator, and conceived the field — the language Maxwell would mathematize."
+    },
+    {
+      "name": "Ibn Khaldun",
+      "wikiTitle": "Ibn_Khaldun",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ibn_Khaldoun-Kassus.jpg?width=480",
+      "life": "1332–1406",
+      "tagline": "Arab historian; founder of sociology",
+      "bio": "His Muqaddimah (1377) treated history as a science of social structure and group cohesion — 'asabiyyah' — that anticipates modern sociology by half a millennium."
     }
   ]
 }
