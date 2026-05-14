@@ -944,6 +944,1982 @@
       "life": "1332–1406",
       "tagline": "Arab historian; founder of sociology",
       "bio": "His Muqaddimah (1377) treated history as a science of social structure and group cohesion — 'asabiyyah' — that anticipates modern sociology by half a millennium."
+    },
+    {
+      "name": "Charles David Keeling",
+      "wikiTitle": "Charles_David_Keeling",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Charles_David_Keeling.jpg?width=480",
+      "life": "1928–2005",
+      "tagline": "American oceanographer; the Keeling Curve",
+      "bio": "Began measuring atmospheric CO₂ from Mauna Loa in 1958, producing the unbroken record — the Keeling Curve — that turned climate change from speculation into empirical fact."
+    },
+    {
+      "name": "Akira Yoshino",
+      "wikiTitle": "Akira_Yoshino",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Akira_Yoshino_2019.jpg?width=480",
+      "life": "1948–",
+      "tagline": "Japanese chemist; lithium-ion battery",
+      "bio": "Built the first commercially viable lithium-ion battery (1985) by pairing Goodenough's cathode with a carbon anode. Shared the 2019 Nobel in Chemistry."
+    },
+    {
+      "name": "Al-Ma'mun",
+      "wikiTitle": "Al-Ma'mun",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Caliph_al-Ma%27mun_sends_an_envoy_to_Byzantium.png?width=480",
+      "life": "786–833",
+      "tagline": "Abbasid caliph; patron of the House of Wisdom",
+      "bio": "Sponsored the translation movement in Baghdad that brought Greek, Persian, and Indian science into Arabic — and from there into medieval Europe. The institutional engine behind the Islamic Golden Age."
+    },
+    {
+      "name": "Al-Mansur",
+      "wikiTitle": "Al-Mansur",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Al-Mansour_in_Baghdad.jpg?width=480",
+      "life": "714–775",
+      "tagline": "Abbasid caliph; founder of Baghdad",
+      "bio": "Built Baghdad as the round capital of the Abbasid caliphate (762) and seeded the libraries and translation workshops that would mature into the House of Wisdom under his successors."
+    },
+    {
+      "name": "Albert Michelson",
+      "wikiTitle": "Albert_A._Michelson",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Albert_Abraham_Michelson2.jpg?width=480",
+      "life": "1852–1931",
+      "tagline": "American physicist; null result that launched relativity",
+      "bio": "With Edward Morley, ran the 1887 interferometer experiment that found no luminiferous ether — the empirical wall that Einstein's relativity would later vault. First American to win a science Nobel."
+    },
+    {
+      "name": "Albert Sabin",
+      "wikiTitle": "Albert_Sabin",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Albert_Sabin.jpg?width=480",
+      "life": "1906–1993",
+      "tagline": "American virologist; oral polio vaccine",
+      "bio": "Developed the live attenuated oral polio vaccine that displaced Salk's killed-virus shot in mass immunization and brought wild poliovirus to the brink of eradication."
+    },
+    {
+      "name": "Alexander Graham Bell",
+      "wikiTitle": "Alexander_Graham_Bell",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Alexander_Graham_Bell.jpg?width=480",
+      "life": "1847–1922",
+      "tagline": "Scottish-American inventor; the telephone",
+      "bio": "Patented the telephone in 1876, then spent the rest of his life inventing — hydrofoils, metal detectors, the audiometer — and teaching the deaf, which had been his original profession."
+    },
+    {
+      "name": "Allan Cormack",
+      "wikiTitle": "Allan_McLeod_Cormack",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Allan_McLeod_Cormack.jpg?width=480",
+      "life": "1924–1998",
+      "tagline": "South African physicist; CT scanning theory",
+      "bio": "Worked out the mathematics for reconstructing internal images from X-ray projections, the theoretical basis of the CT scanner. Shared the 1979 Nobel with Hounsfield."
+    },
+    {
+      "name": "Amos Tversky",
+      "wikiTitle": "Amos_Tversky",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Amos_Tversky.jpg?width=480",
+      "life": "1937–1996",
+      "tagline": "Israeli cognitive psychologist",
+      "bio": "With Daniel Kahneman, mapped the systematic ways human judgment departs from rationality — heuristics and biases that founded behavioral economics. Died before he could share the 2002 Nobel."
+    },
+    {
+      "name": "Arno Penzias",
+      "wikiTitle": "Arno_Allan_Penzias",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Arno_Penzias.jpg?width=480",
+      "life": "1933–2024",
+      "tagline": "American physicist; cosmic microwave background",
+      "bio": "With Robert Wilson, accidentally detected the 2.7 K relic radiation from the Big Bang while tracking down noise in a Bell Labs antenna (1964). Shared the 1978 Nobel."
+    },
+    {
+      "name": "Barry Barish",
+      "wikiTitle": "Barry_Barish",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Barry_Barish.jpg?width=480",
+      "life": "1936–",
+      "tagline": "American physicist; LIGO leadership",
+      "bio": "Turned LIGO from a struggling project into the instrument that detected gravitational waves in 2015. Shared the 2017 Nobel with Weiss and Thorne."
+    },
+    {
+      "name": "Bernhard Riemann",
+      "wikiTitle": "Bernhard_Riemann",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Georg_Friedrich_Bernhard_Riemann.jpeg?width=480",
+      "life": "1826–1866",
+      "tagline": "German mathematician; Riemannian geometry & the zeta function",
+      "bio": "Generalized geometry to curved n-dimensional manifolds — the mathematics Einstein would borrow for general relativity — and posed the Riemann Hypothesis, still the most famous unsolved problem in mathematics."
+    },
+    {
+      "name": "Buzz Aldrin",
+      "wikiTitle": "Buzz_Aldrin",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Buzz_Aldrin.jpg?width=480",
+      "life": "1930–",
+      "tagline": "American astronaut; Apollo 11 lunar module pilot",
+      "bio": "Second human on the Moon, 20 July 1969. PhD in astronautics from MIT; later advocate for human Mars exploration."
+    },
+    {
+      "name": "Charles Best",
+      "wikiTitle": "Charles_Best_(medical_scientist)",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Charles_Best.jpg?width=480",
+      "life": "1899–1978",
+      "tagline": "Canadian medical scientist; co-discoverer of insulin",
+      "bio": "Banting's medical-student summer assistant who helped isolate insulin from canine pancreases in 1921 — a discovery that turned type 1 diabetes from a death sentence into a manageable condition."
+    },
+    {
+      "name": "Charles Kao",
+      "wikiTitle": "Charles_K._Kao",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Charles_K._Kao_cropped_1.jpg?width=480",
+      "life": "1933–2018",
+      "tagline": "Chinese-British engineer; fiber-optic communications",
+      "bio": "Showed in 1966 that purified glass fibers could carry light over long distances with low enough loss for telecommunications — the foundation of every transoceanic cable carrying the modern internet. 2009 Nobel."
+    },
+    {
+      "name": "Daniel Kahneman",
+      "wikiTitle": "Daniel_Kahneman",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Daniel_KAHNEMAN.jpg?width=480",
+      "life": "1934–2024",
+      "tagline": "Israeli-American psychologist; prospect theory",
+      "bio": "With Tversky, founded the program of empirical decision research and gave us the System-1/System-2 framework popularized in Thinking, Fast and Slow. 2002 Nobel in Economics."
+    },
+    {
+      "name": "Dennis Ritchie",
+      "wikiTitle": "Dennis_Ritchie",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Dennis_Ritchie_2011.jpg?width=480",
+      "life": "1941–2011",
+      "tagline": "American computer scientist; C language & Unix",
+      "bio": "Co-created Unix at Bell Labs and designed the C programming language. Almost every operating system, language, and runtime in use today is downstream of his work."
+    },
+    {
+      "name": "Edgar Codd",
+      "wikiTitle": "Edgar_F._Codd",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Edgar_F_Codd.jpg?width=480",
+      "life": "1923–2003",
+      "tagline": "British computer scientist; the relational model",
+      "bio": "His 1970 paper recast databases as sets of relations queried by a closed algebra — the model that SQL implements and that almost every business application still depends on."
+    },
+    {
+      "name": "Edward Morley",
+      "wikiTitle": "Edward_W._Morley",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Edward_Morley.jpg?width=480",
+      "life": "1838–1923",
+      "tagline": "American chemist; Michelson–Morley experiment",
+      "bio": "Cleveland chemist whose precision measurements with Michelson failed to find any motion of the Earth through the ether — the negative result that helped launch special relativity."
+    },
+    {
+      "name": "Emile Durkheim",
+      "wikiTitle": "Émile_Durkheim",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Emile_Durkheim.jpg?width=480",
+      "life": "1858–1917",
+      "tagline": "French sociologist; founder of sociology as a discipline",
+      "bio": "His Rules of Sociological Method and Suicide (1897) treated social facts as causes in their own right — and used statistics to prove it. The first holder of a chair in sociology in France."
+    },
+    {
+      "name": "Enrico Fermi",
+      "wikiTitle": "Enrico_Fermi",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Enrico_Fermi_1943-49.jpg?width=480",
+      "life": "1901–1954",
+      "tagline": "Italian-American physicist; the first nuclear reactor",
+      "bio": "Built Chicago Pile-1 (1942), the first sustained nuclear chain reaction, then went on to the Manhattan Project. Equally legendary as a back-of-envelope estimator and as the architect of Fermi statistics for half-integer-spin particles."
+    },
+    {
+      "name": "Ernest Rutherford",
+      "wikiTitle": "Ernest_Rutherford",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ernest_Rutherford_1908.jpg?width=480",
+      "life": "1871–1937",
+      "tagline": "New Zealand-British physicist; the atomic nucleus",
+      "bio": "His 1911 gold-foil experiment scattered alpha particles off something hard and small in the center of the atom — the nucleus. Coined 'alpha', 'beta', and 'gamma' radiation; turned Manchester and then Cambridge into the world's leading nuclear labs."
+    },
+    {
+      "name": "Ernst Mayr",
+      "wikiTitle": "Ernst_Mayr",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ernst_Mayr.jpg?width=480",
+      "life": "1904–2005",
+      "tagline": "German-American evolutionary biologist",
+      "bio": "Architect of the Modern Synthesis that fused Darwinian selection with Mendelian genetics, and the standard-bearer for the biological species concept."
+    },
+    {
+      "name": "Evariste Galois",
+      "wikiTitle": "Évariste_Galois",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Evariste_galois.jpg?width=480",
+      "life": "1811–1832",
+      "tagline": "French mathematician; group theory",
+      "bio": "Founded group theory and showed why polynomial equations of degree five and above are not solvable by radicals — work he scribbled the night before he died in a duel at twenty."
+    },
+    {
+      "name": "Federico Faggin",
+      "wikiTitle": "Federico_Faggin",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Federico_Faggin_2011_(cropped).jpg?width=480",
+      "life": "1941–",
+      "tagline": "Italian-American physicist; the microprocessor",
+      "bio": "Led the design of the Intel 4004 (1971), the first commercial single-chip microprocessor, and the 8080 that defined the era of personal computing."
+    },
+    {
+      "name": "Fei-Fei Li",
+      "wikiTitle": "Fei-Fei_Li",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Fei-Fei_Li_at_AI_for_Good_2017.jpg?width=480",
+      "life": "1976–",
+      "tagline": "Chinese-American computer scientist; ImageNet",
+      "bio": "Built ImageNet — millions of labeled images — and ran the annual challenge that, in 2012, vaulted deep learning to the front of computer vision. Co-director of Stanford HAI."
+    },
+    {
+      "name": "Ferdinand de Saussure",
+      "wikiTitle": "Ferdinand_de_Saussure",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ferdinand_de_Saussure_by_Jullien.png?width=480",
+      "life": "1857–1913",
+      "tagline": "Swiss linguist; founder of structuralism",
+      "bio": "His posthumous Course in General Linguistics (1916) cast language as a system of arbitrary signs that mean only by their differences from one another — the structuralism that would reshape anthropology and literary theory."
+    },
+    {
+      "name": "Francois Englert",
+      "wikiTitle": "François_Englert",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/François_Englert_(cropped).jpg?width=480",
+      "life": "1932–",
+      "tagline": "Belgian theoretical physicist; the Higgs mechanism",
+      "bio": "Co-proposed in 1964 the spontaneous symmetry-breaking mechanism that gives gauge bosons mass. Shared the 2013 Nobel with Higgs after the LHC found the boson."
+    },
+    {
+      "name": "Francois Jacob",
+      "wikiTitle": "François_Jacob",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Francois_Jacob_nobel.jpg?width=480",
+      "life": "1920–2013",
+      "tagline": "French biologist; gene regulation",
+      "bio": "With Monod, deciphered the lac operon — bacteria's switch for turning genes on and off — and gave biology the concept of the regulatory circuit. 1965 Nobel."
+    },
+    {
+      "name": "Frederick Banting",
+      "wikiTitle": "Frederick_Banting",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Sir_Frederick_Banting_ca._1925.jpg?width=480",
+      "life": "1891–1941",
+      "tagline": "Canadian physician; co-discoverer of insulin",
+      "bio": "Led the Toronto team that isolated insulin in 1921. Shared the 1923 Nobel with Macleod, and then half his prize money with Best."
+    },
+    {
+      "name": "Georg Cantor",
+      "wikiTitle": "Georg_Cantor",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Georg_Cantor_(Porträt).jpg?width=480",
+      "life": "1845–1918",
+      "tagline": "German mathematician; set theory",
+      "bio": "Proved that infinities come in different sizes — the diagonal argument that bothered his contemporaries and founded set theory, the foundation that all of modern mathematics now rests on."
+    },
+    {
+      "name": "George Gaylord Simpson",
+      "wikiTitle": "George_Gaylord_Simpson",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/George_Gaylord_Simpson.jpg?width=480",
+      "life": "1902–1984",
+      "tagline": "American paleontologist; tempo and mode in evolution",
+      "bio": "His Tempo and Mode in Evolution (1944) integrated paleontology into the Modern Synthesis and made evolutionary rates a quantitative science."
+    },
+    {
+      "name": "Georges Lemaitre",
+      "wikiTitle": "Georges_Lemaître",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Lemaître.jpg?width=480",
+      "life": "1894–1966",
+      "tagline": "Belgian priest and physicist; the Big Bang",
+      "bio": "Catholic priest who in 1927 derived an expanding-universe solution to Einstein's equations and proposed the 'primeval atom' from which everything emerged. The Big Bang's intellectual father."
+    },
+    {
+      "name": "Godfrey Hounsfield",
+      "wikiTitle": "Godfrey_Hounsfield",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Godfrey_Hounsfield.jpg?width=480",
+      "life": "1919–2004",
+      "tagline": "British engineer; the CT scanner",
+      "bio": "Working at EMI, built the first commercial computed tomography scanner (1971). Shared the 1979 Nobel with Cormack. The Hounsfield unit still labels CT densities."
+    },
+    {
+      "name": "Gottlob Frege",
+      "wikiTitle": "Gottlob_Frege",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Young_frege.jpg?width=480",
+      "life": "1848–1925",
+      "tagline": "German mathematician and logician",
+      "bio": "Invented modern predicate logic in his Begriffsschrift (1879) and tried to derive arithmetic from logic alone — until Bertrand Russell pointed out a paradox in his foundations."
+    },
+    {
+      "name": "Henri Becquerel",
+      "wikiTitle": "Henri_Becquerel",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Henri_Becquerel.jpg?width=480",
+      "life": "1852–1908",
+      "tagline": "French physicist; discovered radioactivity",
+      "bio": "Discovered in 1896 that uranium salts spontaneously emit penetrating rays. Shared the 1903 Nobel with the Curies."
+    },
+    {
+      "name": "Henry Briggs",
+      "wikiTitle": "Henry_Briggs_(mathematician)",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Henry_Briggs.jpg?width=480",
+      "life": "1561–1630",
+      "tagline": "English mathematician; common logarithms",
+      "bio": "Took Napier's natural logarithms and reworked them to base 10 — the form astronomers, navigators, and schoolchildren would use until the slide rule retired."
+    },
+    {
+      "name": "Hermann von Helmholtz",
+      "wikiTitle": "Hermann_von_Helmholtz",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Hermann_von_Helmholtz_by_Ludwig_Knaus.jpg?width=480",
+      "life": "1821–1894",
+      "tagline": "German polymath; conservation of energy",
+      "bio": "Formulated the first general statement of conservation of energy (1847), invented the ophthalmoscope, and made fundamental contributions to thermodynamics, acoustics, vision, and electromagnetism."
+    },
+    {
+      "name": "J. Presper Eckert",
+      "wikiTitle": "J._Presper_Eckert",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Presper_Eckert.jpg?width=480",
+      "life": "1919–1995",
+      "tagline": "American electrical engineer; ENIAC",
+      "bio": "Co-designer of ENIAC (1946), the first general-purpose electronic computer, and of UNIVAC I, the first commercial American computer."
+    },
+    {
+      "name": "Jacques Monod",
+      "wikiTitle": "Jacques_Monod",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Jacques_Monod_nobel.jpg?width=480",
+      "life": "1910–1976",
+      "tagline": "French biochemist; gene regulation",
+      "bio": "With Jacob, worked out the lac operon and the broader logic of enzyme induction. His Chance and Necessity (1970) argued that life is contingent and not metaphysically privileged."
+    },
+    {
+      "name": "James Allison",
+      "wikiTitle": "James_P._Allison",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/James_P._Allison.jpg?width=480",
+      "life": "1948–",
+      "tagline": "American immunologist; checkpoint inhibitor cancer therapy",
+      "bio": "Showed that blocking CTLA-4 releases the immune brake on T cells — a strategy that produced durable remissions in melanoma and seeded the modern checkpoint-inhibitor pharmacology. 2018 Nobel."
+    },
+    {
+      "name": "Janos Bolyai",
+      "wikiTitle": "János_Bolyai",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Janos_Bolyai.jpg?width=480",
+      "life": "1802–1860",
+      "tagline": "Hungarian mathematician; non-Euclidean geometry",
+      "bio": "Independently of Lobachevsky, developed hyperbolic geometry by dropping Euclid's parallel postulate (1832). The discovery that geometry need not match the world Euclid drew."
+    },
+    {
+      "name": "John Backus",
+      "wikiTitle": "John_Backus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_W._Backus.jpg?width=480",
+      "life": "1924–2007",
+      "tagline": "American computer scientist; FORTRAN & BNF",
+      "bio": "Led IBM's team that built FORTRAN (1957), the first widely used high-level language. Later co-defined Backus-Naur form, the metalanguage for grammar of programming languages."
+    },
+    {
+      "name": "John Goodenough",
+      "wikiTitle": "John_B._Goodenough",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_B._Goodenough_2019.jpg?width=480",
+      "life": "1922–2023",
+      "tagline": "American materials scientist; lithium-ion cathode",
+      "bio": "At 57, identified the lithium cobalt oxide cathode that made high-energy rechargeable batteries practical. Shared the 2019 Nobel at age 97."
+    },
+    {
+      "name": "John Macleod",
+      "wikiTitle": "John_Macleod_(physiologist)",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_Macleod_nobel.jpg?width=480",
+      "life": "1876–1935",
+      "tagline": "Scottish physiologist; insulin co-discoverer",
+      "bio": "Director of Toronto's physiology laboratory who hosted Banting and Best's summer work and supplied the resources for it. Shared the 1923 Nobel with Banting."
+    },
+    {
+      "name": "John Mauchly",
+      "wikiTitle": "John_Mauchly",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_Mauchly.jpg?width=480",
+      "life": "1907–1980",
+      "tagline": "American physicist; co-designer of ENIAC",
+      "bio": "Conceived the architecture that became ENIAC, the first general-purpose electronic computer. With Eckert, then designed UNIVAC."
+    },
+    {
+      "name": "John Snow",
+      "wikiTitle": "John_Snow",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_Snow.jpg?width=480",
+      "life": "1813–1858",
+      "tagline": "English physician; founder of epidemiology",
+      "bio": "Mapped the 1854 Broad Street cholera outbreak to a contaminated pump and stopped it by removing the handle. Founded modern epidemiology and the discipline of evidence-based public health."
+    },
+    {
+      "name": "Jonas Salk",
+      "wikiTitle": "Jonas_Salk",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Jonas_Salk_smoking.jpg?width=480",
+      "life": "1914–1995",
+      "tagline": "American virologist; the first polio vaccine",
+      "bio": "Developed the inactivated-virus polio vaccine licensed in 1955. Famously declined to patent it: 'Could you patent the sun?'"
+    },
+    {
+      "name": "Jonathan Ive",
+      "wikiTitle": "Jony_Ive",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Jonathan_Ive_2014.jpg?width=480",
+      "life": "1967–",
+      "tagline": "British industrial designer; Apple's hardware era",
+      "bio": "Apple's chief designer through the iMac, iPod, iPhone, iPad, and MacBook — a two-decade run that re-set the aesthetic vocabulary of consumer electronics."
+    },
+    {
+      "name": "Joseph Farman",
+      "wikiTitle": "Joseph_Farman",
+      "portrait": "",
+      "life": "1930–2013",
+      "tagline": "British geophysicist; discovered the ozone hole",
+      "bio": "Working with the British Antarctic Survey, he and colleagues reported the seasonal ozone hole over Antarctica in 1985 — the observation that drove the Montreal Protocol."
+    },
+    {
+      "name": "Karl Marx",
+      "wikiTitle": "Karl_Marx",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Karl_Marx_001.jpg?width=480",
+      "life": "1818–1883",
+      "tagline": "German philosopher; political economy of capital",
+      "bio": "His Das Kapital reframed history as class struggle and capital as a self-reproducing social relation. The political and academic afterlives are still arguing."
+    },
+    {
+      "name": "Ken Thompson",
+      "wikiTitle": "Ken_Thompson",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ken_n_dennis.jpg?width=480",
+      "life": "1943–",
+      "tagline": "American computer scientist; Unix & Go",
+      "bio": "Co-created Unix at Bell Labs with Dennis Ritchie, wrote the B language that became C, and decades later co-designed the Go programming language at Google."
+    },
+    {
+      "name": "Kip Thorne",
+      "wikiTitle": "Kip_Thorne",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Kip_Thorne_at_Caltech.jpg?width=480",
+      "life": "1940–",
+      "tagline": "American theoretical physicist; LIGO",
+      "bio": "Co-founded LIGO and developed the theoretical templates that made gravitational-wave detection possible. Shared the 2017 Nobel with Weiss and Barish. Consultant on Interstellar."
+    },
+    {
+      "name": "Linus Pauling",
+      "wikiTitle": "Linus_Pauling",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Linus_Pauling_1962.jpg?width=480",
+      "life": "1901–1994",
+      "tagline": "American chemist; chemical bond & two Nobels",
+      "bio": "Founded molecular biology with The Nature of the Chemical Bond, discovered the α-helix of proteins, and won the 1962 Nobel Peace Prize for anti-nuclear advocacy after his 1954 chemistry Nobel."
+    },
+    {
+      "name": "Linus Torvalds",
+      "wikiTitle": "Linus_Torvalds",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/LinuxCon_Europe_Linus_Torvalds_03_(cropped).jpg?width=480",
+      "life": "1969–",
+      "tagline": "Finnish-American software engineer; Linux & Git",
+      "bio": "Began Linux as a hobby in 1991 and watched it become the kernel that runs most of the world's servers, supercomputers, and Android phones. Wrote Git in two weeks because he was annoyed with the alternatives."
+    },
+    {
+      "name": "Luis Alvarez",
+      "wikiTitle": "Luis_Walter_Alvarez",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Luis_Walter_Alvarez_2.jpg?width=480",
+      "life": "1911–1988",
+      "tagline": "American experimental physicist",
+      "bio": "Won the 1968 Nobel for particle physics; later, with his son Walter, proposed that an asteroid impact killed the dinosaurs — confirmed by the Chicxulub crater. Also chased the JFK assassination film frames."
+    },
+    {
+      "name": "M. Stanley Whittingham",
+      "wikiTitle": "M._Stanley_Whittingham",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Stanley_Whittingham.jpg?width=480",
+      "life": "1941–",
+      "tagline": "British-American chemist; first lithium battery",
+      "bio": "Built the first rechargeable lithium battery in the early 1970s at Exxon. Shared the 2019 Nobel with Goodenough and Yoshino."
+    },
+    {
+      "name": "Martin Hellman",
+      "wikiTitle": "Martin_Hellman",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Martin_Hellman.jpg?width=480",
+      "life": "1945–",
+      "tagline": "American cryptographer; public-key cryptography",
+      "bio": "With Whitfield Diffie, published the 1976 paper that broke the assumption that secret communication required pre-shared secrets — and made the public internet possible. 2015 Turing Award."
+    },
+    {
+      "name": "Michael Collins",
+      "wikiTitle": "Michael_Collins_(astronaut)",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Michael_Collins_(S69-31742,_restored)_(cropped).jpg?width=480",
+      "life": "1930–2021",
+      "tagline": "American astronaut; Apollo 11 command module pilot",
+      "bio": "Orbited the Moon alone in Columbia while Armstrong and Aldrin walked the surface. Later wrote Carrying the Fire, often called the finest astronaut memoir."
+    },
+    {
+      "name": "Neil Armstrong",
+      "wikiTitle": "Neil_Armstrong",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Neil_Armstrong_pose.jpg?width=480",
+      "life": "1930–2012",
+      "tagline": "American astronaut; first human on the Moon",
+      "bio": "Stepped onto Mare Tranquillitatis on 20 July 1969 with the line that closed the Apollo era's defining sentence. Test pilot's discipline; almost monastic privacy afterward."
+    },
+    {
+      "name": "Nicolas Steno",
+      "wikiTitle": "Nicolas_Steno",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Niels_Stensen.jpg?width=480",
+      "life": "1638–1686",
+      "tagline": "Danish anatomist; founder of stratigraphy",
+      "bio": "Formulated the principles of superposition and original horizontality that let geologists read time from rock layers. Later abandoned science for the priesthood and was beatified in 1988."
+    },
+    {
+      "name": "Niels Bohr",
+      "wikiTitle": "Niels_Bohr",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Niels_Bohr.jpg?width=480",
+      "life": "1885–1962",
+      "tagline": "Danish physicist; the quantum atom",
+      "bio": "His 1913 atomic model quantized electron orbits and explained spectral lines. His Copenhagen Institute trained a generation of quantum physicists; his 'complementarity' framed how to talk about quantum measurement."
+    },
+    {
+      "name": "Nikolai Lobachevsky",
+      "wikiTitle": "Nikolai_Lobachevsky",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Lobachevsky_03_crop.jpg?width=480",
+      "life": "1792–1856",
+      "tagline": "Russian mathematician; non-Euclidean geometry",
+      "bio": "Independently of Bolyai, constructed hyperbolic geometry by dropping the parallel postulate (1830). Dismissed for years; vindicated when general relativity needed curved space."
+    },
+    {
+      "name": "Orville Wright",
+      "wikiTitle": "Orville_Wright",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Orville_Wright_1905-crop.jpg?width=480",
+      "life": "1871–1948",
+      "tagline": "American aviation pioneer; co-built the first airplane",
+      "bio": "With brother Wilbur, designed and flew the first successful powered, controlled, heavier-than-air aircraft at Kitty Hawk on 17 December 1903."
+    },
+    {
+      "name": "Oskar Morgenstern",
+      "wikiTitle": "Oskar_Morgenstern",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Oskar_Morgenstern.jpg?width=480",
+      "life": "1902–1977",
+      "tagline": "Austrian-American economist; game theory",
+      "bio": "Co-authored Theory of Games and Economic Behavior (1944) with von Neumann — the book that made strategic interaction a mathematical science."
+    },
+    {
+      "name": "Peter Higgs",
+      "wikiTitle": "Peter_Higgs",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Peter_Higgs_2009.jpg?width=480",
+      "life": "1929–2024",
+      "tagline": "British theoretical physicist; the Higgs mechanism",
+      "bio": "Proposed in 1964 the field whose excitation — the Higgs boson — gives mass to elementary particles. Watched the LHC confirm it 48 years later."
+    },
+    {
+      "name": "Rainer Weiss",
+      "wikiTitle": "Rainer_Weiss",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Rainer_Weiss_EM1B5760_(38655602601).jpg?width=480",
+      "life": "1932–",
+      "tagline": "German-American physicist; LIGO interferometry",
+      "bio": "Invented the laser-interferometer scheme that LIGO used to detect gravitational waves in 2015. Shared the 2017 Nobel with Thorne and Barish."
+    },
+    {
+      "name": "Richard Stallman",
+      "wikiTitle": "Richard_Stallman",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Richard_Stallman_at_Pittsburgh_University.jpg?width=480",
+      "life": "1953–",
+      "tagline": "American programmer; free software movement",
+      "bio": "Launched GNU in 1983 and wrote the GPL — copyleft software license that made Linux's permissive distribution possible. Author of GCC, GDB, and Emacs."
+    },
+    {
+      "name": "Robert Wilson",
+      "wikiTitle": "Robert_Woodrow_Wilson",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Robert_Wilson_(astronomer)_2014.jpg?width=480",
+      "life": "1936–",
+      "tagline": "American astronomer; co-discoverer of the CMB",
+      "bio": "With Penzias, accidentally detected the cosmic microwave background while debugging a Bell Labs horn antenna (1964). Shared the 1978 Nobel."
+    },
+    {
+      "name": "Rudolf Clausius",
+      "wikiTitle": "Rudolf_Clausius",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Clausius.jpg?width=480",
+      "life": "1822–1888",
+      "tagline": "German physicist; entropy & the second law",
+      "bio": "Coined 'entropy', stated the second law of thermodynamics in its modern form, and made heat a quantitative bridge to atomic motion."
+    },
+    {
+      "name": "Samuel Morse",
+      "wikiTitle": "Samuel_Morse",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Samuel_Morse_1840.jpg?width=480",
+      "life": "1791–1872",
+      "tagline": "American inventor; the electric telegraph",
+      "bio": "Built the first practical electric telegraph and the Morse code that gave it a language. The first global-scale electronic communication network."
+    },
+    {
+      "name": "Santiago Ramon y Cajal",
+      "wikiTitle": "Santiago_Ramón_y_Cajal",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Santiago_Ramón_y_Cajal_(1899).jpg?width=480",
+      "life": "1852–1934",
+      "tagline": "Spanish neuroanatomist; founder of modern neuroscience",
+      "bio": "Drew the brain neuron by neuron and proved that neurons are discrete cells, not a syncytial mesh — the neuron doctrine. 1906 Nobel."
+    },
+    {
+      "name": "Steve Wozniak",
+      "wikiTitle": "Steve_Wozniak",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Steve_Wozniak_by_Gage_Skidmore.jpg?width=480",
+      "life": "1950–",
+      "tagline": "American engineer; co-founder of Apple",
+      "bio": "Single-handedly designed the Apple I and Apple II — the machines that turned the personal computer from a hobbyist kit into a consumer product."
+    },
+    {
+      "name": "Susan Solomon",
+      "wikiTitle": "Susan_Solomon",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Susan_Solomon_2011.jpg?width=480",
+      "life": "1956–",
+      "tagline": "American atmospheric chemist",
+      "bio": "Led the Antarctic expeditions that identified chlorofluorocarbons as the culprit in stratospheric ozone destruction — the science behind the Montreal Protocol."
+    },
+    {
+      "name": "Svante Arrhenius",
+      "wikiTitle": "Svante_Arrhenius",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Arrhenius2.jpg?width=480",
+      "life": "1859–1927",
+      "tagline": "Swedish chemist; first quantitative greenhouse model",
+      "bio": "1903 Nobel for the ionic theory of dissociation; in 1896 also computed that doubling atmospheric CO₂ would warm the planet by several degrees — the first quantitative climate-sensitivity estimate."
+    },
+    {
+      "name": "Tasuku Honjo",
+      "wikiTitle": "Tasuku_Honjo",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Tasuku_Honjo_201311.jpg?width=480",
+      "life": "1942–",
+      "tagline": "Japanese immunologist; PD-1 checkpoint",
+      "bio": "Discovered PD-1 (1992), whose blockade became the second pillar of cancer immunotherapy. Shared the 2018 Nobel with James Allison."
+    },
+    {
+      "name": "Ted Hoff",
+      "wikiTitle": "Marcian_Hoff",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Marcian_Hoff_2009.jpg?width=480",
+      "life": "1937–",
+      "tagline": "American engineer; conceived the microprocessor",
+      "bio": "At Intel, proposed that a single general-purpose chip could replace the dozen custom logic chips a Japanese calculator company wanted. The idea became the Intel 4004."
+    },
+    {
+      "name": "Theodosius Dobzhansky",
+      "wikiTitle": "Theodosius_Dobzhansky",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Theodosius_Dobzhansky.jpg?width=480",
+      "life": "1900–1975",
+      "tagline": "Ukrainian-American geneticist",
+      "bio": "Founding architect of the Modern Synthesis; wrote 'Nothing in biology makes sense except in the light of evolution'. Showed via Drosophila genetics how natural selection acts on real populations."
+    },
+    {
+      "name": "Thomas Hunt Morgan",
+      "wikiTitle": "Thomas_Hunt_Morgan",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Thomas_Hunt_Morgan.jpg?width=480",
+      "life": "1866–1945",
+      "tagline": "American geneticist; chromosomal theory of heredity",
+      "bio": "His Drosophila 'fly room' at Columbia demonstrated that genes sit on chromosomes — earning the 1933 Nobel and laying down genetics' physical foundations."
+    },
+    {
+      "name": "Thomas Kuhn",
+      "wikiTitle": "Thomas_Kuhn",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Kuhn.jpg?width=480",
+      "life": "1922–1996",
+      "tagline": "American philosopher of science",
+      "bio": "The Structure of Scientific Revolutions (1962) introduced 'paradigm shift' and argued that science changes by discrete revolutions, not steady accumulation. The most-cited academic book of the 20th century."
+    },
+    {
+      "name": "Walter Alvarez",
+      "wikiTitle": "Walter_Alvarez",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Walter_Alvarez.jpg?width=480",
+      "life": "1940–",
+      "tagline": "American geologist; impact theory of mass extinction",
+      "bio": "Found anomalous iridium in the K-Pg boundary clay; with father Luis, proposed an asteroid impact ended the Cretaceous. Vindicated when the Chicxulub crater was identified."
+    },
+    {
+      "name": "Whitfield Diffie",
+      "wikiTitle": "Whitfield_Diffie",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Whitfield_Diffie_Royal_Society.jpg?width=480",
+      "life": "1944–",
+      "tagline": "American cryptographer; public-key cryptography",
+      "bio": "Co-author with Hellman of the 1976 'New Directions in Cryptography' paper that founded public-key cryptography. 2015 Turing Award."
+    },
+    {
+      "name": "Wilbur Wright",
+      "wikiTitle": "Wilbur_Wright",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Wilbur_Wright-crop.jpg?width=480",
+      "life": "1867–1912",
+      "tagline": "American aviation pioneer; the first airplane",
+      "bio": "Older Wright brother; the systems engineer of the pair. The wind-tunnel data and three-axis-control insight that made powered flight workable were largely his."
+    },
+    {
+      "name": "Wilhelm Roentgen",
+      "wikiTitle": "Wilhelm_Röntgen",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Roentgen2.jpg?width=480",
+      "life": "1845–1923",
+      "tagline": "German physicist; discovered X-rays",
+      "bio": "Stumbled onto X-rays in 1895 and within weeks photographed his wife's hand bones — the first medical image. First Nobel Prize in Physics."
+    },
+    {
+      "name": "Willard Libby",
+      "wikiTitle": "Willard_Libby",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Willard_Frank_Libby.jpg?width=480",
+      "life": "1908–1980",
+      "tagline": "American chemist; radiocarbon dating",
+      "bio": "Developed radiocarbon dating in 1949, giving archaeologists and paleoclimatologists an absolute clock for the last 50,000 years. 1960 Nobel."
+    },
+    {
+      "name": "William T.G. Morton",
+      "wikiTitle": "William_T._G._Morton",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/William_Thomas_Green_Morton.jpg?width=480",
+      "life": "1819–1868",
+      "tagline": "American dentist; ether anesthesia",
+      "bio": "Publicly demonstrated ether anesthesia at Massachusetts General Hospital in October 1846, ending the era when surgery required holding the patient down."
+    },
+    {
+      "name": "Ada Lovelace",
+      "wikiTitle": "Ada_Lovelace",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ada_Lovelace_portrait.jpg?width=480",
+      "life": "1815–1852",
+      "tagline": "English mathematician; the first programmer",
+      "bio": "Her 1843 notes on Babbage's analytical engine included what is widely regarded as the first published algorithm intended to be executed by a machine — and a vision of computation as more than arithmetic."
+    },
+    {
+      "name": "Aksapada Gautama",
+      "wikiTitle": "Akṣapāda_Gautama",
+      "portrait": "",
+      "life": "fl. c. 2nd century BCE",
+      "tagline": "Indian philosopher; founder of Nyaya logic",
+      "bio": "Compiled the Nyaya Sutras, the foundational text of the Nyaya school of Indian philosophy — a sophisticated system of epistemology and inferential logic."
+    },
+    {
+      "name": "Al-Biruni",
+      "wikiTitle": "Al-Biruni",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Al-Biruni-Persian_Scholar-1973_Afghanistan_post_stamp.jpg?width=480",
+      "life": "973–1050",
+      "tagline": "Persian polymath; comparative civilization",
+      "bio": "Wrote an empirical study of India, measured the Earth's radius from a mountaintop in modern Pakistan, and produced more than a hundred works on mathematics, astronomy, and geology."
+    },
+    {
+      "name": "Al-Razi",
+      "wikiTitle": "Al-Razi",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Al-Razi_in_Gerardus_Cremonensis_1250.jpg?width=480",
+      "life": "c. 854–925",
+      "tagline": "Persian physician and chemist",
+      "bio": "Distinguished smallpox from measles for the first time, wrote a 23-volume medical encyclopedia, and ran the Baghdad hospital where he sited the new wards by hanging meat around the city to see where it spoiled last."
+    },
+    {
+      "name": "Alan Guth",
+      "wikiTitle": "Alan_Guth",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Alan_Guth_at_Trinity_College_Dublin_2007.jpg?width=480",
+      "life": "1947–",
+      "tagline": "American theoretical physicist; inflationary cosmology",
+      "bio": "Proposed in 1980 that the early universe underwent an exponential expansion that explains its flatness, smoothness, and structure — the inflationary universe."
+    },
+    {
+      "name": "Alec Jeffreys",
+      "wikiTitle": "Alec_Jeffreys",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Alec_Jeffreys_-_1.jpg?width=480",
+      "life": "1950–",
+      "tagline": "British geneticist; DNA fingerprinting",
+      "bio": "Discovered hypervariable regions of human DNA and used them to identify individuals — a 1984 'eureka moment' that transformed forensic science and immigration law."
+    },
+    {
+      "name": "Alexander von Humboldt",
+      "wikiTitle": "Alexander_von_Humboldt",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Alexander_von_Humboldt-1843.jpg?width=480",
+      "life": "1769–1859",
+      "tagline": "Prussian polymath; founder of biogeography",
+      "bio": "Spent five years exploring the Americas, then five decades writing it up. His Kosmos tried to unite the sciences into a single view of nature and seeded biogeography, ecology, and climatology."
+    },
+    {
+      "name": "Alfred North Whitehead",
+      "wikiTitle": "Alfred_North_Whitehead",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Alfred_North_Whitehead_in_1936.jpg?width=480",
+      "life": "1861–1947",
+      "tagline": "English mathematician and philosopher",
+      "bio": "Co-authored Principia Mathematica (1910–13) with Russell, attempting to derive arithmetic from logic. Later founded process philosophy at Harvard."
+    },
+    {
+      "name": "Amartya Sen",
+      "wikiTitle": "Amartya_Sen",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Amartya_Sen_NIH.jpg?width=480",
+      "life": "1933–",
+      "tagline": "Indian economist; welfare & capabilities",
+      "bio": "Reframed development as the expansion of human capabilities, and showed that famines reflect entitlement failures, not just food shortages. 1998 Nobel in Economics."
+    },
+    {
+      "name": "Amedeo Avogadro",
+      "wikiTitle": "Amedeo_Avogadro",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Amedeo_Avogadro2.png?width=480",
+      "life": "1776–1856",
+      "tagline": "Italian physicist; equal volumes, equal numbers",
+      "bio": "Proposed in 1811 that equal volumes of gases at the same conditions contain equal numbers of molecules. Ignored for half a century; vindicated when the law and the constant named for him became chemistry's spine."
+    },
+    {
+      "name": "Andre Geim",
+      "wikiTitle": "Andre_Geim",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Andre_Geim_2010.jpg?width=480",
+      "life": "1958–",
+      "tagline": "Russian-British physicist; graphene",
+      "bio": "With Konstantin Novoselov, isolated graphene by lifting it off graphite with Scotch tape (2004). Shared the 2010 Nobel — and an Ig Nobel for magnetically levitating a frog."
+    },
+    {
+      "name": "Andrew Wiles",
+      "wikiTitle": "Andrew_Wiles",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Andrew_wiles1-3.jpg?width=480",
+      "life": "1953–",
+      "tagline": "British mathematician; proved Fermat's Last Theorem",
+      "bio": "Worked in secret in his Princeton attic for seven years, then announced a proof of Fermat's Last Theorem in 1993 — patched and finalized in 1995. The theorem had been open for 358 years."
+    },
+    {
+      "name": "Apollonius of Perga",
+      "wikiTitle": "Apollonius_of_Perga",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Apollonius_of_Perga.jpg?width=480",
+      "life": "c. 240–c. 190 BCE",
+      "tagline": "Greek geometer; conic sections",
+      "bio": "His Conics gave a systematic theory of ellipses, parabolas, and hyperbolas — the curves Kepler would later identify with planetary orbits."
+    },
+    {
+      "name": "Aristarchus of Samos",
+      "wikiTitle": "Aristarchus_of_Samos",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Aristarchus_of_Samos.png?width=480",
+      "life": "c. 310–c. 230 BCE",
+      "tagline": "Greek astronomer; ancient heliocentrism",
+      "bio": "Proposed eighteen centuries before Copernicus that the Earth orbits the Sun. Estimated the relative sizes of Sun, Moon, and Earth from clever angular measurements."
+    },
+    {
+      "name": "August Kekule",
+      "wikiTitle": "August_Kekulé",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Friedrich_August_Kekulé.jpg?width=480",
+      "life": "1829–1896",
+      "tagline": "German chemist; the benzene ring",
+      "bio": "Proposed that benzene's six carbons form a ring with alternating double bonds — an insight he later said came in a dream of a snake biting its tail. Founded structural chemistry."
+    },
+    {
+      "name": "Auguste Comte",
+      "wikiTitle": "Auguste_Comte",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Auguste_Comte.jpg?width=480",
+      "life": "1798–1857",
+      "tagline": "French philosopher; founder of positivism",
+      "bio": "Coined 'sociology' and argued that human knowledge passes through theological, metaphysical, and finally positive (scientific) stages. The positive stage was his program."
+    },
+    {
+      "name": "Augustine of Hippo",
+      "wikiTitle": "Augustine_of_Hippo",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Saint_Augustine_by_Philippe_de_Champaigne.jpg?width=480",
+      "life": "354–430",
+      "tagline": "Christian philosopher and theologian",
+      "bio": "Bishop of Hippo whose Confessions and City of God set the intellectual frame for Western Christianity for over a thousand years — on time, will, sin, and the state."
+    },
+    {
+      "name": "B.F. Skinner",
+      "wikiTitle": "B._F._Skinner",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/B.F._Skinner_at_Harvard_circa_1950.jpg?width=480",
+      "life": "1904–1990",
+      "tagline": "American psychologist; operant conditioning",
+      "bio": "Made reinforcement schedules the spine of experimental psychology and the Skinner box a textbook fixture. His program lost ground after Chomsky's 1959 review of Verbal Behavior."
+    },
+    {
+      "name": "Barry Marshall",
+      "wikiTitle": "Barry_Marshall",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Barry_Marshall_2008.jpg?width=480",
+      "life": "1951–",
+      "tagline": "Australian physician; H. pylori as ulcer cause",
+      "bio": "Drank a beaker of H. pylori, gave himself gastritis, and proved peptic ulcers are bacterial — overturning a stress-and-acid dogma. Shared the 2005 Nobel with Robin Warren."
+    },
+    {
+      "name": "Baruch Spinoza",
+      "wikiTitle": "Baruch_Spinoza",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Spinoza.jpg?width=480",
+      "life": "1632–1677",
+      "tagline": "Dutch philosopher; rationalist monism",
+      "bio": "Ground lenses for a living and worked out, more geometrico, an ethics in which God is identical with Nature — too radical for his Amsterdam community, which excommunicated him at 23."
+    },
+    {
+      "name": "Bertrand Russell",
+      "wikiTitle": "Bertrand_Russell",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Bertrand_Russell_1957.jpg?width=480",
+      "life": "1872–1970",
+      "tagline": "British philosopher and logician",
+      "bio": "Co-author of Principia Mathematica, pacifist who went to prison in WWI, public intellectual for half a century, and 1950 Nobel laureate in Literature."
+    },
+    {
+      "name": "Bi Sheng",
+      "wikiTitle": "Bi_Sheng",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Bi_Sheng_statue.jpg?width=480",
+      "life": "c. 970–1051",
+      "tagline": "Chinese artisan; movable-type printing",
+      "bio": "Invented movable clay type around 1040, four centuries before Gutenberg. The technology spread eastward through Korea and Japan but did not transform Chinese book production the way Europe's metal type would."
+    },
+    {
+      "name": "Bob Metcalfe",
+      "wikiTitle": "Robert_Metcalfe",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Bob_Metcalfe_2014.jpg?width=480",
+      "life": "1946–",
+      "tagline": "American engineer; co-inventor of Ethernet",
+      "bio": "At Xerox PARC in 1973 he co-invented Ethernet, the local-area networking standard that connected every computer in the office and then every datacenter in the world. 2022 Turing Award."
+    },
+    {
+      "name": "Carl Djerassi",
+      "wikiTitle": "Carl_Djerassi",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Carl_Djerassi_Stanford_1985.jpg?width=480",
+      "life": "1923–2015",
+      "tagline": "Austrian-American chemist; the contraceptive pill",
+      "bio": "Synthesized norethisterone in 1951 — the first orally active progestin and the chemistry underneath the contraceptive pill."
+    },
+    {
+      "name": "Chanakya",
+      "wikiTitle": "Chanakya",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Chanakya_artistic_depiction.jpg?width=480",
+      "life": "c. 4th century BCE",
+      "tagline": "Indian statesman; the Arthashastra",
+      "bio": "Advisor to the first Maurya emperor; the Arthashastra he authored is a sober manual of statecraft, economics, and intelligence — Machiavelli avant la lettre, by two millennia."
+    },
+    {
+      "name": "Charaka",
+      "wikiTitle": "Charaka",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Maharshi_Charak.jpg?width=480",
+      "life": "fl. 1st–2nd century CE",
+      "tagline": "Indian physician; the Charaka Samhita",
+      "bio": "His Charaka Samhita is the foundational text of Ayurvedic internal medicine — an encyclopedic system of diagnosis, pharmacology, and ethics still studied today."
+    },
+    {
+      "name": "Christiaan Barnard",
+      "wikiTitle": "Christiaan_Barnard",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Christian_Barnard.jpg?width=480",
+      "life": "1922–2001",
+      "tagline": "South African surgeon; first heart transplant",
+      "bio": "Performed the first human-to-human heart transplant in Cape Town on 3 December 1967. The patient lived 18 days; the operation became routine within a generation."
+    },
+    {
+      "name": "Chrysippus",
+      "wikiTitle": "Chrysippus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Chrysippos_BM_1846.jpg?width=480",
+      "life": "c. 279–c. 206 BCE",
+      "tagline": "Greek Stoic philosopher",
+      "bio": "The systematizer of Stoicism; without his contribution, Zeno's school might not have survived. Reportedly wrote 705 books, almost all lost."
+    },
+    {
+      "name": "Claude Levi-Strauss",
+      "wikiTitle": "Claude_Lévi-Strauss",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Levi-strauss_260.jpg?width=480",
+      "life": "1908–2009",
+      "tagline": "French anthropologist; structural anthropology",
+      "bio": "Applied structural linguistics to kinship and myth, arguing that culture, like language, is generated by deep oppositions in the human mind."
+    },
+    {
+      "name": "David Liu",
+      "wikiTitle": "David_R._Liu",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/David_R._Liu.jpg?width=480",
+      "life": "1973–",
+      "tagline": "American chemist; base & prime editing",
+      "bio": "Harvard chemist who invented base editing and prime editing — CRISPR-derived techniques that rewrite single DNA letters without breaking the double helix."
+    },
+    {
+      "name": "David Ricardo",
+      "wikiTitle": "David_Ricardo",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg?width=480",
+      "life": "1772–1823",
+      "tagline": "English economist; comparative advantage",
+      "bio": "Wealthy stockbroker turned political economist; his Principles (1817) gave economics the theory of comparative advantage and the labor theory of value Marx would later sharpen."
+    },
+    {
+      "name": "David Silver",
+      "wikiTitle": "David_Silver_(computer_scientist)",
+      "portrait": "",
+      "life": "1976–",
+      "tagline": "British computer scientist; AlphaGo lead",
+      "bio": "Led DeepMind's reinforcement-learning team behind AlphaGo, AlphaZero, and MuZero — the systems that taught themselves to play board games at superhuman level."
+    },
+    {
+      "name": "Diophantus of Alexandria",
+      "wikiTitle": "Diophantus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Diophantus-cover.jpg?width=480",
+      "life": "fl. c. 250 CE",
+      "tagline": "Greek mathematician; father of algebra",
+      "bio": "His Arithmetica handled equations with integer solutions — Diophantine equations — and was the book in whose margin Fermat would much later scribble his last theorem."
+    },
+    {
+      "name": "Edmund Husserl",
+      "wikiTitle": "Edmund_Husserl",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Edmund_Husserl_1900.jpg?width=480",
+      "life": "1859–1938",
+      "tagline": "German philosopher; founder of phenomenology",
+      "bio": "Argued for a rigorous descriptive science of consciousness, bracketing assumptions about the external world. The thread Heidegger, Sartre, and Merleau-Ponty would pull on."
+    },
+    {
+      "name": "Edsger Dijkstra",
+      "wikiTitle": "Edsger_W._Dijkstra",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Edsger_Wybe_Dijkstra.jpg?width=480",
+      "life": "1930–2002",
+      "tagline": "Dutch computer scientist",
+      "bio": "His shortest-path algorithm is taught everywhere; his 'goto considered harmful' letter reset programming style; his unsigned EWD memos shaped the discipline's taste."
+    },
+    {
+      "name": "Edward Boyden",
+      "wikiTitle": "Edward_Boyden",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Edward_Boyden_2014.jpg?width=480",
+      "life": "1979–",
+      "tagline": "American neuroengineer; optogenetics",
+      "bio": "With Karl Deisseroth, developed optogenetics — the technique of using light-sensitive proteins to switch specific neurons on and off in living brains."
+    },
+    {
+      "name": "Elon Musk",
+      "wikiTitle": "Elon_Musk",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Elon_Musk_Royal_Society_(crop2).jpg?width=480",
+      "life": "1971–",
+      "tagline": "South African-American entrepreneur",
+      "bio": "Founded or led PayPal, SpaceX, Tesla, Neuralink, X, and xAI. SpaceX returned heavy-lift launch to commercial scale; Tesla brought EVs to volume production."
+    },
+    {
+      "name": "Epicurus",
+      "wikiTitle": "Epicurus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Epicurus_Louvre.jpg?width=480",
+      "life": "341–270 BCE",
+      "tagline": "Greek philosopher; founder of Epicureanism",
+      "bio": "Taught that the highest good is freedom from pain and disturbance, and that the world is made of atoms moving in void. The Garden, his philosophical commune, admitted women and slaves."
+    },
+    {
+      "name": "Eugene Stoermer",
+      "wikiTitle": "Eugene_F._Stoermer",
+      "portrait": "",
+      "life": "1934–2012",
+      "tagline": "American biologist; popularized 'Anthropocene'",
+      "bio": "Diatom ecologist who, with Paul Crutzen in 2000, gave the present geological epoch the name Anthropocene to mark humanity's dominant role in shaping Earth."
+    },
+    {
+      "name": "Florence Nightingale",
+      "wikiTitle": "Florence_Nightingale",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Florence_Nightingale_(H_Hering_NPG_x82368).jpg?width=480",
+      "life": "1820–1910",
+      "tagline": "English nurse; founder of modern nursing",
+      "bio": "In the Crimean War, halved hospital mortality with sanitation reforms documented in polar-area diagrams of her own design — an early infographic that persuaded Parliament."
+    },
+    {
+      "name": "Franz Boas",
+      "wikiTitle": "Franz_Boas",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/FranzBoas.jpg?width=480",
+      "life": "1858–1942",
+      "tagline": "German-American anthropologist",
+      "bio": "Founded American cultural anthropology and dismantled scientific racism with measurements showing that head shapes change in immigrants' children — culture and environment, not race, do the work."
+    },
+    {
+      "name": "Fritz Zwicky",
+      "wikiTitle": "Fritz_Zwicky",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Fritz_Zwicky.jpg?width=480",
+      "life": "1898–1974",
+      "tagline": "Swiss astronomer; dark matter inference",
+      "bio": "From the velocities of galaxies in the Coma Cluster, deduced in 1933 that most of the cluster's mass must be 'dunkle Materie' — dark matter. Coined 'supernova' too."
+    },
+    {
+      "name": "G.W.F. Hegel",
+      "wikiTitle": "Georg_Wilhelm_Friedrich_Hegel",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Hegel_portrait_by_Schlesinger_1831.jpg?width=480",
+      "life": "1770–1831",
+      "tagline": "German philosopher; dialectical idealism",
+      "bio": "Built a system in which Spirit unfolds through history by dialectical contradiction — an architecture that Marx would later invert and modern continental philosophy is still grappling with."
+    },
+    {
+      "name": "Georges Cuvier",
+      "wikiTitle": "Georges_Cuvier",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Cuvier_-_Lithographie_de_François-Séraphin_Delpech_(crop).jpg?width=480",
+      "life": "1769–1832",
+      "tagline": "French naturalist; founder of paleontology",
+      "bio": "Established that fossils represent extinct species — overturning the assumption that all created kinds still walked the Earth — and laid down comparative anatomy."
+    },
+    {
+      "name": "Gregory Pincus",
+      "wikiTitle": "Gregory_Pincus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Gregory_Goodwin_Pincus_1966.jpg?width=480",
+      "life": "1903–1967",
+      "tagline": "American biologist; the birth-control pill",
+      "bio": "Co-developed the first oral contraceptive (approved 1960), the pharmacology that detached fertility from intercourse and reshaped 20th-century social life."
+    },
+    {
+      "name": "Grigori Perelman",
+      "wikiTitle": "Grigori_Perelman",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Grigori_Perelman,_1993_(re-scanned).jpg?width=480",
+      "life": "1966–",
+      "tagline": "Russian mathematician; proved the Poincaré conjecture",
+      "bio": "Posted his proof of the Poincaré conjecture to arXiv in 2002–03 and then declined both the Fields Medal and the million-dollar Clay Prize."
+    },
+    {
+      "name": "Hannah Arendt",
+      "wikiTitle": "Hannah_Arendt",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Hannah_Arendt_1975_(cropped).jpg?width=480",
+      "life": "1906–1975",
+      "tagline": "German-American political theorist",
+      "bio": "Her Origins of Totalitarianism and Eichmann in Jerusalem — coining 'the banality of evil' — shaped how the postwar world tried to think about modern political violence."
+    },
+    {
+      "name": "Henry Bessemer",
+      "wikiTitle": "Henry_Bessemer",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Henry_Bessemer.jpg?width=480",
+      "life": "1813–1898",
+      "tagline": "English engineer; the Bessemer steel process",
+      "bio": "His 1856 process blew air through molten pig iron to burn off carbon, making cheap steel by the ton. The technology that built railroads, ships, and skyscrapers."
+    },
+    {
+      "name": "Henry Ford",
+      "wikiTitle": "Henry_Ford",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Henry_ford_1919.jpg?width=480",
+      "life": "1863–1947",
+      "tagline": "American industrialist; the moving assembly line",
+      "bio": "Put car manufacturing on a moving assembly line in 1913 and the Model T into the hands of his own workers. The labor regime he built defined 20th-century industrial production."
+    },
+    {
+      "name": "Hipparchus",
+      "wikiTitle": "Hipparchus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Hipparchos_1.jpeg?width=480",
+      "life": "c. 190–c. 120 BCE",
+      "tagline": "Greek astronomer; precession of the equinoxes",
+      "bio": "Compiled the first comprehensive star catalogue, discovered the precession of Earth's axis, and developed trigonometry for astronomical use."
+    },
+    {
+      "name": "Ian Wilmut",
+      "wikiTitle": "Ian_Wilmut",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ian_Wilmut.jpg?width=480",
+      "life": "1944–2023",
+      "tagline": "British embryologist; cloned Dolly the sheep",
+      "bio": "Led the Roslin Institute team that produced Dolly in 1996 — the first mammal cloned from an adult somatic cell — and opened the modern era of regenerative biology."
+    },
+    {
+      "name": "Ibn al-Nafis",
+      "wikiTitle": "Ibn_al-Nafis",
+      "portrait": "",
+      "life": "1213–1288",
+      "tagline": "Arab physician; pulmonary circulation",
+      "bio": "Described the pulmonary circulation — blood passing from the right ventricle to the lungs and back to the left — three centuries before Harvey rediscovered it in the West."
+    },
+    {
+      "name": "Ignaz Semmelweis",
+      "wikiTitle": "Ignaz_Semmelweis",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ignaz_Semmelweis_1860.jpg?width=480",
+      "life": "1818–1865",
+      "tagline": "Hungarian physician; hand hygiene",
+      "bio": "Showed in 1847 that handwashing in chlorinated lime cut puerperal fever mortality by an order of magnitude. Rejected by his colleagues, died — possibly beaten — in an asylum."
+    },
+    {
+      "name": "Ivan Pavlov",
+      "wikiTitle": "Ivan_Pavlov",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ivan_Pavlov_NLM3.jpg?width=480",
+      "life": "1849–1936",
+      "tagline": "Russian physiologist; classical conditioning",
+      "bio": "His dog-and-bell experiments demonstrated that physiological responses could be conditioned by association — the foundation of behaviorist psychology. 1904 Nobel for digestion."
+    },
+    {
+      "name": "Jabir ibn Hayyan",
+      "wikiTitle": "Jabir_ibn_Hayyan",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/15th-century_painting_of_Jabir_ibn_Hayyan.jpg?width=480",
+      "life": "c. 721–c. 815",
+      "tagline": "Arab polymath; father of chemistry",
+      "bio": "His vast corpus systematized practical alchemy — distillation, crystallization, sublimation, the alkalis — and entered medieval Europe as 'Geber'."
+    },
+    {
+      "name": "Jean Piaget",
+      "wikiTitle": "Jean_Piaget",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Jean_Piaget_in_Ann_Arbor.png?width=480",
+      "life": "1896–1980",
+      "tagline": "Swiss psychologist; developmental stages",
+      "bio": "Studied his own children to map four stages through which thought develops — sensorimotor, preoperational, concrete operational, formal operational — and founded constructivist psychology."
+    },
+    {
+      "name": "Jimmy Wales",
+      "wikiTitle": "Jimmy_Wales",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Jimmy_Wales_July_2010.jpg?width=480",
+      "life": "1966–",
+      "tagline": "American internet entrepreneur; co-founded Wikipedia",
+      "bio": "Co-founded Wikipedia in 2001 after the failed expert-driven Nupedia; the volunteer encyclopedia became the most-used reference work in human history."
+    },
+    {
+      "name": "John McCarthy",
+      "wikiTitle": "John_McCarthy_(computer_scientist)",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_McCarthy_Stanford.jpg?width=480",
+      "life": "1927–2011",
+      "tagline": "American computer scientist; coined 'AI'",
+      "bio": "Organized the 1956 Dartmouth workshop that named the field of artificial intelligence and invented Lisp the following year — still the second-oldest high-level language in use."
+    },
+    {
+      "name": "John Nash",
+      "wikiTitle": "John_Forbes_Nash_Jr.",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_Forbes_Nash,_Jr._by_Peter_Badge.jpg?width=480",
+      "life": "1928–2015",
+      "tagline": "American mathematician; Nash equilibrium",
+      "bio": "Generalized game-theory equilibria to non-cooperative games — work done at 22 that won the 1994 Nobel. Schizophrenia interrupted his career; the partial recovery was the subject of A Beautiful Mind."
+    },
+    {
+      "name": "John Rawls",
+      "wikiTitle": "John_Rawls",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_Rawls_(1971_photo_portrait).jpg?width=480",
+      "life": "1921–2002",
+      "tagline": "American political philosopher; justice as fairness",
+      "bio": "His Theory of Justice (1971) revived liberal political philosophy with the 'veil of ignorance' thought experiment — how to design a society without knowing your place in it."
+    },
+    {
+      "name": "John Stuart Mill",
+      "wikiTitle": "John_Stuart_Mill",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/John_Stuart_Mill_by_London_Stereoscopic_Company,_c1870.jpg?width=480",
+      "life": "1806–1873",
+      "tagline": "English philosopher; utilitarianism & liberty",
+      "bio": "Refined Bentham's utilitarianism and, in On Liberty (1859), gave the canonical defense of free speech and individual autonomy against the tyranny of the majority."
+    },
+    {
+      "name": "Joseph Priestley",
+      "wikiTitle": "Joseph_Priestley",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Priestley.jpg?width=480",
+      "life": "1733–1804",
+      "tagline": "English natural philosopher; isolated oxygen",
+      "bio": "Isolated oxygen ('dephlogisticated air') in 1774 — the gas that Lavoisier would name and use to bury phlogiston. Also a dissenting minister run out of England for his political views."
+    },
+    {
+      "name": "Joseph-Marie Jacquard",
+      "wikiTitle": "Joseph_Marie_Jacquard",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Joseph_Marie_Jacquard.jpg?width=480",
+      "life": "1752–1834",
+      "tagline": "French weaver; programmable loom",
+      "bio": "His 1804 loom used punched cards to control the weave — the first practical use of stored instructions, and the direct ancestor of Babbage's punched-card inputs and Hollerith's tabulators."
+    },
+    {
+      "name": "Karl Deisseroth",
+      "wikiTitle": "Karl_Deisseroth",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Karl_Deisseroth.jpg?width=480",
+      "life": "1971–",
+      "tagline": "American psychiatrist and bioengineer; optogenetics",
+      "bio": "Co-developed optogenetics — using channelrhodopsins to control specific neurons with light — the tool that rebuilt circuit neuroscience."
+    },
+    {
+      "name": "Karl Popper",
+      "wikiTitle": "Karl_Popper",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Karl_Popper.jpg?width=480",
+      "life": "1902–1994",
+      "tagline": "Austrian-British philosopher of science",
+      "bio": "Argued that what makes a theory scientific is its falsifiability — a criterion that sharpened how scientists talk about evidence. The Open Society (1945) defended liberal democracy against historicism."
+    },
+    {
+      "name": "Kenneth Arrow",
+      "wikiTitle": "Kenneth_Arrow",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Kenneth_Arrow,_Stanford_University.jpg?width=480",
+      "life": "1921–2017",
+      "tagline": "American economist; impossibility theorem",
+      "bio": "His 1951 impossibility theorem proved that no rank-order voting system can satisfy a small set of reasonable fairness conditions — social-choice theory's foundational result."
+    },
+    {
+      "name": "Konstantin Novoselov",
+      "wikiTitle": "Konstantin_Novoselov",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Kostya_Novoselov.jpg?width=480",
+      "life": "1974–",
+      "tagline": "Russian-British physicist; graphene",
+      "bio": "Co-discovered, with Andre Geim at Manchester, that a layer of carbon one atom thick could be peeled from graphite and was a remarkable two-dimensional material. 2010 Nobel."
+    },
+    {
+      "name": "Laozi",
+      "wikiTitle": "Laozi",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Lao_Tzu_-_Project_Gutenberg_eText_15250.jpg?width=480",
+      "life": "fl. 6th century BCE",
+      "tagline": "Chinese philosopher; founder of Daoism",
+      "bio": "Traditionally credited with the Tao Te Ching, an 81-chapter poem on the dao — the unnameable way of things — and the politics of wu wei, governing without forcing."
+    },
+    {
+      "name": "Larry Page",
+      "wikiTitle": "Larry_Page",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Larry_Page_in_the_European_Parliament,_17.06.2009_(cropped).jpg?width=480",
+      "life": "1973–",
+      "tagline": "American computer scientist; co-founder of Google",
+      "bio": "With Sergey Brin at Stanford, invented PageRank in 1996 and turned the idea into Google a year later. Co-founder of Alphabet."
+    },
+    {
+      "name": "Larry Sanger",
+      "wikiTitle": "Larry_Sanger",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Larry_Sanger_December_2008.jpg?width=480",
+      "life": "1968–",
+      "tagline": "American philosopher; co-founder of Wikipedia",
+      "bio": "Co-founded Wikipedia in 2001 with Jimmy Wales, served as its first editor-in-chief, and proposed many of the editorial conventions that still shape it."
+    },
+    {
+      "name": "Leo Baekeland",
+      "wikiTitle": "Leo_Baekeland",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Leo_Baekeland_1916.jpg?width=480",
+      "life": "1863–1944",
+      "tagline": "Belgian-American chemist; the first synthetic plastic",
+      "bio": "Patented Bakelite in 1907 — phenol-formaldehyde resin, the first fully synthetic plastic. Lighter, cheaper, mass-producible material was now everywhere a possibility."
+    },
+    {
+      "name": "Leonardo of Pisa",
+      "wikiTitle": "Fibonacci",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Fibonacci2.jpg?width=480",
+      "life": "c. 1170–c. 1250",
+      "tagline": "Italian mathematician; Hindu-Arabic numerals in Europe",
+      "bio": "Better known as Fibonacci, his Liber Abaci (1202) introduced Hindu-Arabic numerals and place-value arithmetic to Latin Europe — and included the rabbit problem that named his sequence."
+    },
+    {
+      "name": "Li Si",
+      "wikiTitle": "Li_Si",
+      "portrait": "",
+      "life": "c. 280–208 BCE",
+      "tagline": "Chinese statesman; standardized Chinese writing",
+      "bio": "Chancellor of Qin Shi Huang; standardized the Chinese script — the small-seal form that gave the empire a single bureaucratic language."
+    },
+    {
+      "name": "Louis Agassiz",
+      "wikiTitle": "Louis_Agassiz",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Louis_Agassiz_-_Brady-Handy.jpg?width=480",
+      "life": "1807–1873",
+      "tagline": "Swiss-American naturalist; the ice age",
+      "bio": "Proposed in 1840 that great sheets of ice once covered northern Europe and North America — the Pleistocene glaciation that explained moraines, erratic boulders, and U-shaped valleys."
+    },
+    {
+      "name": "Louis Daguerre",
+      "wikiTitle": "Louis_Daguerre",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Louis_Daguerre_2.jpg?width=480",
+      "life": "1787–1851",
+      "tagline": "French artist and inventor; daguerreotype",
+      "bio": "Invented the first commercially practical photographic process (1839), fixing images on silver-plated copper. The age of mechanical reproduction begins here."
+    },
+    {
+      "name": "Luc Montagnier",
+      "wikiTitle": "Luc_Montagnier",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Luc_Montagnier-press_conference_Dec_06th,_2008-1.jpg?width=480",
+      "life": "1932–2022",
+      "tagline": "French virologist; co-discovered HIV",
+      "bio": "His Pasteur Institute team isolated the retrovirus that would be named HIV in 1983 — identifying the cause of AIDS. Shared the 2008 Nobel."
+    },
+    {
+      "name": "Lucretius",
+      "wikiTitle": "Lucretius",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Lukrez_(Pseudo).jpg?width=480",
+      "life": "c. 99–c. 55 BCE",
+      "tagline": "Roman poet; De Rerum Natura",
+      "bio": "His six-book hexameter poem laid out Epicurean atomism for a Roman audience and survived through a single manuscript rediscovered in 1417 — kicking off the Renaissance recovery of pagan natural philosophy."
+    },
+    {
+      "name": "Madhava of Sangamagrama",
+      "wikiTitle": "Madhava_of_Sangamagrama",
+      "portrait": "",
+      "life": "c. 1340–c. 1425",
+      "tagline": "Indian mathematician; founder of the Kerala school",
+      "bio": "Two centuries before Newton, derived infinite-series expansions for sine, cosine, and arctangent — including the series for π that Western mathematicians would attribute to Leibniz and Gregory."
+    },
+    {
+      "name": "Mark Zuckerberg",
+      "wikiTitle": "Mark_Zuckerberg",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Mark_Zuckerberg_F8_2019_Keynote_(32830578717)_(cropped).jpg?width=480",
+      "life": "1984–",
+      "tagline": "American entrepreneur; co-founded Facebook",
+      "bio": "Launched Facebook from his Harvard dorm in 2004; built it into a global social platform serving billions and renamed the parent company Meta to bet on virtual and augmented reality."
+    },
+    {
+      "name": "Martin Heidegger",
+      "wikiTitle": "Martin_Heidegger",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Heidegger_2_(1960).jpg?width=480",
+      "life": "1889–1976",
+      "tagline": "German philosopher; Being and Time",
+      "bio": "Being and Time (1927) reframed metaphysics by asking what it means to be at all, and shaped 20th-century continental thought. His Nazi-era rectorship at Freiburg has never been fully reckoned with."
+    },
+    {
+      "name": "Max Weber",
+      "wikiTitle": "Max_Weber",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Max_Weber_1894.jpg?width=480",
+      "life": "1864–1920",
+      "tagline": "German sociologist",
+      "bio": "Argued that the rise of capitalism owed something to a Protestant work ethic, that bureaucratic rationality was modernity's iron cage, and that political legitimacy comes in three flavors — traditional, charismatic, legal."
+    },
+    {
+      "name": "Michel Foucault",
+      "wikiTitle": "Michel_Foucault",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Foucault5.jpg?width=480",
+      "life": "1926–1984",
+      "tagline": "French philosopher; power, knowledge, history",
+      "bio": "Traced how the modern subject was constituted by discourses around madness, punishment, sexuality, and medicine — and how 'truth' is inseparable from the institutions that produce it."
+    },
+    {
+      "name": "Milton Friedman",
+      "wikiTitle": "Milton_Friedman",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Portrait_of_Milton_Friedman.jpg?width=480",
+      "life": "1912–2006",
+      "tagline": "American economist; monetarism",
+      "bio": "Argued that money supply is what drives inflation and that fiscal activism does more harm than good — ideas that shaped Volcker's Fed, Thatcher and Reagan, and the late-20th-century policy consensus. 1976 Nobel."
+    },
+    {
+      "name": "Milutin Milankovitch",
+      "wikiTitle": "Milutin_Milanković",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Milutin_Milankovitch_2.jpg?width=480",
+      "life": "1879–1958",
+      "tagline": "Serbian engineer; orbital climate cycles",
+      "bio": "Computed by hand how variations in Earth's orbit and tilt change insolation across latitudes — the Milankovitch cycles that pace the ice ages."
+    },
+    {
+      "name": "Mozi",
+      "wikiTitle": "Mozi",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Mozi.jpg?width=480",
+      "life": "c. 470–c. 391 BCE",
+      "tagline": "Chinese philosopher; founder of Mohism",
+      "bio": "Argued for universal love (jian'ai) and against ritualism and aggressive warfare. The Mohists also did early optics, mechanics, and logic — a rationalist counter to Confucian China."
+    },
+    {
+      "name": "Niccolo Machiavelli",
+      "wikiTitle": "Niccolò_Machiavelli",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Santi_di_Tito_-_Niccolo_Machiavelli's_portrait_headcrop.jpg?width=480",
+      "life": "1469–1527",
+      "tagline": "Florentine diplomat; The Prince",
+      "bio": "Florentine secretary turned exile who wrote The Prince (1513) as a job application and accidentally founded modern political science — the analysis of how power actually works, not how it ought to."
+    },
+    {
+      "name": "Nikola Tesla",
+      "wikiTitle": "Nikola_Tesla",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Tesla_circa_1890.jpeg?width=480",
+      "life": "1856–1943",
+      "tagline": "Serbian-American electrical engineer; AC power",
+      "bio": "Designed the alternating-current induction motor and the polyphase distribution system that — over Edison's resistance — became the global electric grid. Late-life experiments with wireless power preceded modern radio."
+    },
+    {
+      "name": "Nikolaus Otto",
+      "wikiTitle": "Nicolaus_Otto",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Nicolaus_Otto.jpg?width=480",
+      "life": "1832–1891",
+      "tagline": "German engineer; the four-stroke engine",
+      "bio": "Built the first practical four-stroke internal-combustion engine in 1876 — the cycle that still bears his name and the prime mover of the automobile age."
+    },
+    {
+      "name": "Omar Khayyam",
+      "wikiTitle": "Omar_Khayyam",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Statue_of_Omar_Khayyám_in_Bucharest_-_2.jpg?width=480",
+      "life": "1048–1131",
+      "tagline": "Persian polymath; algebra & astronomy",
+      "bio": "Solved cubic equations geometrically, designed a calendar more accurate than the Gregorian, and — in the West — became famous as the poet of the Rubaiyat."
+    },
+    {
+      "name": "Patrick Steptoe",
+      "wikiTitle": "Patrick_Steptoe",
+      "portrait": "",
+      "life": "1913–1988",
+      "tagline": "British gynecologist; in-vitro fertilization",
+      "bio": "With Robert Edwards, produced the first IVF baby — Louise Brown — in 1978, opening reproductive medicine to a still-expanding repertoire of techniques."
+    },
+    {
+      "name": "Paul Crutzen",
+      "wikiTitle": "Paul_J._Crutzen",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Paul_Crutzen-2.jpg?width=480",
+      "life": "1933–2021",
+      "tagline": "Dutch atmospheric chemist",
+      "bio": "Showed how nitrogen oxides destroy stratospheric ozone — work that led to the 1995 Nobel — and, with Stoermer, popularized the term 'Anthropocene'."
+    },
+    {
+      "name": "Pedanius Dioscorides",
+      "wikiTitle": "Pedanius_Dioscorides",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Dioscorides01.jpg?width=480",
+      "life": "c. 40–c. 90 CE",
+      "tagline": "Greek physician; the Materia Medica",
+      "bio": "Roman army surgeon who catalogued some 600 medicinal plants in De Materia Medica — the standard pharmacopoeia of the Mediterranean world for 1,500 years."
+    },
+    {
+      "name": "Peter Shor",
+      "wikiTitle": "Peter_Shor",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Peter_Shor_2017_Dirac_Medal_Award_Ceremony.jpg?width=480",
+      "life": "1959–",
+      "tagline": "American mathematician; quantum factoring",
+      "bio": "Devised in 1994 a quantum algorithm that factors integers in polynomial time — putting the entire public-key cryptography stack on borrowed time, and giving quantum computing its first compelling target."
+    },
+    {
+      "name": "Philo Farnsworth",
+      "wikiTitle": "Philo_Farnsworth",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Philo_T._Farnsworth.png?width=480",
+      "life": "1906–1971",
+      "tagline": "American inventor; all-electronic television",
+      "bio": "Sketched the principles of electronic television as a 14-year-old farm boy and transmitted the first image — a single line — at 21. A patent fight with RCA defined his later career."
+    },
+    {
+      "name": "Qin Shi Huang",
+      "wikiTitle": "Qin_Shi_Huang",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Qin_Shi_Huang_(秦始皇帝).jpg?width=480",
+      "life": "259–210 BCE",
+      "tagline": "First emperor of unified China",
+      "bio": "Unified the warring states in 221 BCE, standardized weights, measures, axle widths, and the writing system, and ordered the first version of the Great Wall. Buried with an army of terracotta."
+    },
+    {
+      "name": "Rachel Carson",
+      "wikiTitle": "Rachel_Carson",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Rachel-Carson.jpg?width=480",
+      "life": "1907–1964",
+      "tagline": "American marine biologist; Silent Spring",
+      "bio": "Silent Spring (1962) documented the ecological devastation of indiscriminate pesticide use and is credited with launching the modern environmental movement."
+    },
+    {
+      "name": "Ray Tomlinson",
+      "wikiTitle": "Ray_Tomlinson",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ray_Tomlinson.jpg?width=480",
+      "life": "1941–2016",
+      "tagline": "American programmer; @-sign in email",
+      "bio": "In 1971, sent the first networked email between two computers on ARPANET and chose the @-sign to separate user from host — still the convention every address you've ever used follows."
+    },
+    {
+      "name": "Robert Edwards",
+      "wikiTitle": "Robert_Edwards_(physiologist)",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Robert_Geoffrey_Edwards_2011.jpg?width=480",
+      "life": "1925–2013",
+      "tagline": "British physiologist; in-vitro fertilization",
+      "bio": "Worked out the conditions for fertilizing human eggs outside the body. With Patrick Steptoe, achieved the first IVF birth in 1978. 2010 Nobel."
+    },
+    {
+      "name": "Robert Gallo",
+      "wikiTitle": "Robert_Gallo",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Bob_Gallo_5_1995.jpg?width=480",
+      "life": "1937–",
+      "tagline": "American biomedical researcher; co-discovery of HIV",
+      "bio": "His NIH lab characterized HIV in 1984 and developed the first blood test, after a priority dispute with Montagnier's Pasteur Institute team."
+    },
+    {
+      "name": "Robert Hooke",
+      "wikiTitle": "Robert_Hooke",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/13_Portrait_of_Robert_Hooke.jpg?width=480",
+      "life": "1635–1703",
+      "tagline": "English natural philosopher; Micrographia",
+      "bio": "Curator of experiments for the Royal Society; coined 'cell' from looking at cork; formulated Hooke's law of elasticity; quarrelled famously with Newton."
+    },
+    {
+      "name": "Robin Warren",
+      "wikiTitle": "Robin_Warren",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Robin_Warren.jpg?width=480",
+      "life": "1937–2024",
+      "tagline": "Australian pathologist; H. pylori discovery",
+      "bio": "Noticed spiral bacteria in nearly half of stomach biopsies and persuaded Barry Marshall to culture them. Shared the 2005 Nobel for proving peptic ulcers are infections."
+    },
+    {
+      "name": "Seiji Ogawa",
+      "wikiTitle": "Seiji_Ogawa",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Seiji_Ogawa,_2019.jpg?width=480",
+      "life": "1934–",
+      "tagline": "Japanese neuroscientist; functional MRI",
+      "bio": "At Bell Labs in 1990 he demonstrated that blood oxygenation changes are visible in MRI — the BOLD signal that became fMRI, the workhorse of cognitive neuroscience."
+    },
+    {
+      "name": "Sejong the Great",
+      "wikiTitle": "Sejong_the_Great",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Sejong_the_Great_(15th_century).jpg?width=480",
+      "life": "1397–1450",
+      "tagline": "Korean monarch; commissioned Hangul",
+      "bio": "Fourth king of the Joseon dynasty. Promulgated Hangul (1446) — a phonetic alphabet designed so 'a wise man can learn it in a morning' — to lift Korean literacy out of Chinese characters."
+    },
+    {
+      "name": "Sergei Korolev",
+      "wikiTitle": "Sergei_Korolev",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Sergei_Korolev,_1969.jpg?width=480",
+      "life": "1907–1966",
+      "tagline": "Soviet rocket engineer; Sputnik & Vostok",
+      "bio": "Survived the Gulag to lead the Soviet space program: Sputnik (1957), Laika, Gagarin's flight. His identity was a state secret until after his death."
+    },
+    {
+      "name": "Sergey Brin",
+      "wikiTitle": "Sergey_Brin",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Sergey_Brin_Ted_2010.jpg?width=480",
+      "life": "1973–",
+      "tagline": "Russian-American computer scientist; co-founded Google",
+      "bio": "Co-founded Google with Larry Page after their Stanford graduate research on PageRank. Later led Google X and the Alphabet moonshot factories."
+    },
+    {
+      "name": "Shen Kuo",
+      "wikiTitle": "Shen_Kuo",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Shen_Kuo.JPG?width=480",
+      "life": "1031–1095",
+      "tagline": "Chinese polymath; the Dream Pool Essays",
+      "bio": "Song-dynasty civil servant whose Dream Pool Essays describe magnetic-needle compasses, the discovery of true north's deviation from magnetic north, fossil interpretation, and movable-type printing."
+    },
+    {
+      "name": "Shinya Yamanaka",
+      "wikiTitle": "Shinya_Yamanaka",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Shinya_yamanaka10.jpg?width=480",
+      "life": "1962–",
+      "tagline": "Japanese stem-cell biologist; iPS cells",
+      "bio": "Discovered that four transcription factors can revert ordinary adult cells into pluripotent stem cells — an alternative to embryonic sources that won the 2012 Nobel."
+    },
+    {
+      "name": "Sigmund Freud",
+      "wikiTitle": "Sigmund_Freud",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Sigmund_Freud,_by_Max_Halberstadt_(cropped).jpg?width=480",
+      "life": "1856–1939",
+      "tagline": "Austrian neurologist; founder of psychoanalysis",
+      "bio": "Mapped a theory of the unconscious mind — repression, dreams, transference — that dominated 20th-century thought about the self even as it largely lost its empirical claims to neuroscience."
+    },
+    {
+      "name": "Socrates",
+      "wikiTitle": "Socrates",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Socrates_Louvre.jpg?width=480",
+      "life": "c. 470–399 BCE",
+      "tagline": "Greek philosopher; the Socratic method",
+      "bio": "Wrote nothing. Cross-examined the politicians of Athens in the marketplace until they put him to death for it. Through Plato's dialogues, his interrogation became the model of philosophical inquiry."
+    },
+    {
+      "name": "Stanley Milgram",
+      "wikiTitle": "Stanley_Milgram",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Stanley_Milgram_Profile.jpg?width=480",
+      "life": "1933–1984",
+      "tagline": "American social psychologist",
+      "bio": "His Yale experiments on obedience to authority (1961) — administering 'shocks' to a stranger on a psychologist's orders — became one of the most-discussed studies in social science."
+    },
+    {
+      "name": "Subrahmanyan Chandrasekhar",
+      "wikiTitle": "Subrahmanyan_Chandrasekhar",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Subramanyan_Chandrasekhar.gif?width=480",
+      "life": "1910–1995",
+      "tagline": "Indian-American astrophysicist; stellar collapse",
+      "bio": "Computed in 1931 the maximum mass above which a white dwarf must collapse — the Chandrasekhar limit, the gateway to neutron stars and black holes. 1983 Nobel."
+    },
+    {
+      "name": "Svante Paabo",
+      "wikiTitle": "Svante_Pääbo",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Svante_Pääbo_2014.jpg?width=480",
+      "life": "1955–",
+      "tagline": "Swedish geneticist; ancient DNA",
+      "bio": "Sequenced the Neanderthal genome and identified the Denisovans from a single finger bone — proving modern humans interbred with both. 2022 Nobel."
+    },
+    {
+      "name": "Thales of Miletus",
+      "wikiTitle": "Thales_of_Miletus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Illustrerad_Verldshistoria_band_I_Ill_107.jpg?width=480",
+      "life": "c. 624–c. 546 BCE",
+      "tagline": "Greek pre-Socratic philosopher",
+      "bio": "First of the Seven Sages; argued that water is the fundamental substance and explained natural events without invoking the gods. The first attempt at physis."
+    },
+    {
+      "name": "Thomas Aquinas",
+      "wikiTitle": "Thomas_Aquinas",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Carlo_Crivelli_007.jpg?width=480",
+      "life": "1225–1274",
+      "tagline": "Italian Dominican; Christianized Aristotle",
+      "bio": "His Summa Theologica reconciled Aristotelian philosophy with Catholic theology — the synthesis that became official Catholic doctrine and structured medieval thought."
+    },
+    {
+      "name": "Thomas Hobbes",
+      "wikiTitle": "Thomas_Hobbes",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Thomas_Hobbes_(portrait).jpg?width=480",
+      "life": "1588–1679",
+      "tagline": "English philosopher; Leviathan",
+      "bio": "Argued in Leviathan (1651) that, absent a sovereign, life is 'solitary, poor, nasty, brutish, and short' — that we accept absolute authority to escape the state of nature. Modern political theory's starting position."
+    },
+    {
+      "name": "Thomas Malthus",
+      "wikiTitle": "Thomas_Robert_Malthus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg?width=480",
+      "life": "1766–1834",
+      "tagline": "English economist; population & resources",
+      "bio": "Argued that population grows geometrically while food grows arithmetically — a trap Darwin would later read across to natural selection."
+    },
+    {
+      "name": "Thomas Savery",
+      "wikiTitle": "Thomas_Savery",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Thomas_Savery_-_Project_Gutenberg_etext_20218.jpg?width=480",
+      "life": "1650–1715",
+      "tagline": "English engineer; first commercial steam pump",
+      "bio": "Patented in 1698 'The Miner's Friend', an atmospheric steam engine used to pump water from mines — the working ancestor of Newcomen's and Watt's later machines."
+    },
+    {
+      "name": "Thucydides",
+      "wikiTitle": "Thucydides",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Thucydides-bust-cropped.jpg?width=480",
+      "life": "c. 460–c. 400 BCE",
+      "tagline": "Athenian general; History of the Peloponnesian War",
+      "bio": "Wrote history without gods or prophecies — only causes, speeches reconstructed for what each side would plausibly have said, and a chilling realism about power. The model of secular historiography."
+    },
+    {
+      "name": "Tycho Brahe",
+      "wikiTitle": "Tycho_Brahe",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Tycho_Brahe.JPG?width=480",
+      "life": "1546–1601",
+      "tagline": "Danish astronomer; the last great naked-eye observer",
+      "bio": "Pre-telescope, observed planetary positions accurate to minutes of arc from his island observatory Uraniborg — the data on which his assistant Kepler would derive the laws of planetary motion."
+    },
+    {
+      "name": "W. French Anderson",
+      "wikiTitle": "W._French_Anderson",
+      "portrait": "",
+      "life": "1936–",
+      "tagline": "American geneticist; first human gene therapy",
+      "bio": "Led the team that performed the first authorized human gene therapy in 1990, treating an immunodeficient four-year-old by infusing ADA-corrected lymphocytes."
+    },
+    {
+      "name": "W.V.O. Quine",
+      "wikiTitle": "Willard_Van_Orman_Quine",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Wvqlecturing.jpg?width=480",
+      "life": "1908–2000",
+      "tagline": "American philosopher and logician",
+      "bio": "His Two Dogmas of Empiricism dismantled the analytic/synthetic distinction and reduction to immediate experience. The most influential American philosopher of the 20th century."
+    },
+    {
+      "name": "William James",
+      "wikiTitle": "William_James",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/William_James_b1842c.jpg?width=480",
+      "life": "1842–1910",
+      "tagline": "American philosopher and psychologist",
+      "bio": "Founded American psychology with his 1890 Principles, and American pragmatism with his lectures of the same name. Brother of Henry; conversationalist of the same caliber."
+    },
+    {
+      "name": "Zeno of Citium",
+      "wikiTitle": "Zeno_of_Citium",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Zeno_of_Citium_pushkin01.jpg?width=480",
+      "life": "c. 334–c. 262 BCE",
+      "tagline": "Greek philosopher; founder of Stoicism",
+      "bio": "Taught from the Stoa Poikile in Athens. His ethics — virtue is the only good, the rest is preferred or dispreferred indifferents — would underwrite Roman Stoicism three centuries later."
+    },
+    {
+      "name": "Ahmes",
+      "wikiTitle": "Ahmes",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Rhind_Mathematical_Papyrus.jpg?width=480",
+      "life": "fl. c. 1650 BCE",
+      "tagline": "Egyptian scribe; the Rhind Mathematical Papyrus",
+      "bio": "Copied the oldest surviving mathematical textbook — 84 problems in arithmetic, geometry, and proportion that document the state of Egyptian mathematics around 1650 BCE."
+    },
+    {
+      "name": "Ambroise Pare",
+      "wikiTitle": "Ambroise_Paré",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Ambroise_Paré_1.jpg?width=480",
+      "life": "1510–1590",
+      "tagline": "French battlefield surgeon",
+      "bio": "Replaced cauterizing oil with ligatures and gentle dressings on gunshot wounds, slashing surgical mortality. Founder of modern surgery and military medicine."
+    },
+    {
+      "name": "Chester Carlson",
+      "wikiTitle": "Chester_Carlson",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Chester_Carlson.jpg?width=480",
+      "life": "1906–1968",
+      "tagline": "American physicist; xerography",
+      "bio": "Invented dry-plate electrophotography in 1938 — a process IBM and others rejected before Haloid (later Xerox) made it a multibillion-dollar industry."
+    },
+    {
+      "name": "Christopher Sholes",
+      "wikiTitle": "Christopher_Latham_Sholes",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Christopher_Sholes2.jpg?width=480",
+      "life": "1819–1890",
+      "tagline": "American inventor; the typewriter & QWERTY",
+      "bio": "Patented the first commercially successful typewriter (1868) and the QWERTY layout that arranged frequently used letters apart to stop the mechanism jamming. Both have outlived their causes."
+    },
+    {
+      "name": "Chuck Hull",
+      "wikiTitle": "Chuck_Hull",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Chuck_Hull.jpg?width=480",
+      "life": "1939–",
+      "tagline": "American engineer; stereolithography",
+      "bio": "Invented stereolithography in 1984 — 3D printing of UV-curable photopolymer layer by layer — and founded 3D Systems. The technology that made additive manufacturing real."
+    },
+    {
+      "name": "Comte de Buffon",
+      "wikiTitle": "Georges-Louis_Leclerc,_Comte_de_Buffon",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Georges-Louis_Leclerc,_comte_de_Buffon_by_François-Hubert_Drouais.jpg?width=480",
+      "life": "1707–1788",
+      "tagline": "French naturalist; Histoire Naturelle",
+      "bio": "His 36-volume Histoire Naturelle gathered everything known about the natural world. Argued the Earth was many times older than 6,000 years — an empirical estimate from cooling iron spheres."
+    },
+    {
+      "name": "E.O. Wilson",
+      "wikiTitle": "E._O._Wilson",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/E_O_Wilson_2003.jpg?width=480",
+      "life": "1929–2021",
+      "tagline": "American biologist; sociobiology",
+      "bio": "Pioneer of myrmecology who, in Sociobiology (1975), tried to give animal social behavior — including human behavior — an evolutionary framework. The controversy that followed reshaped social science."
+    },
+    {
+      "name": "Felix Hoffmann",
+      "wikiTitle": "Felix_Hoffmann",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Felix_Hoffmann.jpg?width=480",
+      "life": "1868–1946",
+      "tagline": "German chemist; aspirin",
+      "bio": "At Bayer in 1897, synthesized stable acetylsalicylic acid — aspirin — to treat his father's rheumatism. Synthesized heroin a few weeks later, marketed initially as a cough suppressant."
+    },
+    {
+      "name": "Frank Whittle",
+      "wikiTitle": "Frank_Whittle",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/CH_011867.jpg?width=480",
+      "life": "1907–1996",
+      "tagline": "British engineer; the jet engine",
+      "bio": "Patented the turbojet engine in 1930. The first British jet aircraft flew in 1941 — the technology that made the postwar jet age possible."
+    },
+    {
+      "name": "Han Fei",
+      "wikiTitle": "Han_Fei",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Hanfeitsu_(cropped).jpg?width=480",
+      "life": "c. 280–233 BCE",
+      "tagline": "Chinese philosopher; founder of Legalism",
+      "bio": "Argued that strict laws, harsh punishments, and centralized power — not Confucian virtue — keep states orderly. The intellectual blueprint of the Qin unification."
+    },
+    {
+      "name": "Hans von Ohain",
+      "wikiTitle": "Hans_von_Ohain",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Hans_von_Ohain.jpg?width=480",
+      "life": "1911–1998",
+      "tagline": "German physicist; jet engine, independently",
+      "bio": "Designed and ran the first operational turbojet (Heinkel HeS 1, 1937) — independently of Whittle's parallel work in Britain."
+    },
+    {
+      "name": "Harold Kroto",
+      "wikiTitle": "Harry_Kroto",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Harold_Kroto_2010.jpg?width=480",
+      "life": "1939–2016",
+      "tagline": "British chemist; buckminsterfullerene",
+      "bio": "Co-discovered the soccer-ball-shaped C₆₀ molecule (1985) and the family of fullerenes — opening the door to carbon nanotubes and graphene. Shared the 1996 Nobel."
+    },
+    {
+      "name": "Herodotus",
+      "wikiTitle": "Herodotus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/AGMA_Herodote.jpg?width=480",
+      "life": "c. 484–c. 425 BCE",
+      "tagline": "Greek writer; the father of history",
+      "bio": "His Histories investigated the causes of the Greco-Persian wars and along the way described Egypt, Scythia, India, and dozens of customs unfamiliar to his Greek audience — inventing ethnography as he went."
+    },
+    {
+      "name": "Hugo Grotius",
+      "wikiTitle": "Hugo_Grotius",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Michiel_Jansz_van_Mierevelt_-_Hugo_Grotius.jpg?width=480",
+      "life": "1583–1645",
+      "tagline": "Dutch jurist; founder of international law",
+      "bio": "His De Jure Belli ac Pacis (1625) argued that there is a natural law binding sovereigns even at war — the conceptual seed of the Westphalian system and modern international law."
+    },
+    {
+      "name": "Imhotep",
+      "wikiTitle": "Imhotep",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Imhotep-Louvre.JPG?width=480",
+      "life": "fl. c. 2650 BCE",
+      "tagline": "Egyptian polymath; first named architect",
+      "bio": "Vizier to Pharaoh Djoser; designed the Step Pyramid at Saqqara, the first large-scale stone monument. Later deified as a god of medicine."
+    },
+    {
+      "name": "Jared Diamond",
+      "wikiTitle": "Jared_Diamond",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Jared_Diamond_PopTech.jpg?width=480",
+      "life": "1937–",
+      "tagline": "American geographer; Guns, Germs, and Steel",
+      "bio": "Argued in his 1997 Pulitzer-winning book that environmental factors — geography, available species, disease ecology — explain why some societies came to dominate others."
+    },
+    {
+      "name": "Jean Bodin",
+      "wikiTitle": "Jean_Bodin",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Jean_Bodin.jpg?width=480",
+      "life": "1530–1596",
+      "tagline": "French jurist; theorist of sovereignty",
+      "bio": "His Six Books of the Commonwealth (1576) defined sovereignty as the absolute, perpetual power of the state — a concept that the Westphalian order would soon institutionalize."
+    },
+    {
+      "name": "John Martinis",
+      "wikiTitle": "John_Martinis",
+      "portrait": "",
+      "life": "1958–",
+      "tagline": "American physicist; quantum supremacy",
+      "bio": "Led Google's quantum-computing group through the 2019 'quantum supremacy' demonstration on the Sycamore processor — the first task believably beyond classical reach."
+    },
+    {
+      "name": "Joseph Kirschvink",
+      "wikiTitle": "Joseph_Kirschvink",
+      "portrait": "",
+      "life": "1953–",
+      "tagline": "American geobiologist; Snowball Earth",
+      "bio": "Caltech paleomagnetist who proposed the Snowball Earth hypothesis — that the planet froze over completely in the late Proterozoic — and worked out biogenic magnetite in animal navigation."
+    },
+    {
+      "name": "Louis Braille",
+      "wikiTitle": "Louis_Braille",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Louis_Braille.jpg?width=480",
+      "life": "1809–1852",
+      "tagline": "French educator; the braille writing system",
+      "bio": "Blinded at three; at fifteen, devised the six-dot tactile alphabet now used worldwide by blind readers. Posted at the Panthéon."
+    },
+    {
+      "name": "Marcello Malpighi",
+      "wikiTitle": "Marcello_Malpighi",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Marcello_Malpighi_by_Carlo_Cignani.jpg?width=480",
+      "life": "1628–1694",
+      "tagline": "Italian biologist; microscopic anatomy",
+      "bio": "First to see capillaries — and thereby close Harvey's circulatory loop. Pioneer of histology and embryology with a microscope."
+    },
+    {
+      "name": "Mihaly Csikszentmihalyi",
+      "wikiTitle": "Mihaly_Csikszentmihalyi",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Mihaly_Csikszentmihalyi.jpg?width=480",
+      "life": "1934–2021",
+      "tagline": "Hungarian-American psychologist; flow",
+      "bio": "Identified 'flow' — the state of complete absorption in a challenging task — and built positive psychology around the conditions that produce it."
+    },
+    {
+      "name": "Nehemiah Grew",
+      "wikiTitle": "Nehemiah_Grew",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Nehemiah_Grew.jpg?width=480",
+      "life": "1641–1712",
+      "tagline": "English botanist; plant anatomy",
+      "bio": "His Anatomy of Plants (1682) gave the first systematic microscopic description of plant tissues — and proposed that flowers are the sexual organs of plants."
+    },
+    {
+      "name": "Nicole Oresme",
+      "wikiTitle": "Nicole_Oresme",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Oresme_Cosmography.jpg?width=480",
+      "life": "c. 1320–1382",
+      "tagline": "French scholastic; early kinematics & graphs",
+      "bio": "Graphed quantities against time, anticipated coordinates, argued for the rotation of the Earth, and translated Aristotle into French. Bishop of Lisieux."
+    },
+    {
+      "name": "Paracelsus",
+      "wikiTitle": "Paracelsus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Paracelsus01.jpg?width=480",
+      "life": "1493–1541",
+      "tagline": "Swiss alchemist-physician",
+      "bio": "Burned medical textbooks in public, introduced chemistry to medicine, taught that 'the dose makes the poison'. Founded toxicology and rattled the Galenic establishment."
+    },
+    {
+      "name": "Pliny the Elder",
+      "wikiTitle": "Pliny_the_Elder",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Pliny_the_Elder.jpg?width=480",
+      "life": "23/24–79 CE",
+      "tagline": "Roman polymath; Naturalis Historia",
+      "bio": "His 37-volume encyclopedia tried to compile everything the Roman world knew about the natural world. Died investigating the eruption of Vesuvius that destroyed Pompeii."
+    },
+    {
+      "name": "Richard Dawkins",
+      "wikiTitle": "Richard_Dawkins",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Richard_Dawkins_Cooper_Union_Shankbone.jpg?width=480",
+      "life": "1941–",
+      "tagline": "British evolutionary biologist",
+      "bio": "The Selfish Gene (1976) reframed evolution at the level of replicators rather than organisms and coined 'meme'. Later, public proponent of atheism."
+    },
+    {
+      "name": "Richard Smalley",
+      "wikiTitle": "Richard_Smalley",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Richard_Errett_Smalley_2007.jpg?width=480",
+      "life": "1943–2005",
+      "tagline": "American chemist; fullerenes",
+      "bio": "Co-discoverer of C₆₀ (buckminsterfullerene) and an advocate for nanotechnology and the energy challenge. 1996 Nobel."
+    },
+    {
+      "name": "Robert Curl",
+      "wikiTitle": "Robert_Curl",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Robert_Curl_HD2008_FRX1305.jpg?width=480",
+      "life": "1933–2022",
+      "tagline": "American chemist; fullerene co-discoverer",
+      "bio": "Rice University chemist who, with Kroto and Smalley, produced and identified C₆₀ — the third allotrope of carbon. Shared the 1996 Nobel."
+    },
+    {
+      "name": "Robert Putnam",
+      "wikiTitle": "Robert_D._Putnam",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Robert_Putnam_-_World_Economic_Forum_Annual_Meeting_2007.jpg?width=480",
+      "life": "1941–",
+      "tagline": "American political scientist; social capital",
+      "bio": "Bowling Alone (2000) documented the postwar decline of American civic association and made 'social capital' a household phrase in social science."
+    },
+    {
+      "name": "Satoshi Nakamoto",
+      "wikiTitle": "Satoshi_Nakamoto",
+      "portrait": "",
+      "life": "fl. 2008–2011",
+      "tagline": "Pseudonymous inventor of Bitcoin",
+      "bio": "Posted the Bitcoin whitepaper in October 2008 and shipped the first node in January 2009 — solving the double-spend problem without a trusted intermediary. Identity unknown; vanished by 2011."
+    },
+    {
+      "name": "Strabo",
+      "wikiTitle": "Strabo",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Strabo.jpg?width=480",
+      "life": "64 BCE–c. 24 CE",
+      "tagline": "Greek geographer and historian",
+      "bio": "His 17-volume Geographica described the inhabited world as the Romans knew it — physical features, cultures, economies — and survived almost intact."
+    },
+    {
+      "name": "Su Song",
+      "wikiTitle": "Su_Song",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Su_Song_Statue.jpg?width=480",
+      "life": "1020–1101",
+      "tagline": "Chinese polymath; astronomical clock tower",
+      "bio": "Song-dynasty official who built a 10-meter water-driven astronomical clock tower (1088) — the world's first known escapement mechanism, three centuries before European clocks caught up."
+    },
+    {
+      "name": "Sun Tzu",
+      "wikiTitle": "Sun_Tzu",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Enchoen27n3200.jpg?width=480",
+      "life": "fl. c. 5th century BCE",
+      "tagline": "Chinese general; The Art of War",
+      "bio": "The Art of War distilled warfare into thirteen short chapters of doctrine — deception, terrain, timing — that have been read by generals, executives, and football coaches ever since."
+    },
+    {
+      "name": "Theophrastus",
+      "wikiTitle": "Theophrastus",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Theophrastos.jpg?width=480",
+      "life": "c. 371–c. 287 BCE",
+      "tagline": "Greek philosopher; father of botany",
+      "bio": "Aristotle's successor at the Lyceum. His Enquiry into Plants and On the Causes of Plants founded botany as a systematic discipline."
+    },
+    {
+      "name": "Thomas Sydenham",
+      "wikiTitle": "Thomas_Sydenham",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Thomas_Sydenham_by_Mary_Beale.jpg?width=480",
+      "life": "1624–1689",
+      "tagline": "English physician; the 'English Hippocrates'",
+      "bio": "Brought clinical observation back into English medicine, classifying diseases as discrete entities. His preference for plain remedies and bedside attention defined a clinical style still recognizable today."
+    },
+    {
+      "name": "Zeno of Elea",
+      "wikiTitle": "Zeno_of_Elea",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Zeno_of_Elea_Tibaldi_or_Carducci_Escorial.jpg?width=480",
+      "life": "c. 490–c. 430 BCE",
+      "tagline": "Greek pre-Socratic; the paradoxes",
+      "bio": "Devised the paradoxes — Achilles and the tortoise, the arrow, the dichotomy — that tortured every philosopher of motion until the modern theory of limits resolved them."
+    },
+    {
+      "name": "Zhang Heng",
+      "wikiTitle": "Zhang_Heng",
+      "portrait": "https://en.wikipedia.org/wiki/Special:FilePath/Zhang_heng.jpg?width=480",
+      "life": "78–139 CE",
+      "tagline": "Chinese polymath; seismoscope",
+      "bio": "Han astronomer-mathematician who built the first known seismoscope (132 CE) — a bronze urn with dragons that dropped balls in the direction of distant earthquakes."
     }
   ]
 }
