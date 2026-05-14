@@ -101,14 +101,20 @@ export function useUIState(): UIState & UIActions {
         return [id, null];
       });
       setSelectedId(id);
+      setSelectedPersonState(null);
       return;
     }
     setCompareIds([null, null]);
     setSelectedId(id);
+    setSelectedPersonState(null);
   }, []);
 
   const selectPerson = useCallback((name: string | null) => {
     setSelectedPersonState(name);
+    if (name) {
+      setSelectedId(null);
+      setCompareIds([null, null]);
+    }
   }, []);
 
   const selectConcept = useCallback((id: string | null) => {
