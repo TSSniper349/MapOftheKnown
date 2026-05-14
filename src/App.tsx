@@ -1,5 +1,6 @@
 import { useEffect, useMemo } from 'react';
 import { useEvents } from './hooks/useEvents';
+import { usePeople } from './hooks/usePeople';
 import { useUIState } from './hooks/useUIState';
 import { useViewport } from './hooks/useResponsive';
 import { TimelineNetwork } from './components/TimelineNetwork';
@@ -7,6 +8,8 @@ import { GeographicView } from './views/GeographicView';
 import { PeopleView } from './views/PeopleView';
 import { ConceptView } from './views/ConceptView';
 import { DetailPanel } from './components/DetailPanel';
+import { PersonProfilePanel } from './components/PersonProfilePanel';
+import { StorylineRunner } from './components/StorylineRunner';
 import { ControlsPanel } from './components/ControlsPanel';
 import { TimeScrubber } from './components/TimeScrubber';
 import { Header } from './components/Header';
@@ -19,6 +22,7 @@ import type { RawEdge, RawEvent, ViewId } from './types';
 
 export default function App() {
   const events = useEvents();
+  const profiles = usePeople();
   const ui = useUIState();
   const vp = useViewport();
 
@@ -88,9 +92,21 @@ export default function App() {
             derived={derived}
             ui={ui}
           />
+          <StorylineRunner nodes={nodes} ui={ui} />
           <SelectionBreadcrumb nodes={nodes} edges={edges} ui={ui} />
         </div>
-        <DetailPanel nodes={nodes} edges={edges} derived={derived} ui={ui} />
+        {ui.selectedPerson ? (
+          <PersonProfilePanel
+            name={ui.selectedPerson}
+            nodes={nodes}
+            edges={edges}
+            derived={derived}
+            profile={profiles.get(ui.selectedPerson)}
+            ui={ui}
+          />
+        ) : (
+          <DetailPanel nodes={nodes} edges={edges} derived={derived} ui={ui} />
+        )}
       </div>
       {showScrubber && <TimeScrubber ui={ui} nodes={nodes} />}
     </div>

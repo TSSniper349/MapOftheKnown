@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import type { PreparedEdge, PreparedNode } from '../App';
 import { DOMAIN_BY_ID } from '../data/domains';
 import { formatYear, parseEventYear } from '../lib/timeScale';
@@ -17,8 +17,30 @@ export function DetailPanel({ nodes, edges, derived, ui }: DetailPanelProps) {
   const sel = ui.selectedId;
   const [a, b] = ui.compareIds;
   const showCompare = !!(a && b && a !== b);
+  const [collapsed, setCollapsed] = useState(false);
 
   const node = useMemo(() => nodes.find((n) => n.raw.id === sel) ?? null, [nodes, sel]);
+
+  if (collapsed && (sel || showCompare)) {
+    return (
+      <aside className="group/detail relative hidden h-full w-10 shrink-0 flex-col items-center border-l border-parchment-300 bg-parchment-50/70 py-3 transition-[width] duration-200 ease-out hover:w-14 hover:bg-parchment-50 lg:flex">
+        <button
+          type="button"
+          onClick={() => setCollapsed(false)}
+          className="rounded p-1 text-ink-500 hover:bg-parchment-200/70 hover:text-ink-700"
+          aria-label="Expand detail panel"
+          title="Expand"
+        >
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M9 3 L5 7 L9 11" stroke="currentColor" strokeWidth="1.5" />
+          </svg>
+        </button>
+        <div className="mt-6 origin-top-left rotate-90 whitespace-nowrap text-[10px] uppercase tracking-[0.2em] text-ink-500">
+          {showCompare ? 'compare' : 'detail'}
+        </div>
+      </aside>
+    );
+  }
 
   if (!sel || !node) {
     return (
@@ -66,7 +88,7 @@ export function DetailPanel({ nodes, edges, derived, ui }: DetailPanelProps) {
   const concepts = ev.concepts ?? [];
 
   return (
-    <aside className="relative flex h-full w-[28rem] shrink-0 flex-col border-l border-parchment-300 bg-parchment-50 shadow-card">
+    <aside className="group/detail relative flex h-full w-[28rem] shrink-0 flex-col border-l border-parchment-300 bg-parchment-50 shadow-card transition-[width] duration-200 ease-out hover:w-[30rem]">
       <div className="flex items-start justify-between gap-4 px-6 pt-6">
         <div>
           <div
@@ -92,6 +114,15 @@ export function DetailPanel({ nodes, edges, derived, ui }: DetailPanelProps) {
           </div>
         </div>
         <div className="flex flex-col items-end gap-1">
+          <button
+            type="button"
+            onClick={() => setCollapsed(true)}
+            className="rounded-md border border-parchment-300 bg-parchment-50 px-2 py-1 font-sans text-xs text-ink-600 hover:bg-parchment-200"
+            aria-label="Collapse detail panel"
+            title="Collapse"
+          >
+            collapse
+          </button>
           <button
             type="button"
             onClick={ui.togglePinDetail}
@@ -375,7 +406,7 @@ function CompareNarrative({ nodes, edges, aId, bId, ui }: CompareProps) {
   const nodeMap = useMemo(() => new Map(nodes.map((n) => [n.raw.id, n])), [nodes]);
 
   return (
-    <aside className="relative flex h-full w-[28rem] shrink-0 flex-col border-l border-parchment-300 bg-parchment-50 shadow-card">
+    <aside className="group/detail relative flex h-full w-[28rem] shrink-0 flex-col border-l border-parchment-300 bg-parchment-50 shadow-card transition-[width] duration-200 ease-out hover:w-[30rem]">
       <div className="flex items-start justify-between gap-3 px-6 pt-6">
         <div>
           <div className="text-[11px] uppercase tracking-[0.16em] text-domain-medicine">

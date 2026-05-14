@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { UIActions, UIState } from '../hooks/useUIState';
 import { DOMAINS } from '../data/domains';
+import { StorylinePicker } from './StorylineRunner';
 
 interface ControlsPanelProps {
   ui: UIState & UIActions;
@@ -10,8 +11,10 @@ export function ControlsPanel({ ui }: ControlsPanelProps) {
   const [open, setOpen] = useState(true);
   return (
     <aside
-      className={`relative flex shrink-0 flex-col border-r border-parchment-300 bg-parchment-50/60 transition-all duration-200 ${
-        open ? 'w-64 px-4 py-4' : 'w-9 px-0 py-2'
+      className={`group/controls relative flex shrink-0 flex-col overflow-hidden border-r border-parchment-300 bg-parchment-50/60 transition-[width,padding] duration-200 ease-out ${
+        open
+          ? 'w-64 px-4 py-4 hover:w-72'
+          : 'w-9 px-0 py-2 hover:w-12 hover:bg-parchment-100/80'
       }`}
     >
       <button
@@ -130,6 +133,13 @@ export function ControlsPanel({ ui }: ControlsPanelProps) {
             <p className="mt-1 font-serif text-[11px] italic text-ink-400">
               edges fade to ~10%; brighten on hover/selection
             </p>
+          </Section>
+
+          <Section title="Storylines">
+            <p className="mb-1.5 font-serif text-[11px] italic text-ink-500">
+              curated tours through the influence graph
+            </p>
+            <StorylinePicker ui={ui} />
           </Section>
 
           <Section title="Lenses">

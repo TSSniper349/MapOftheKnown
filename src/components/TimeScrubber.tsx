@@ -18,6 +18,7 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [trackW, setTrackW] = useState(0);
   const [drag, setDrag] = useState<'left' | 'right' | 'window' | null>(null);
+  const [collapsed, setCollapsed] = useState(false);
   const dragStart = useRef<{ mouseX: number; window: [number, number] } | null>(null);
 
   useEffect(() => {
@@ -61,6 +62,38 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
     () => bins.reduce((m, b) => Math.max(m, b.importance), 1),
     [bins],
   );
+
+  /**
+   * Cumulative-importance path: a low, calm sweep across the track that shows
+   * how knowledge has compounded. Drawn as an area under a curve, scaled to
+   * the full historical span. Makes the modern inflection visible at a glance.
+   */
+  const cumulativePath = useMemo(() => {
+    if (bins.length === 0) return '';
+    const totals: number[] = new Array(bins.length);
+    let running = 0;
+    for (let i = 0; i < bins.length; i++) {
+      running += bins[i].importance;
+      totals[i] = running;
+    }
+    const grandTotal = running || 1;
+    const trackH = TRACK_HEIGHT - 4;
+    // Curve hugs the bottom; reserves headroom for histogram + labels above.
+    const maxH = Math.max(8, trackH * 0.32);
+    const baseY = trackH - 2;
+    const pts: string[] = [];
+    for (let i = 0; i < bins.length; i++) {
+      const x = bins[i].x + bins[i].w / 2;
+      const y = baseY - (totals[i] / grandTotal) * maxH;
+      pts.push(`${i === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)}`);
+    }
+    // Close to baseline to make an area.
+    const last = bins[bins.length - 1];
+    pts.push(`L ${(last.x + last.w).toFixed(1)} ${baseY.toFixed(1)}`);
+    pts.push(`L ${bins[0].x.toFixed(1)} ${baseY.toFixed(1)}`);
+    pts.push('Z');
+    return pts.join(' ');
+  }, [bins]);
 
   const yearAtMouse = useCallback(
     (clientX: number): number => {
@@ -130,9 +163,40 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
   const x0 = xScale.forward(winYears[0]);
   const x1 = xScale.forward(winYears[1]);
 
+  if (collapsed) {
+    return (
+      <footer
+        className="z-10 flex h-7 shrink-0 select-none items-center justify-between border-t border-parchment-300 bg-parchment-50/90 shadow-page transition-[height] duration-200 ease-out hover:h-9"
+        style={{ paddingLeft: PAD_LEFT - 8, paddingRight: PAD_RIGHT }}
+      >
+        <div className="flex items-center gap-3 font-serif text-xs italic text-ink-500">
+          <span className="text-[10px] uppercase not-italic tracking-[0.2em] text-ink-400">
+            timeline
+          </span>
+          <span>
+            {formatYear(winYears[0])}
+            <span className="mx-2">to</span>
+            {formatYear(winYears[1])}
+          </span>
+        </div>
+        <button
+          type="button"
+          onClick={() => setCollapsed(false)}
+          className="rounded p-1 text-ink-500 hover:bg-parchment-200/70 hover:text-ink-700"
+          aria-label="Expand timeline"
+          title="Expand timeline"
+        >
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 9 L7 5 L11 9" stroke="currentColor" strokeWidth="1.5" />
+          </svg>
+        </button>
+      </footer>
+    );
+  }
+
   return (
     <footer
-      className="z-10 flex h-[110px] shrink-0 select-none flex-col justify-end border-t border-parchment-300 bg-parchment-50/90 shadow-page"
+      className="group/scrubber z-10 flex h-[110px] shrink-0 select-none flex-col justify-end border-t border-parchment-300 bg-parchment-50/90 shadow-page transition-[height] duration-200 ease-out hover:h-[124px]"
       style={{ paddingLeft: PAD_LEFT - 8, paddingRight: PAD_RIGHT }}
     >
       <div className="mb-1 flex items-center justify-between gap-3">
@@ -182,10 +246,37 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
             Full
           </button>
         </div>
-        <div className="font-serif text-xs italic text-ink-500">
-          {formatYear(winYears[0])}
-          <span className="mx-2">to</span>
-          {formatYear(winYears[1])}
+        <div className="flex items-center gap-2 font-serif text-xs italic text-ink-500">
+          <span
+            className="hidden items-center gap-1 not-italic text-[10px] uppercase tracking-[0.16em] text-ink-400 md:inline-flex"
+            title="Cumulative importance of all curated events, scaled across the full timeline"
+          >
+            <svg width="20" height="8" viewBox="0 0 20 8">
+              <path
+                d="M0 7 C 6 6, 10 5, 14 3 S 18 1, 20 0 L 20 8 L 0 8 Z"
+                fill="rgba(122,46,58,0.20)"
+                stroke="rgba(122,46,58,0.7)"
+                strokeWidth="0.8"
+              />
+            </svg>
+            <span>cumulative</span>
+          </span>
+          <span>
+            {formatYear(winYears[0])}
+            <span className="mx-2">to</span>
+            {formatYear(winYears[1])}
+          </span>
+          <button
+            type="button"
+            onClick={() => setCollapsed(true)}
+            className="rounded p-1 not-italic text-ink-500 hover:bg-parchment-200/70 hover:text-ink-700"
+            aria-label="Collapse timeline"
+            title="Collapse timeline"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 5 L7 9 L11 5" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </button>
         </div>
       </div>
 
@@ -204,6 +295,15 @@ export function TimeScrubber({ nodes, ui }: TimeScrubberProps) {
           className="absolute inset-0 h-full w-full"
           preserveAspectRatio="none"
         >
+          {cumulativePath && (
+            <path
+              d={cumulativePath}
+              fill="rgba(122,46,58,0.10)"
+              stroke="rgba(122,46,58,0.55)"
+              strokeWidth={0.9}
+              strokeLinejoin="round"
+            />
+          )}
           {bins.map((b, i) => {
             const h = ((b.importance / maxBin) * (TRACK_HEIGHT - 18)) | 0;
             const inside = b.x + b.w / 2 >= x0 && b.x + b.w / 2 <= x1;

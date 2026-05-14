@@ -1,4 +1,4 @@
-import type { ConceptRecord, DomainId, PersonRecord, PlaceRecord, RawEvent } from '../types';
+import type { ConceptRecord, DomainId, PersonRecord, PlaceRecord, RawEdge, RawEvent } from '../types';
 
 /** Derived tables computed from events at load time. Cheap; no need to memo further. */
 export interface DerivedTables {
@@ -97,6 +97,103 @@ export interface PersonEdge {
   target: string;
   /** Number of shared events. */
   weight: number;
+}
+
+/** Directed person-to-person influence, lifted from event edges. */
+export interface PersonInfluence {
+  /** Other person's name. */
+  name: string;
+  /** Event ids on this person's side of the link. */
+  myEvents: Set<string>;
+  /** Event ids on the other person's side. */
+  theirEvents: Set<string>;
+  /** Number of underlying event edges. */
+  weight: number;
+}
+
+/**
+ * For a given person, return:
+ *   - `builtOn`: people whose events feed into this person's events (incoming).
+ *   - `enabled`: people whose events this person's work fed into (outgoing).
+ *   - `collaborators`: people who co-authored events with this person.
+ * Self-links are filtered.
+ */
+export function getPersonInfluence(
+  personName: string,
+  events: RawEvent[],
+  edges: RawEdge[],
+): {
+  builtOn: PersonInfluence[];
+  enabled: PersonInfluence[];
+  collaborators: PersonInfluence[];
+} {
+  const eventById = new Map(events.map((e) => [e.id, e]));
+  const myEventIds = new Set(
+    events.filter((e) => (e.keyFigures ?? []).includes(personName)).map((e) => e.id),
+  );
+
+  const incoming = new Map<string, PersonInfluence>();
+  const outgoing = new Map<string, PersonInfluence>();
+
+  const addInfluence = (
+    map: Map<string, PersonInfluence>,
+    name: string,
+    myEv: string,
+    theirEv: string,
+  ) => {
+    if (name === personName) return;
+    let rec = map.get(name);
+    if (!rec) {
+      rec = { name, myEvents: new Set(), theirEvents: new Set(), weight: 0 };
+      map.set(name, rec);
+    }
+    rec.myEvents.add(myEv);
+    rec.theirEvents.add(theirEv);
+    rec.weight += 1;
+  };
+
+  for (const edge of edges) {
+    const sources = edge.source ? [edge.source] : edge.sources ?? [];
+    const target = edge.target;
+    const targetEv = eventById.get(target);
+    if (!targetEv) continue;
+    const targetFigs = targetEv.keyFigures ?? [];
+    for (const src of sources) {
+      const srcEv = eventById.get(src);
+      if (!srcEv) continue;
+      const srcFigs = srcEv.keyFigures ?? [];
+      if (myEventIds.has(target)) {
+        for (const srcFig of srcFigs) addInfluence(incoming, srcFig, target, src);
+      }
+      if (myEventIds.has(src)) {
+        for (const tgtFig of targetFigs) addInfluence(outgoing, tgtFig, src, target);
+      }
+    }
+  }
+
+  const collaborators = new Map<string, PersonInfluence>();
+  for (const id of myEventIds) {
+    const ev = eventById.get(id);
+    if (!ev) continue;
+    for (const f of ev.keyFigures ?? []) {
+      if (f === personName) continue;
+      let rec = collaborators.get(f);
+      if (!rec) {
+        rec = { name: f, myEvents: new Set(), theirEvents: new Set(), weight: 0 };
+        collaborators.set(f, rec);
+      }
+      rec.myEvents.add(id);
+      rec.theirEvents.add(id);
+      rec.weight += 1;
+    }
+  }
+
+  const byWeight = (a: PersonInfluence, b: PersonInfluence) => b.weight - a.weight;
+  return {
+    builtOn: [...incoming.values()].sort(byWeight),
+    enabled: [...outgoing.values()].sort(byWeight),
+    collaborators: [...collaborators.values()].sort(byWeight),
+  };
 }
 
 /** Co-event ties: for each event with ≥2 keyFigures, add an edge between each pair. */

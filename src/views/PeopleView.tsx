@@ -5,7 +5,6 @@ import { useResizeObserver } from '../hooks/useResponsive';
 import { DOMAIN_BY_ID } from '../data/domains';
 import type { UIActions, UIState } from '../hooks/useUIState';
 import { buildPersonEdges, type DerivedTables, type PersonEdge } from '../lib/derive';
-import { formatYear } from '../lib/timeScale';
 
 interface PeopleViewProps {
   nodes: PreparedNode[];
@@ -228,61 +227,11 @@ export function PeopleView({ nodes, derived, ui }: PeopleViewProps) {
         </div>
       </div>
 
-      {selectedPerson && (
-        <PersonSummary
-          name={selectedPerson}
-          derived={derived}
-          nodes={nodes}
-          ui={ui}
-        />
+      {!selectedPerson && (
+        <div className="pointer-events-none absolute left-3 top-3 rounded-md border border-parchment-300 bg-parchment-50/85 px-3 py-1.5 font-serif text-[11px] italic text-ink-500 shadow-page">
+          click a figure to open their profile →
+        </div>
       )}
-    </div>
-  );
-}
-
-function PersonSummary({
-  name,
-  derived,
-  nodes,
-  ui,
-}: {
-  name: string;
-  derived: DerivedTables;
-  nodes: PreparedNode[];
-  ui: UIState & UIActions;
-}) {
-  const p = derived.people.get(name);
-  if (!p) return null;
-  const events = p.events
-    .map((id) => nodes.find((n) => n.raw.id === id))
-    .filter((n): n is PreparedNode => !!n)
-    .sort((a, b) => a.year - b.year);
-  return (
-    <div className="absolute left-3 top-3 w-80 rounded-md border border-parchment-300 bg-parchment-50/95 px-4 py-3 shadow-card">
-      <div className="font-serif text-lg text-ink-900">{name}</div>
-      <div className="text-[11px] uppercase tracking-wider text-ink-500">
-        {events.length} events · {formatYear(p.dateMin)} – {formatYear(p.dateMax)}
-      </div>
-      <ul className="mt-2 max-h-64 overflow-y-auto pr-1 text-[13px]">
-        {events.map((n) => {
-          const d = DOMAIN_BY_ID[n.raw.domain];
-          return (
-            <li key={n.raw.id} className="mb-1">
-              <button
-                type="button"
-                onClick={() => ui.teleportTo(n.raw.id)}
-                className="text-left font-serif text-ink-700 hover:text-ink-900"
-              >
-                <span className="inline-block h-2 w-2 align-middle" style={{ background: d.color }} />
-                <span className="ml-2">{n.raw.label}</span>
-                <span className="ml-2 font-sans text-[10px] text-ink-500">
-                  {formatYear(n.year)}
-                </span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 }
